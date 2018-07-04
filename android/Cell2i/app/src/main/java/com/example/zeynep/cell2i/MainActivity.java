@@ -31,18 +31,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
-                if (!username.isEmpty() && !password.isEmpty()) {
-                    if (SubScribe.checkUsername(username, password) == true) {
-                        Intent intent = new Intent(MainActivity.this, HomePage.class);
-                        startActivity(intent);
-                    } else {
-                        loginFailed();
+                if (edUsername.getText() != null && edPassword.getText() != null) {
+                    if (!username.isEmpty() && !password.isEmpty()) {
+                        if (SubScribe.checkUsername(username, password) == true) {
+                            Intent intent = new Intent(MainActivity.this, HomePage.class);
+                            startActivity(intent);
+                        } else {
+                            loginFailed();
+                        }
+                    } else if (username.isEmpty()) {
+                        emptyUsernameFailed();
+                    } else if (password.isEmpty()) {
+                        emptyPasswordFailed();
                     }
-                } else if (username.isEmpty()) {
-                    emptyUsernameFailed();
-                }
-                else if (password.isEmpty()) {
-                    emptyPasswordFailed();
                 }
             }
         });
