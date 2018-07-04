@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
+
                 if (!username.isEmpty() && !password.isEmpty()) {
                     if (SubScribe.checkUsername(username, password) == true) {
                         Intent intent = new Intent(MainActivity.this, HomePage.class);

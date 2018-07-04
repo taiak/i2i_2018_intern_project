@@ -16,8 +16,9 @@ public class SubScribe extends Activity {
 
         boolean is_valid = false;
         if (!username.isEmpty() && !password.isEmpty()) {
-             if (username.equals("zeynep") && password.equals("rumeysa"))
+             if (username.equals("admin") && password.equals("admin"))
                 is_valid = true;
+
         }
 
             return is_valid;
