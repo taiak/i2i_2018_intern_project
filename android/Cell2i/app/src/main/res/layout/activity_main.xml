@@ -39,10 +39,10 @@
             android:layout_width="195dp"
             android:layout_height="31dp"
             android:layout_marginLeft="200dp"
-            android:textColor="#111111"
+            android:fontFamily="italic"
             android:text="Forgot your password"
             android:textAllCaps="false"
-            android:fontFamily="italic"
+            android:textColor="#111111"
             android:textSize="15dp" />
 
 
