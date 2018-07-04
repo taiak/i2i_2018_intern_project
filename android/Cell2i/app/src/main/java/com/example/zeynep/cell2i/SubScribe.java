@@ -24,4 +24,15 @@ public class SubScribe extends Activity {
             return is_valid;
     }
 
+
+    public static boolean changePassword(String username, String newpassword, String confirmpassword) {
+
+        boolean is_valid = false;
+
+            if (username.equals("zeynep")  && confirmpassword.equals(newpassword))
+                is_valid = true;
+
+
+        return is_valid;
+    }
 }
