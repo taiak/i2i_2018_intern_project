@@ -24,33 +24,21 @@ public class MainActivity extends AppCompatActivity {
         edPassword = (EditText) findViewById(R.id.editText_password);
         btnlogin  = (Button)findViewById(R.id.btn_login);
         txtforgot = (TextView)findViewById(R.id.txt_forgot);
-
-
-
+        final Utility authentication = new Utility();
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                    String username = edUsername.getText().toString();
-                    String password = edPassword.getText().toString();
+                String username = edUsername.getText().toString();
+                String password = edPassword.getText().toString();
 
                     if (!username.isEmpty() && !password.isEmpty()) {
-                        if(username.equals("admin") && password.equals("admin")) {
+                        if(Utility.checkUsername(username,password)==true) {
                             Intent intent = new Intent(MainActivity.this, HomePage.class);
                             startActivity(intent);
                         }else {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                            builder.setTitle("Login Failed");
-                            builder.setMessage("Please check your username and password");
-
-
-                            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-
-                                }
-                            });
-                            builder.show();
+                          loginFailed();
 
                         }
                     } else if(username.isEmpty()){
@@ -75,12 +63,20 @@ public class MainActivity extends AppCompatActivity {
                         });
                         builder.show();
                     }
-
             }
         });
 
 
+    }
+    public void loginFailed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Login Failed");
+        builder.setMessage("Please check your username and password");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
 
-
+            }
+        });
+        builder.show();
     }
 }
