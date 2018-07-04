@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.zeynep.cell2i.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:background="@drawable/shape"
+        android:orientation="vertical"
+        android:layout_marginTop="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:id="@+id/editText_username"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="enter your username"/>
+
+        <EditText
+            android:paddingLeft="10dp"
+            android:id="@+id/editText_password"
+            android:inputType="textPassword"
+            android:layout_width="350dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"
+            android:hint="enter your password" />
+
+        <TextView
+            android:id="@+id/txt_forgot"
+            android:layout_width="195dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="200dp"
+            android:textColor="#111111"
+            android:text="Forgot your password"
+            android:textAllCaps="false"
+            android:fontFamily="italic"
+            android:textSize="15dp" />
+
+
+        <Button
+            android:background="#8fc64f"
+            android:layout_marginTop="15dp"
+            android:id="@+id/btn_login"
+
+            android:layout_marginLeft="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        app:srcCompat="@drawable/logo" />
+
+
+</RelativeLayout>
