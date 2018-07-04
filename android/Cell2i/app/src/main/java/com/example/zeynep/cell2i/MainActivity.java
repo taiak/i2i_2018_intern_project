@@ -24,59 +24,61 @@ public class MainActivity extends AppCompatActivity {
         edPassword = (EditText) findViewById(R.id.editText_password);
         btnlogin  = (Button)findViewById(R.id.btn_login);
         txtforgot = (TextView)findViewById(R.id.txt_forgot);
-        final Utility authentication = new Utility();
+        final SubScribe authentication = new SubScribe();
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
-
-                    if (!username.isEmpty() && !password.isEmpty()) {
-                        if(Utility.checkUsername(username,password)==true) {
-                            Intent intent = new Intent(MainActivity.this, HomePage.class);
-                            startActivity(intent);
-                        }else {
-                          loginFailed();
-
-                        }
-                    } else if(username.isEmpty()){
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-                        builder.setMessage("Username is empty");
-                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-
-                            }
-                        });
-                        builder.show();
+                if (!username.isEmpty() && !password.isEmpty()) {
+                    if (SubScribe.checkUsername(username, password) == true) {
+                        Intent intent = new Intent(MainActivity.this, HomePage.class);
+                        startActivity(intent);
+                    } else {
+                        loginFailed();
                     }
-                    else if(password.isEmpty()){
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-                        builder.setMessage("Password is empty");
-                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-
-                            }
-                        });
-                        builder.show();
-                    }
+                } else if (username.isEmpty()) {
+                    emptyUsernameFailed();
+                }
+                else if (password.isEmpty()) {
+                    emptyPasswordFailed();
+                }
             }
         });
 
-
     }
-    public void loginFailed(){
+    public  void loginFailed(){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Login Failed");
         builder.setMessage("Please check your username and password");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+        builder.show();
+    }
+    public  void emptyUsernameFailed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+        builder.setMessage("Username is empty");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
             }
         });
         builder.show();
+    }
+    public  void emptyPasswordFailed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+        builder.setMessage("Password is empty");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+            }
+        });
+        builder.show();
+
     }
 }
