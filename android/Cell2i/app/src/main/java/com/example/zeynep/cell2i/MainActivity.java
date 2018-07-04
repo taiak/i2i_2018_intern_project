@@ -47,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        txtforgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ChangePassword.class);
+                startActivity(intent);
+            }
+        });
+
     }
     public  void loginFailed(){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -81,4 +89,6 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
 
     }
+
+
 }
