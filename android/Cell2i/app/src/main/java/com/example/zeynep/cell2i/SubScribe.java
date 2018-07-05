@@ -3,6 +3,7 @@ package com.example.zeynep.cell2i;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.widget.EditText;
 
@@ -16,7 +17,9 @@ public class SubScribe extends Activity {
 
         boolean is_valid = false;
         if (!username.isEmpty() && !password.isEmpty()) {
-             if (username.equals("admin") && password.equals("admin"))
+             if (username.equals("a") && password.equals("a"))
+
+
                 is_valid = true;
 
         }
@@ -37,4 +40,7 @@ public class SubScribe extends Activity {
 
         return is_valid;
     }
+
+
+
 }
