@@ -21,6 +21,7 @@ public class SubScribe extends Activity {
 
         }
 
+
             return is_valid;
     }
 
@@ -29,9 +30,10 @@ public class SubScribe extends Activity {
 
         boolean is_valid = false;
 
-            if (username.equals("zeynep")  && confirmpassword.equals(newpassword))
+            if (username.equals("admin")  && confirmpassword.equals(newpassword)) {
                 is_valid = true;
 
+            }
 
         return is_valid;
     }
