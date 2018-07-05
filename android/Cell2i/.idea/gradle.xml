@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/ksoap2-android-2.2-jar-with-dependencies" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
