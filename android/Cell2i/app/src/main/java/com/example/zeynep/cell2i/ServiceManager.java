@@ -13,9 +13,9 @@ import org.ksoap2.transport.HttpTransportSE;
 
 public class ServiceManager {
     private static final String METHOD_NAME = "success_statu"; //kullanıdıgız service metodu
-    private static final String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
+    public static final String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
     private static final String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/success_statu";
-    private static final String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
+   public static final String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
     static SoapObject soapObject;
     static SoapSerializationEnvelope soapSerializationEnvelope;
@@ -71,6 +71,9 @@ public class ServiceManager {
 
 
     public boolean checkUser(){
+        String METHOD_NAME = "userControl"; //kullandıgınız service metodu
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/userControl";
+
 
      return false;
     }

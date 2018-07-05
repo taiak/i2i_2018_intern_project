@@ -41,7 +41,6 @@ public class ChangePassword extends AppCompatActivity {
                     builder.show();
 
                     changepassword = new_password;
-                    Toast.makeText(ChangePassword.this, "Yeni şifren" + changepassword, Toast.LENGTH_SHORT).show();
                 }
             }
         });
