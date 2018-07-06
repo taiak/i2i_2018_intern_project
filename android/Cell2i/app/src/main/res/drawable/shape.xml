@@ -11,11 +11,8 @@
 
         android:color="#1E7CC0"/>
 
-    <!-- corner radius-->
 
-    <corners
 
-        android:radius="6dp"/>
 
     <!--paddings-->
 
