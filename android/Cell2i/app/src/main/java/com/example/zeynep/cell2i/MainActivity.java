@@ -13,20 +13,24 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity {
+
     Button btnlogin;
     EditText edUsername;
     EditText edPassword;
     TextView txtforgot;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         edUsername = (EditText) findViewById(R.id.editText_username);
         edPassword = (EditText) findViewById(R.id.editText_password);
-        btnlogin  = (Button)findViewById(R.id.btn_login);
-        txtforgot = (TextView)findViewById(R.id.txt_forgot);
+        btnlogin = (Button) findViewById(R.id.btn_login);
+        txtforgot = (TextView) findViewById(R.id.txt_forgot);
         final SubScribe authentication = new SubScribe();
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
@@ -34,28 +38,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
-                //ServiceManager sm =new ServiceManager();
-              //  sm.PushData();
 
-                if (edUsername.getText() != null && edPassword.getText() != null) {
-                    if (!username.isEmpty() && !password.isEmpty()) {
-                        if (SubScribe.checkUsername(username, password) == true) {
 
-                            ServiceAsyncTask ss = new ServiceAsyncTask();
-                            ss.execute(username);
+                if (!username.isEmpty() && !password.isEmpty()) {
 
-                            Intent intent = new Intent(MainActivity.this, HomePage.class);
-                            startActivity(intent);
-                        } else {
-                            loginFailed();
-                        }
-                    } else if (username.isEmpty()) {
-                        emptyUsernameFailed();
-                    } else if (password.isEmpty()) {
-                        emptyPasswordFailed();
+                    SubScribe.LoginAsyncTask login = new SubScribe.LoginAsyncTask();
+                    login.execute(username, password);
+                } else if (username.isEmpty()) {
+                    emptyUsernameFailed();
+                } else if (password.isEmpty()) {
+                    emptyPasswordFailed();
 
-                    }
                 }
+
             }
         });
 
@@ -71,7 +66,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public  void loginFailed(){
+
+
+    //** login thread bsalangıc
+    public class LoginAsyncTask extends AsyncTask<String, String, String> {
+
+
+        @Override
+        protected String doInBackground(String... dizi) {
+
+
+            Log.d("test", "doInBackground: parametre >> " + dizi[0]);
+
+            return ServiceManager.checkUser(dizi[0], dizi[1]);
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            if (s.equals("true")) {
+                Intent intent = new Intent(MainActivity.this, HomePage.class);
+                startActivity(intent);
+            } else {
+                loginFailed();
+            }
+
+
+        }
+    }
+    //** login thread sonu
+
+
+    public void loginFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Login Failed");
         builder.setMessage("Please check your username and password");
@@ -81,7 +107,8 @@ public class MainActivity extends AppCompatActivity {
         });
         builder.show();
     }
-    public  void emptyUsernameFailed(){
+
+    public void emptyUsernameFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
         builder.setMessage("Username is empty");
@@ -92,7 +119,8 @@ public class MainActivity extends AppCompatActivity {
         });
         builder.show();
     }
-    public  void emptyPasswordFailed(){
+
+    public void emptyPasswordFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
         builder.setMessage("Password is empty");
@@ -105,31 +133,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //** login thread bsalangıc
-    public  class ServiceAsyncTask extends AsyncTask<String, String, String> {
-
-        @Override
-        protected void onPreExecute() {
-            Toast.makeText(getApplicationContext(),"yükleniyor ...",Toast.LENGTH_SHORT).show();
-        }
-
-        @Override
-        protected String doInBackground(String... dizi) {
 
 
-            Log.d("test", "doInBackground: parametre >> "+dizi[0]);
-
-            return  ServiceManager.getHelloData();
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            Toast.makeText(getApplicationContext(),"tamamlandi "+s,Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    //** login thread sonu
 
 
 
 }
+
