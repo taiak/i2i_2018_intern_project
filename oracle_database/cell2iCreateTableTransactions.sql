@@ -1,7 +1,7 @@
 CREATE TABLE subscriber
 (
     sub_id NUMBER,
-    msisdn VARCHAR(10) NOT NULL,--10 msisdn create index
+    msisdn VARCHAR(10) NOT NULL,
     password VARCHAR(60) NOT NULL,
     first_name VARCHAR(60) NOT NULL,
     last_name VARCHAR(60) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE tariff
     CONSTRAINT tariff_pk PRIMARY KEY (tariff_id)
 );
 /
-CREATE TABLE usage_tracking
+CREATE TABLE usage
 (
     sub_id NUMBER,
     usage_type VARCHAR2(15),
@@ -39,10 +39,4 @@ CREATE TABLE usage_tracking
     CONSTRAINT usage_pk PRIMARY KEY (usage_id)
     
 );
-/
-DROP TABLE invoice_info;
-DROP TABLE subscriber;
-/
-SELECT * FROM all_col_comments WHERE table_name = 'SUBSCRIBER';
-/
 
