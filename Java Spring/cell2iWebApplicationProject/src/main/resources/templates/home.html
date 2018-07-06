@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cell2i Web Application</title>
+
+    <div th:replace="fragments/header :: header-css"/>
+
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+   <div class="container">
+   		<div class="starter-template">
+        <h1>CELL2I LOGIN SCREENS</h1>
+        <h2>Ahmet <a th:href="@{/admin}">Admin page (Spring Security protected, Need Admin Role)</a></h2>
+        <h2>Hakan <a th:href="@{/user}">User page (Spring Security protected, Need User Role)</a></h2>
+        <h2>Spring kalp <a th:href="@{/about}">Normal page</a></h2>
+    </div>
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
