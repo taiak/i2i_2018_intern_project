@@ -18,9 +18,6 @@ public class SubScribe extends MainActivity  {
 
         boolean is_valid = false;
         if (!username.isEmpty() && !password.isEmpty()) {
-
-
-
                 is_valid = true;
 
         }
