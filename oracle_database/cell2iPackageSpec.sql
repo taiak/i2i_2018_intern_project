@@ -1,0 +1,3 @@
+CREATE OR REPLACE PACKAGE CELL2I_UTILITY AS
+    PROCEDURE check_subscriber(pis_searchMsidn VARCHAR2);
+END;
