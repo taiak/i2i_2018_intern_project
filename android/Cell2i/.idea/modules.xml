@@ -3,9 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Cell2i.iml" filepath="$PROJECT_DIR$/Cell2i.iml" />
-      <module fileurl="file://C:\Users\rumey\Documents\GitHub\i2i_2018_intern_project\android\Cell2i\Cell2i.iml" filepath="C:\Users\rumey\Documents\GitHub\i2i_2018_intern_project\android\Cell2i\Cell2i.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\rumey\Documents\GitHub\i2i_2018_intern_project\android\Cell2i\app\app.iml" filepath="C:\Users\rumey\Documents\GitHub\i2i_2018_intern_project\android\Cell2i\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ksoap2-android-2.2-jar-with-dependencies/ksoap2-android-2.2-jar-with-dependencies.iml" filepath="$PROJECT_DIR$/ksoap2-android-2.2-jar-with-dependencies/ksoap2-android-2.2-jar-with-dependencies.iml" />
     </modules>
   </component>
 </project>

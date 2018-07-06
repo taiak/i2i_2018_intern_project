@@ -2,13 +2,16 @@ package com.example.zeynep.cell2i;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btnlogin;
@@ -31,18 +34,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
-<<<<<<< HEAD
+                //ServiceManager sm =new ServiceManager();
+              //  sm.PushData();
 
-                if (!username.isEmpty() && !password.isEmpty()) {
-                    if (SubScribe.checkUsername(username, password) == true) {
-                        Intent intent = new Intent(MainActivity.this, HomePage.class);
-                        startActivity(intent);
-                    } else {
-                        loginFailed();
-=======
                 if (edUsername.getText() != null && edPassword.getText() != null) {
                     if (!username.isEmpty() && !password.isEmpty()) {
                         if (SubScribe.checkUsername(username, password) == true) {
+
+                            ServiceAsyncTask ss = new ServiceAsyncTask();
+                            ss.execute(username);
+
                             Intent intent = new Intent(MainActivity.this, HomePage.class);
                             startActivity(intent);
                         } else {
@@ -52,11 +53,12 @@ public class MainActivity extends AppCompatActivity {
                         emptyUsernameFailed();
                     } else if (password.isEmpty()) {
                         emptyPasswordFailed();
->>>>>>> 95ba84dea2f1d86a33ddad7a57fa6157aae0d2aa
+
                     }
                 }
             }
         });
+
 
         txtforgot.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
     public  void loginFailed(){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Login Failed");
@@ -100,6 +104,32 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
 
     }
+
+    //** login thread bsalangıc
+    public  class ServiceAsyncTask extends AsyncTask<String, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            Toast.makeText(getApplicationContext(),"yükleniyor ...",Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        protected String doInBackground(String... dizi) {
+
+
+            Log.d("test", "doInBackground: parametre >> "+dizi[0]);
+
+            return  ServiceManager.getHelloData();
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            Toast.makeText(getApplicationContext(),"tamamlandi "+s,Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    //** login thread sonu
+
 
 
 }
