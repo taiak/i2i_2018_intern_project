@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.zeynep.cell2i.HomePage"
-    tools:layout_editor_absoluteY="25dp">
+    android:orientation="vertical"
+    tools:context="com.example.zeynep.cell2i.HomePage">
 
     <HorizontalScrollView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-
-        tools:ignore="MissingConstraints"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/home_page"
+                android:id="@+id/homepage"
                 android:layout_width="wrap_content"
-                android:layout_height="62dp"
-                android:background="@drawable/message"
-                android:paddingLeft="50dp" />
+                android:layout_height="match_parent"
+                android:onClick="FragmentHomeClick"
+                android:background="@drawable/message" />
 
             <Button
-                android:id="@+id/gift"
+                android:id="@+id/giftpage"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/gift"
-                android:paddingLeft="50dp" />
+                android:onClick="FragmentGiftClick"
+                tools:ignore="OnClick" />
 
             <Button
-                android:id="@+id/remainder"
+                android:id="@+id/coinspage"
                 android:layout_width="wrap_content"
-                android:layout_height="62dp"
-                android:background="@drawable/coins"
-                android:paddingLeft="50dp" />
+                android:layout_height="match_parent"
+                android:background="@drawable/coins" />
 
             <Button
                 android:id="@+id/exit"
-                android:layout_width="120dp"
+                android:layout_width="117dp"
                 android:layout_height="match_parent"
-                android:paddingLeft="50dp"
-                android:text="EXIT" />
+                android:text="exit" />
         </LinearLayout>
     </HorizontalScrollView>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"/>
+
+
 </android.support.constraint.ConstraintLayout>
