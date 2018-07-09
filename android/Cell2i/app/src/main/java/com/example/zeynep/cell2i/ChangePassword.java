@@ -81,7 +81,7 @@ public class ChangePassword extends AppCompatActivity {
         Pattern pattern;
         Matcher matcher;
 
-        final String PASSWORD_PATTERN = "((?=.*[a-z])(?=.*[0-9])(?=.*[@#$%.]))";
+        final String PASSWORD_PATTERN = "((?=.*[a-z])(?=.*[0-9])(?=.*[@#$%.]).{8,60})";
         pattern = Pattern.compile(PASSWORD_PATTERN);
         matcher = pattern.matcher(password);
         return matcher.matches();
@@ -89,7 +89,7 @@ public class ChangePassword extends AppCompatActivity {
     }
     public void changeFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(ChangePassword.this);
-        builder.setMessage("Your password should contain at least one special character and number");
+        builder.setMessage("Your password should be 8 character long and should contain at least one special character and number ");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
             }
