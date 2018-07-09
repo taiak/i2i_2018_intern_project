@@ -38,13 +38,13 @@ public class ChangePassword extends AppCompatActivity {
                 if (confirm_password.equals(new_password)) {
                     if (isValidPassword(new_password.toString())) {
 
-                            changeUserPasswordAsyncTask deneme = new changeUserPasswordAsyncTask();
-                            deneme.execute(user_name, new_password);
-                            changeConfirmed();
+                        changeUserPasswordAsyncTask deneme = new changeUserPasswordAsyncTask();
+                        deneme.execute(user_name, new_password);
+                        changeConfirmed();
                     } else {
                         changeFailed();
                     }
-                }else{
+                } else {
                     matchFailed();
                 }
 
