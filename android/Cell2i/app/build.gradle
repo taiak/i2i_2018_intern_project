@@ -28,4 +28,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':ksoap2-android-2.2-jar-with-dependencies')
 
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
 }

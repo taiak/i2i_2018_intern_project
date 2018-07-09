@@ -81,7 +81,7 @@ public class ChangePassword extends AppCompatActivity {
         Pattern pattern;
         Matcher matcher;
 
-        final String PASSWORD_PATTERN = "((?=.*[a-z])(?=.*[0-9])(?=.*[@#$%.]).{6,20})";
+        final String PASSWORD_PATTERN = "((?=.*[a-z])(?=.*[0-9])(?=.*[@#$%.]))";
         pattern = Pattern.compile(PASSWORD_PATTERN);
         matcher = pattern.matcher(password);
         return matcher.matches();
