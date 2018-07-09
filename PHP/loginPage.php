@@ -1,7 +1,6 @@
 <?php
 require('classSystem.php');
 
-
 echo $cell2i->ConnectWebService();
 ?>
 <html>
