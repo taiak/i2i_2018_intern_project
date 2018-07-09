@@ -159,7 +159,17 @@ body{
     height: 100%;
 }
 
+.dInlineBlock{
+	display:inline-block;
+}
 
+.userBlock{}
+.userBlock img{
+    max-height: 40px;
+}
+
+
+.lineHeight22{ line-height:22px;}
 
 
 .borderNone{ border:0;}
