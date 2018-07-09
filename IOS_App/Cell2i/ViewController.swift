@@ -26,8 +26,8 @@ class ViewController: UIViewController , UITextFieldDelegate {
         button.layer.shadowOpacity = 1.0
         button.layer.cornerRadius = button.bounds.size.height / 3
 
-
     }
+   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -42,9 +42,9 @@ class ViewController: UIViewController , UITextFieldDelegate {
        
         
         let wsgetSuccess = Cell2iWebServiceImplService()
-        let str = wsgetSuccess.success_statu()
+        let str = wsgetSuccess.isConnected()
         if(str == "Connect Successful") {
-            if(wsgetSuccess.userControl(name: userNameText.text!, password: passwordText.text!)){
+            if(wsgetSuccess.isAuthorized(userId: userNameText.text!, password: passwordText.text!)){
             performSegue(withIdentifier: "gotosecondpage", sender: nil)
             }
             else if userNameText.text == "" {

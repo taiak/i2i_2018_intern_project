@@ -1,12 +1,12 @@
-﻿ 
+ 
 import Foundation
 
 extension String
 {
     public var xmlLocalName:String{
         get{
-            var strs = self.split(separator:  ":")
-            if let lastStr:String = strs.last as! String
+            let strs = self.split(separator:  ":")
+            if let lastStr:String = strs.last as? String
             {
                 return lastStr
             }
