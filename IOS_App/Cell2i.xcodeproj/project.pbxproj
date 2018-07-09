@@ -16,6 +16,11 @@
 		8F81F19320EE5079006DB84C /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F81F19220EE5079006DB84C /* SWXMLHash.swift */; };
 		8F81F19F20EE6089006DB84C /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F81F19E20EE6089006DB84C /* Icon-App-20x20@2x.png */; };
 		8FD0ED4E20EC0A2B00C1E1EF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0ED4D20EC0A2B00C1E1EF /* SecondViewController.swift */; };
+		B82488F620F378D5003D573C /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82488F520F378D5003D573C /* FourthViewController.swift */; };
+		B853344D20F33F650001A4CF /* exit_to_app.svg (3).png in Resources */ = {isa = PBXBuildFile; fileRef = B853344C20F33F650001A4CF /* exit_to_app.svg (3).png */; };
+		B853345120F3462B0001A4CF /* Image 7 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B853344E20F3462B0001A4CF /* Image 7 (1).png */; };
+		B853345220F3462B0001A4CF /* Image 6 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B853344F20F3462B0001A4CF /* Image 6 (1).png */; };
+		B853345320F3462B0001A4CF /* Image 5 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B853345020F3462B0001A4CF /* Image 5 (1).png */; };
 		B862292720EE662600CFABFD /* coins-01.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = B862292420EE662600CFABFD /* coins-01.svg.png */; };
 		B862292820EE662600CFABFD /* gift-alt.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = B862292520EE662600CFABFD /* gift-alt.svg.png */; };
 		B862292920EE662600CFABFD /* message.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = B862292620EE662600CFABFD /* message.svg.png */; };
@@ -39,6 +44,11 @@
 		8F81F19220EE5079006DB84C /* SWXMLHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		8F81F19E20EE6089006DB84C /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
 		8FD0ED4D20EC0A2B00C1E1EF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B82488F520F378D5003D573C /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		B853344C20F33F650001A4CF /* exit_to_app.svg (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit_to_app.svg (3).png"; sourceTree = "<group>"; };
+		B853344E20F3462B0001A4CF /* Image 7 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Image 7 (1).png"; sourceTree = "<group>"; };
+		B853344F20F3462B0001A4CF /* Image 6 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Image 6 (1).png"; sourceTree = "<group>"; };
+		B853345020F3462B0001A4CF /* Image 5 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Image 5 (1).png"; sourceTree = "<group>"; };
 		B862292420EE662600CFABFD /* coins-01.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coins-01.svg.png"; sourceTree = "<group>"; };
 		B862292520EE662600CFABFD /* gift-alt.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gift-alt.svg.png"; sourceTree = "<group>"; };
 		B862292620EE662600CFABFD /* message.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.svg.png; sourceTree = "<group>"; };
@@ -83,10 +93,15 @@
 			isa = PBXGroup;
 			children = (
 				B8DD2E0120EBF20300A9F1CA /* AppDelegate.swift */,
+				B82488F520F378D5003D573C /* FourthViewController.swift */,
 				B8DD2E0320EBF20300A9F1CA /* ViewController.swift */,
 				8FD0ED4D20EC0A2B00C1E1EF /* SecondViewController.swift */,
 				8F81F17A20ECB245006DB84C /* ThirdViewController.swift */,
 				B8DD2E0520EBF20300A9F1CA /* Main.storyboard */,
+				B853345020F3462B0001A4CF /* Image 5 (1).png */,
+				B853344F20F3462B0001A4CF /* Image 6 (1).png */,
+				B853344E20F3462B0001A4CF /* Image 7 (1).png */,
+				B853344C20F33F650001A4CF /* exit_to_app.svg (3).png */,
 				B8DD2E0A20EBF20300A9F1CA /* LaunchScreen.storyboard */,
 				B862292420EE662600CFABFD /* coins-01.svg.png */,
 				B862292520EE662600CFABFD /* gift-alt.svg.png */,
@@ -170,8 +185,12 @@
 				8F81F17D20ECB2AB006DB84C /* password.jpg in Resources */,
 				B862292720EE662600CFABFD /* coins-01.svg.png in Resources */,
 				B862292820EE662600CFABFD /* gift-alt.svg.png in Resources */,
+				B853345120F3462B0001A4CF /* Image 7 (1).png in Resources */,
+				B853345220F3462B0001A4CF /* Image 6 (1).png in Resources */,
 				B862292920EE662600CFABFD /* message.svg.png in Resources */,
 				B8DD2E0C20EBF20300A9F1CA /* LaunchScreen.storyboard in Resources */,
+				B853345320F3462B0001A4CF /* Image 5 (1).png in Resources */,
+				B853344D20F33F650001A4CF /* exit_to_app.svg (3).png in Resources */,
 				B8DD2E0920EBF20300A9F1CA /* Assets.xcassets in Resources */,
 				8F81F19F20EE6089006DB84C /* Icon-App-20x20@2x.png in Resources */,
 				B8DD2E0720EBF20300A9F1CA /* Main.storyboard in Resources */,
@@ -189,6 +208,7 @@
 				8FD0ED4E20EC0A2B00C1E1EF /* SecondViewController.swift in Sources */,
 				B8DD2E0420EBF20300A9F1CA /* ViewController.swift in Sources */,
 				8F81F19120EE5076006DB84C /* SWXMLHash+TypeConversion.swift in Sources */,
+				B82488F620F378D5003D573C /* FourthViewController.swift in Sources */,
 				8F81F17B20ECB245006DB84C /* ThirdViewController.swift in Sources */,
 				8F81F18E20EE5070006DB84C /* SoapHttpClientExtension.swift in Sources */,
 				B8DD2E0220EBF20300A9F1CA /* AppDelegate.swift in Sources */,
@@ -341,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45M762G46Z;
 				INFOPLIST_FILE = Cell2i/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45M762G46Z;
 				INFOPLIST_FILE = Cell2i/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

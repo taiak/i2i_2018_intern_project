@@ -159,7 +159,17 @@ body{
     height: 100%;
 }
 
+.dInlineBlock{
+	display:inline-block;
+}
 
+.userBlock{}
+.userBlock img{
+    max-height: 40px;
+}
+
+
+.lineHeight22{ line-height:22px;}
 
 
 .borderNone{ border:0;}
@@ -206,6 +216,16 @@ body{
 }
 
 
+.menu{}
+.menu > .Btn{
+	
+}
+.menu > .logoBtn > img{
+	max-height:80px;
+}
+.menu > .Btn > img{
+	max-height: 60px;
+}
 
 .logoutBtn{
 	
@@ -213,6 +233,7 @@ body{
     font-size: 11px;
 	
 }
+
 
 .mobilMenu{}
 .openCloseBtn{}
@@ -226,6 +247,9 @@ body{
 
 
 .bottom0{bottom:0;}
+
+
+
 
 
 .top0{ top:0;}
