@@ -14,7 +14,7 @@
         android:background="#EDEDED"
 
         android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content">
+        android:layout_width="450dp">
 
         <Button
             android:layout_marginLeft="25dp"
@@ -42,7 +42,7 @@
             android:id="@+id/exit"
             android:layout_width="60dp"
             android:layout_height="55dp"
-            android:background="@drawable/exit"
+           android:background="@drawable/cikis"
             android:layout_marginLeft="35dp"
             />
 
