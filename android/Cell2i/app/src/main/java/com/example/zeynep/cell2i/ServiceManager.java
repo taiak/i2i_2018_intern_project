@@ -17,7 +17,7 @@ public class ServiceManager {
     private static final String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/success_statu";
    public static final String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
-    static SoapObject soapObject;
+   static SoapObject soapObject;
     static SoapSerializationEnvelope soapSerializationEnvelope;
     static HttpTransportSE httpTransportSE;
 
