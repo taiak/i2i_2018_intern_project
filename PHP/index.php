@@ -1,33 +1,33 @@
-Web Servis adresi -> http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl
-<br>
 <?php
- 
-// wsdl cache 'ini devre disi birak
-ini_set("soap.wsdl_cache_enabled", "0");
- 
-try {
- 
+/**
+ * Example Application
+ *
+ * @package Example-application
+ */
 
- 
- 
- 
- // SOAPClient nesnesi olustur
-  $client = new SoapClient("http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl");
- 
-  // SOAPClient uzerinden karsi sunucudaki getAllNotebooks metodunu cagir
-  $notebooks = $client->success_statu();
+require 'libs/Smarty.class.php';
+require('urlSettings.php');
 
- 
- 
-  echo "Metod basarili bir sekilde calistirildi.<br/>Sonuc asagidadir.<br/>";
- 
-  echo  "<pre>";
-  // Sonucu ekrana bas
-  var_dump($notebooks);
-  echo  "</pre>";
-} catch (Exception $exc) { // Hata olusursa yakala
-  echo "Soap Hatasi Olustu: " . $exc->getMessage();
+$smarty = new Smarty;
+
+
+require('filePhpField.php');
+
+if($_GET){
+$pg = $_GET['pg'];
+
+switch($pg){
+	case 'loginPage':
+		echo 'LOGIN';
+	break;
 }
 
 
+
+$tpl = array_search($pg,$urlSettings).'.tpl';
+
+$smarty->display($tpl);
+}else{
+	echo 'INDEX';
+}
 ?>
