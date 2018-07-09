@@ -18,16 +18,18 @@ if($_SESSION){
 	<body>
 <div class="box col-12 line-bottom box-shadow1">
 	<div class="row">
-		<a href="http://i2i-systems.com/" class="col col-2 col-sm-12 a-center"><img src="img/i2iLogo.png"/></a>
-		<div class="col col-10 col-sm-12">
-			<div class="row">
-				<a href="" class="box col-2 a-center" title="Mesajlarım"><img src="img/messageIcon.png"/></a>
-				<a href="" class="box col-2 a-center" title="Tarifelerim"><img src="img/tariffIcon.png"/></a>
-				<a href="" class="box col-4 a-center" title="Cell2i"><img src="img/cell2i-original.png"/></a>
-				<a href="" class="box col-2 a-center" title="Faturalarım"><img src="img/invoiceIcon.png"/></a>
-				<a href="" class="box col-2 a-center" title="Oturumu Kapat"><img src="img/logoutIcon.png"/></a>
+		<a href="http://i2i-systems.com/" class="box col-2 col-sm-12 a-center"><img src="img/i2iLogo.png"/></a>
+		<div class="box col-1 forDesktop"></div>
+		<div class="col col-6 col-sm-12">
+			<div class="row menu">
+				<a href="" class="box col-2 a-center Btn" title="Mesajlarım"><img src="img/messageIcon.png"/></a>
+				<a href="" class="box col-2 a-center Btn" title="Tarifelerim"><img src="img/tariffIcon.png"/></a>
+				<a href="" class="col col-4 a-center logoBtn" title="Cell2i"><img src="img/cell2i-original.png"/></a>
+				<a href="" class="box col-2 a-center Btn" title="Faturalarım"><img src="img/invoiceIcon.png"/></a>
+				<a href="" class="box col-2 a-center Btn" title="Oturumu Kapat"><img src="img/logoutIcon.png"/></a>
 			</div>
 		</div>
+		<div class="box col-1 forDesktop"></div>
 	</div>
 </div>
 <div class="inner">
