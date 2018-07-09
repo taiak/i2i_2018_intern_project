@@ -23,7 +23,7 @@ public class HomePage extends Activity {
         exit = (Button) findViewById(R.id.exit);
 
         homepage = (Button) findViewById(R.id.home_page);
-        
+
 
         homepage.setOnClickListener(new View.OnClickListener() {
             @Override
