@@ -135,6 +135,36 @@
 
 
 
+    <ProgressBar
+    android:layout_marginTop="260dp"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:id="@+id/kalandk"
+    android:background="#118f17"
+    android:layout_width="350dp"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content"
+    />
+
+    <ProgressBar
+        android:layout_marginTop="330dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/kalanint"
+        android:background="#118f17"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        />
+
+    <ProgressBar
+        android:layout_marginTop="400dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/kalansms"
+        android:background="#118f17"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        />
+
 
 
 </RelativeLayout>
