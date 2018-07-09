@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#EDEDED"
+
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content">
 
@@ -50,26 +51,33 @@
 
 
     <LinearLayout
+
         android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         >
         <ImageView
-            android:layout_marginRight="2dp"
+            android:layout_marginRight="4dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/usericon"/>
         <TextView
+
+            android:gravity="bottom"
             android:text="isim soyisim gelecek"
             android:layout_marginLeft="8dp"
             android:textColor="#111111"
+            android:textSize="20dp"
             android:id="@+id/name"
             android:layout_width="200dp"
             android:layout_height="30dp" />
     </LinearLayout>
 
     <LinearLayout
+
+        android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,16 +87,18 @@
             android:layout_marginRight="2dp"
 
             android:layout_width="40dp"
-            android:layout_height="45dp"
+            android:layout_height="40dp"
             android:background="@drawable/cellicon"/>
 
         <TextView
+            android:textSize="20dp"
+            android:gravity="bottom"
             android:text="Telno gelecek"
             android:id="@+id/telno"
             android:layout_marginLeft="8dp"
             android:textColor="#111111"
             android:layout_width="200dp"
-            android:layout_height="45dp" />
+            android:layout_height="40dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -104,7 +114,8 @@
             android:background="@drawable/star"/>
 
         <TextView
-
+            android:textSize="20dp"
+            android:gravity="bottom"
             android:text="tarife gelecek"
             android:layout_marginLeft="8dp"
             android:textColor="#111111"
@@ -122,17 +133,7 @@
         android:layout_marginBottom="15dp"
         android:id="@+id/imageView4" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:background="#111111"
 
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="400dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout3"
-        android:layout_marginEnd="14dp"
-        android:layout_marginTop="63dp"
-        android:layout_toStartOf="@+id/imageView4" />
 
 
 
