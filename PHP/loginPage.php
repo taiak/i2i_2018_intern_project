@@ -1,7 +1,12 @@
 <?php
+ob_start();
+@session_start();
+
 require('classSystem.php');
 
-echo $cell2i->ConnectWebService();
+if($_SESSION){
+	header('Location:index.php');
+}else{
 ?>
 <html>
 	<head>
@@ -35,26 +40,26 @@ echo $cell2i->ConnectWebService();
 				<div class="row">
 					<div class="box col-12">
 						
-							<input type="text" name="MSISDN" placeholder="Enter your phone number" class="box col-12 box-shadow1 border1" maxLength="10"/>
+							<input type="text" name="MSISDN" placeholder="Enter your phone number" class="box col-12 box-shadow1 border1 Segoe" maxLength="10"/>
 						
 					</div>
 				</div>
 				<div class="row">
 					<div class="box col-12">
 						
-							<input type="password" name="Password" placeholder="Enter your password" class="box col-12 box-shadow1 border1"/>
+							<input type="password" name="Password" placeholder="Enter your password" class="box col-12 box-shadow1 border1 Segoe"/>
 						
 					</div>
 				</div>
 				<div class="row">
 					<div class="col col-12">
 						
-							<a href="forgotPassword.php" class="col col-sm-12 a-right fr line-under color4">Forgot your password?</a>
+							<a href="forgotPassword.php" class="col col-sm-12 a-right fr line-under color4 Segoe">Forgot your password?</a>
 						
 					</div>
 				</div>
 				<div class="row">
-					<div class="col col-12 color5 a-center">
+					<div class="col col-12 color5 a-center Segoe">
 						<?php 
 							if($_POST){
 								$MSISDN = $_POST['MSISDN'];
@@ -68,7 +73,7 @@ echo $cell2i->ConnectWebService();
 					<div class="box col-12">
 						<div class="row">
 							<div class="box col-4 col-sm-1"></div>
-							<input type="submit" value="LOGIN" class="box col-4 col-sm-10 box-shadow1 border1 cPointer bg4 color1 fsize16"/>
+							<input type="submit" value="LOGIN" class="box col-4 col-sm-10 box-shadow1 border1 cPointer bg4 color1 fsize16 Segoe"/>
 							<div class="box col-4 col-sm-1"></div>
 						</div>
 					</div>
@@ -82,3 +87,8 @@ echo $cell2i->ConnectWebService();
 
 	</body>
 </html>
+<?php
+
+}
+ob_end_flush();
+?>

@@ -119,7 +119,9 @@ font-size: 13px;
 color: #706f6f;
 }
 
-
+.Segoe{
+	font-family:'Segoe',sans-serif;
+}
 
 body{
 	
@@ -190,17 +192,17 @@ body{
     box-sizing:border-box;
 }
 
-.placeholderColor1::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #fdfdfd;
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
 }
-.placeholderColor1::-moz-placeholder { /* Firefox 19+ */
-  color: #fdfdfd;
+::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
 }
-.placeholderColor1:-ms-input-placeholder { /* IE 10+ */
-  color: #fdfdfd;
+:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
 }
-.placeholderColor1:-moz-placeholder { /* Firefox 18- */
-  color: #fdfdfd;
+:-moz-placeholder { /* Firefox 18- */
+  color: #000;
 }
 
 
