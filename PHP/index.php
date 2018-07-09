@@ -1,32 +1,14 @@
 <?php
-/**
- * Example Application
- *
- * @package Example-application
- */
+require('soap.php');
+require('classSystem.php');
+$cell2i->ConnectWebService();
 
-require 'libs/Smarty.class.php';
-require('urlSettings.php');
+if($_GET['pg']){
+$pageLink=$_GET['pg'];
+$phpFile=$pageLink.'.php';
 
-$smarty = new Smarty;
+require($phpFile);
 
-
-require('filePhpField.php');
-
-if($_GET){
-$pg = $_GET['pg'];
-
-switch($pg){
-	case 'loginPage':
-		echo 'LOGIN';
-	break;
-}
-
-
-
-$tpl = array_search($pg,$urlSettings).'.tpl';
-
-$smarty->display($tpl);
 }else{
 	echo 'INDEX';
 }

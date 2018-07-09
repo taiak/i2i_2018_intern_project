@@ -1,0 +1,44 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from Cell2iWebServiceImplService WSDL service -->
+
+  <service name="Cell2iWebServiceImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://services.cell2iwebservice.com"/>
+      <parameter name="wsdlServiceElement" value="Cell2iWebServiceImplService"/>
+      <parameter name="schemaQualified" value="http://services.cell2iwebservice.com"/>
+      <parameter name="wsdlServicePort" value="Cell2iWebServiceImpl"/>
+      <parameter name="className" value="com.cell2iwebservice.services.Cell2IWebServiceImplSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Cell2iWebServiceImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="isAuthorized" qname="operNS:isAuthorized" xmlns:operNS="http://services.cell2iwebservice.com" returnQName="retNS:isAuthorizedReturn" xmlns:retNS="http://services.cell2iwebservice.com" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:userId" xmlns:pns="http://services.cell2iwebservice.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:password" xmlns:pns="http://services.cell2iwebservice.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="isConnected" qname="operNS:isConnected" xmlns:operNS="http://services.cell2iwebservice.com" returnQName="retNS:isConnectedReturn" xmlns:retNS="http://services.cell2iwebservice.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getTariffIdBySubmsisdn" qname="operNS:getTariffIdBySubmsisdn" xmlns:operNS="http://services.cell2iwebservice.com" returnQName="retNS:getTariffIdBySubmsisdnReturn" xmlns:retNS="http://services.cell2iwebservice.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:msisdn" xmlns:pns="http://services.cell2iwebservice.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="changeUserPassword" qname="operNS:changeUserPassword" xmlns:operNS="http://services.cell2iwebservice.com" returnQName="retNS:changeUserPasswordReturn" xmlns:retNS="http://services.cell2iwebservice.com" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:userId" xmlns:pns="http://services.cell2iwebservice.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:password" xmlns:pns="http://services.cell2iwebservice.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getTariffIdByname" qname="operNS:getTariffIdByname" xmlns:operNS="http://services.cell2iwebservice.com" returnQName="retNS:getTariffIdBynameReturn" xmlns:retNS="http://services.cell2iwebservice.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:tariffName" xmlns:pns="http://services.cell2iwebservice.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="isDBConnected" qname="operNS:isDBConnected" xmlns:operNS="http://services.cell2iwebservice.com" returnQName="retNS:isDBConnectedReturn" xmlns:retNS="http://services.cell2iwebservice.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="getTariffIdBySubmsisdn changeUserPassword isAuthorized isDBConnected isConnected getTariffIdByname"/>
+
+  </service>
+</deployment>
