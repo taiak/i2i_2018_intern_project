@@ -14,6 +14,7 @@ public class HomePage extends Activity {
 
     TextView fullname, no, recipe;
     Button exit;
+    Button invoices;
 
 
     @Override
@@ -21,6 +22,7 @@ public class HomePage extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         exit = (Button) findViewById(R.id.exit);
+        invoices=(Button) findViewById(R.id.invoices);
         fullname = (TextView) findViewById(R.id.name);
         no = (TextView) findViewById(R.id.telno);
         recipe = (TextView) findViewById(R.id.tarife);
@@ -33,6 +35,13 @@ public class HomePage extends Activity {
             public void onClick(View v) {
                 Intent intentexit = new Intent(HomePage.this, MainActivity.class);
                 startActivity(intentexit);
+            }
+        });
+        invoices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentinvoices = new Intent (HomePage.this, InvoicesPage.class);
+                startActivity(intentinvoices);
             }
         });
 

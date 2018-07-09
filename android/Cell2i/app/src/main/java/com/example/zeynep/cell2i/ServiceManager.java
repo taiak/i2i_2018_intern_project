@@ -12,51 +12,30 @@ import org.ksoap2.transport.HttpTransportSE;
  */
 
 public class ServiceManager {
-    private static final String METHOD_NAME = "success_statu"; //kullanıdıgız service metodu
-    public static final String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-    private static final String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/success_statu";
-   public static final String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
+
 
    static SoapObject soapObject;
     static SoapSerializationEnvelope soapSerializationEnvelope;
     static HttpTransportSE httpTransportSE;
 
-    //veri ekle
-    public static boolean PushData() {
-         String name = "";
-         String password = "";
-        soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
-
-
-        soapSerializationEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
-        soapSerializationEnvelope.dotNet = true;
-        soapSerializationEnvelope.setOutputSoapObject(soapObject);
-        soapObject.addProperty("name",name);
-        soapObject.addProperty("password",password);
-
-        httpTransportSE = new HttpTransportSE(URL);
-        httpTransportSE.debug = true;
-        try {
-            httpTransportSE.call(SOAP_ACTION, soapSerializationEnvelope);
-            SoapPrimitive soapPrimitive = (SoapPrimitive) soapSerializationEnvelope.getResponse();
-            System.out.println(soapPrimitive.toString());
-            return true;
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return false;
-    }
 
     //login
-    public static String getHelloData() {
+    public static String changeUserPassword(String username, String password) {
+         String METHOD_NAME = "changeUserPassword"; //kullanıdıgız service metodu
+       String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
+         String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/changeUserPassword";
+       final String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
         String returnedData = "";
         soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
-      //  soapObject.addProperty("username",gelenDegiskenUsername)
+
+
 
         soapSerializationEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapSerializationEnvelope.dotNet = true;
         soapSerializationEnvelope.setOutputSoapObject(soapObject);
 
+        soapObject.addProperty("username",username );
+        soapObject.addProperty("password", password);
         httpTransportSE = new HttpTransportSE(URL);
         httpTransportSE.debug = true;
         try {
@@ -74,9 +53,9 @@ public class ServiceManager {
 
     public static String checkUser(String username, String password){
         String returnedData = ""; //metoddan gelen değer
-        String METHOD_NAME = "userControl";
+        String METHOD_NAME = "isAuthorized";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/userControl";
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/isAuthorized";
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
         soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
