@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
                 if (isConnectionNetwork()==false){

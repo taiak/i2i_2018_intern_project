@@ -4,7 +4,9 @@ package com.example.zeynep.cell2i;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Paint;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -46,6 +48,28 @@ public class HomePage extends Activity {
         });
 
 
+
+
+    }
+    public class getUsernameTask extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... dizi) {
+
+
+
+            Log.d("test", "doInBackground: parametre >> " + dizi[0]);
+
+
+
+            return ServiceManager.getUsername().toString();
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            fullname.setText( s);
+
+        }
     }
 
 }
