@@ -4,18 +4,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- <groupId>org.springframework</groupId>
-	    <artifactId>gs-consuming-web-service</artifactId>
+
+	<groupId>org.springframework</groupId>
+		<artifactId>gs-consuming-web-service</artifactId>
     <version>0.1.0</version>
     
-Change 1 : groupId used instead of artifactId -->
-
-	<artifactId>spring-boot-web-spring-security</artifactId>
-	<packaging>jar</packaging>
-	<name>Spring Boot Web Spring Security</name>
-	<description>Spring Boot Web Spring Security Example</description>
-	<url>https://www.mkyong.com</url>
-	<version>1.0</version>
+<!-- Change 1 : groupId used instead of artifactId -->
 	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -83,6 +77,29 @@ Change 1 : groupId used instead of artifactId -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- start of wsdl -->
+			<plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <version>0.12.3</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <schemaLanguage>WSDL</schemaLanguage>
+                    <generatePackage>hello.wsdl</generatePackage>
+                    <schemas>
+                        <schema>
+                            <url>http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl</url>
+                        </schema>
+                    </schemas>
+                </configuration>
+            </plugin>
+            <!-- end wsdl -->
 		</plugins>
 	</build>
 </project>
