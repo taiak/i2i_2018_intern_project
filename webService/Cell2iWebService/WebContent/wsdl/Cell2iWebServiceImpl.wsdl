@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.cell2iwebservice.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.cell2iwebservice.com" xmlns:intf="http://services.cell2iwebservice.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.cell2iwebservice.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="isAuthorized">
+    <complexType>
+     <sequence>
+      <element name="userId" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isAuthorizedResponse">
+    <complexType>
+     <sequence>
+      <element name="isAuthorizedReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isConnected">
+    <complexType/>
+   </element>
+   <element name="isConnectedResponse">
+    <complexType>
+     <sequence>
+      <element name="isConnectedReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTariffIdBySubmsisdn">
+    <complexType>
+     <sequence>
+      <element name="msisdn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTariffIdBySubmsisdnResponse">
+    <complexType>
+     <sequence>
+      <element name="getTariffIdBySubmsisdnReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="changeUserPassword">
+    <complexType>
+     <sequence>
+      <element name="userId" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="changeUserPasswordResponse">
+    <complexType>
+     <sequence>
+      <element name="changeUserPasswordReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTariffIdByname">
+    <complexType>
+     <sequence>
+      <element name="tariffName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTariffIdBynameResponse">
+    <complexType>
+     <sequence>
+      <element name="getTariffIdBynameReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isDBConnected">
+    <complexType/>
+   </element>
+   <element name="isDBConnectedResponse">
+    <complexType>
+     <sequence>
+      <element name="isDBConnectedReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="isConnectedRequest">
+
+      <wsdl:part element="impl:isConnected" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isAuthorizedRequest">
+
+      <wsdl:part element="impl:isAuthorized" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isConnectedResponse">
+
+      <wsdl:part element="impl:isConnectedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTariffIdBynameResponse">
+
+      <wsdl:part element="impl:getTariffIdBynameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTariffIdBySubmsisdnRequest">
+
+      <wsdl:part element="impl:getTariffIdBySubmsisdn" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="changeUserPasswordRequest">
+
+      <wsdl:part element="impl:changeUserPassword" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isAuthorizedResponse">
+
+      <wsdl:part element="impl:isAuthorizedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="changeUserPasswordResponse">
+
+      <wsdl:part element="impl:changeUserPasswordResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isDBConnectedResponse">
+
+      <wsdl:part element="impl:isDBConnectedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTariffIdBySubmsisdnResponse">
+
+      <wsdl:part element="impl:getTariffIdBySubmsisdnResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isDBConnectedRequest">
+
+      <wsdl:part element="impl:isDBConnected" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTariffIdBynameRequest">
+
+      <wsdl:part element="impl:getTariffIdByname" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Cell2iWebServiceImpl">
+
+      <wsdl:operation name="isAuthorized">
+
+         <wsdl:input message="impl:isAuthorizedRequest" name="isAuthorizedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:isAuthorizedResponse" name="isAuthorizedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isConnected">
+
+         <wsdl:input message="impl:isConnectedRequest" name="isConnectedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:isConnectedResponse" name="isConnectedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTariffIdBySubmsisdn">
+
+         <wsdl:input message="impl:getTariffIdBySubmsisdnRequest" name="getTariffIdBySubmsisdnRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTariffIdBySubmsisdnResponse" name="getTariffIdBySubmsisdnResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeUserPassword">
+
+         <wsdl:input message="impl:changeUserPasswordRequest" name="changeUserPasswordRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:changeUserPasswordResponse" name="changeUserPasswordResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTariffIdByname">
+
+         <wsdl:input message="impl:getTariffIdBynameRequest" name="getTariffIdBynameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTariffIdBynameResponse" name="getTariffIdBynameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isDBConnected">
+
+         <wsdl:input message="impl:isDBConnectedRequest" name="isDBConnectedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:isDBConnectedResponse" name="isDBConnectedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="Cell2iWebServiceImplSoapBinding" type="impl:Cell2iWebServiceImpl">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="isAuthorized">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isAuthorizedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isAuthorizedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isConnected">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isConnectedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isConnectedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTariffIdBySubmsisdn">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTariffIdBySubmsisdnRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTariffIdBySubmsisdnResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeUserPassword">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="changeUserPasswordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="changeUserPasswordResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTariffIdByname">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTariffIdBynameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTariffIdBynameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isDBConnected">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isDBConnectedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isDBConnectedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="Cell2iWebServiceImplService">
+
+      <wsdl:port binding="impl:Cell2iWebServiceImplSoapBinding" name="Cell2iWebServiceImpl">
+
+         <wsdlsoap:address location="http://localhost:8082/Cell2iWebService/services/Cell2iWebServiceImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
