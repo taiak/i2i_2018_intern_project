@@ -15,18 +15,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ChangePassword extends AppCompatActivity {
- EditText username, newpassword, confirmpassword;
- Button donebtn;
+    EditText username, newpassword, confirmpassword;
+    Button donebtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
 
-        username = (EditText)findViewById(R.id.username);
-        newpassword = (EditText)findViewById(R.id.newpassword);
-        confirmpassword = (EditText)findViewById(R.id.confirmpassword);
-        donebtn = (Button)findViewById(R.id.donebtn);
+        username = (EditText) findViewById(R.id.username);
+        newpassword = (EditText) findViewById(R.id.newpassword);
+        confirmpassword = (EditText) findViewById(R.id.confirmpassword);
+        donebtn = (Button) findViewById(R.id.donebtn);
 
         donebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,22 +35,25 @@ public class ChangePassword extends AppCompatActivity {
                 String new_password = newpassword.getText().toString();
                 String confirm_password = confirmpassword.getText().toString();
 
-                if (isValidPassword(new_password.toString())) {
-                    if (new_password.equals(confirm_password)){
-                        changeUserPasswordAsyncTask deneme = new changeUserPasswordAsyncTask();
-                        deneme.execute(user_name,new_password);
-                        changeConfirmed();
+                if (confirm_password.equals(new_password)) {
+                    if (isValidPassword(new_password.toString())) {
+
+                            changeUserPasswordAsyncTask deneme = new changeUserPasswordAsyncTask();
+                            deneme.execute(user_name, new_password);
+                            changeConfirmed();
+                    } else {
+                        changeFailed();
                     }
-                } else {
-                    changeFailed();
+                }else{
+                    matchFailed();
                 }
 
             }
         });
 
 
-
     }
+
     public class changeUserPasswordAsyncTask extends AsyncTask<String, String, String> {
 
 
@@ -60,7 +63,7 @@ public class ChangePassword extends AppCompatActivity {
 
             Log.d("test", "doInBackground: parametre >> " + dizi[0]);
 
-            return ServiceManager.changeUserPassword(dizi[0],dizi[1] );
+            return ServiceManager.changeUserPassword(dizi[0], dizi[1]);
         }
 
         @Override
@@ -76,6 +79,7 @@ public class ChangePassword extends AppCompatActivity {
 
 
     }
+
     public boolean isValidPassword(final String password) {
 
         Pattern pattern;
@@ -87,6 +91,7 @@ public class ChangePassword extends AppCompatActivity {
         return matcher.matches();
 
     }
+
     public void changeFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(ChangePassword.this);
         builder.setMessage("Your password should be 8 character long and should contain at least one special character and number ");
@@ -96,6 +101,7 @@ public class ChangePassword extends AppCompatActivity {
         });
         builder.show();
     }
+
     public void changeConfirmed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(ChangePassword.this);
         builder.setMessage("Password Confirmed");
@@ -106,4 +112,13 @@ public class ChangePassword extends AppCompatActivity {
         builder.show();
     }
 
+    public void matchFailed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(ChangePassword.this);
+        builder.setMessage("Your password should match");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+        builder.show();
+    }
 }
