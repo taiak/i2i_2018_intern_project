@@ -6,10 +6,26 @@
     android:layout_height="match_parent"
     tools:context="com.example.zeynep.cell2i.InvoicesPage">
 
+<LinearLayout
+    android:orientation="horizontal"
+    android:background="#118f17"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="INVOICES"
+    android:textColor="#FFFF"
+    android:textSize="25dp"
+   android:layout_marginLeft="130dp"
+    android:layout_gravity="center"
 
+    />
+</LinearLayout>
 
 
     <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="60dp"
         android:id="@+id/recyclerView"
         android:layout_width="383dp"
         android:layout_height="510dp"
