@@ -59,8 +59,6 @@ public class HomePage extends Activity {
 
             Log.d("test", "doInBackground: parametre >> " + dizi[0]);
 
-
-
             return ServiceManager.getUsername().toString();
         }
 
