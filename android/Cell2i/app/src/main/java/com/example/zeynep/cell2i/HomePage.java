@@ -56,6 +56,20 @@ public class HomePage extends Activity {
 
 
 
+<<<<<<< HEAD
+            Log.d("test", "doInBackground: parametre >> " + dizi[0]);
+
+            return ServiceManager.getUsername().toString();
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+
+            fullname.setText( s);
+
+        }
+=======
+>>>>>>> 1d5b966eb6eb62132e8ef69fa35344f1b8088250
     }
 
 
