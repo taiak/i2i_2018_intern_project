@@ -24,7 +24,6 @@
 </LinearLayout>
 
 
-<<<<<<< HEAD
     <android.support.v7.widget.RecyclerView
 
         android:layout_marginTop="60dp"
@@ -37,9 +36,7 @@
         tools:layout_editor_absoluteX="0dp">
 
     </android.support.v7.widget.RecyclerView>
-=======
 
->>>>>>> 2b682d3c9be89e4b0cb3671deb7d02766976c30c
 
     <ImageView
         android:id="@+id/imageView4"
