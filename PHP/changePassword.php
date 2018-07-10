@@ -4,15 +4,6 @@ ob_start();
 
 require('classSystem.php');
 
-$abc = "HASAN.1_";
-$b = ".";
-$string = "foo";
-
-echo preg_match('/[\'^£$%&*()}{@#~?.><>,|=_+¬-]/', $string);
-
-
-echo 'STRPOS -> '.strrpos($abc,$b);
-
 if($_SESSION){
 	header('Location:index.php');
 }else{
@@ -68,8 +59,9 @@ if($_SESSION){
 						<?php 
 							if($_POST){
 								$MSISDN = $_POST['MSISDN'];
-								$Password = $_POST['Password'];		
-								echo $cell2i->UserLogin($MSISDN,$Password);
+								$Password = $_POST['Password'];	
+								$confirmPassword = $_POST['confirmPassword'];
+								echo $cell2i->changePassword($MSISDN,$Password,$confirmPassword);
 							}
 							?>
 					</div>
