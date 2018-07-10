@@ -5,6 +5,7 @@ import android.util.Log;
 
 import static com.example.zeynep.cell2i.HomePage.fullname;
 import static com.example.zeynep.cell2i.HomePage.no;
+import static com.example.zeynep.cell2i.HomePage.sumsms;
 import static com.example.zeynep.cell2i.HomePage.tariff;
 
 /**
@@ -23,12 +24,14 @@ public class Task {
         protected void onPostExecute(String s) {
 
             if (s != null) {
-                fullname.setText(s);
+                String[] separated = s.split("_");
+                fullname.setText(separated[1] + " " + separated[2]);
+                no.setText(separated[0]);
 
             }
         }
     }
-    public static class getUserTariffNameTask extends AsyncTask<String, String, String> {
+    public static class getUserTariffInfoTask extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... dizi) {
             Log.d("test", "doInBackground: parametre >> " + dizi[0]);
@@ -39,24 +42,32 @@ public class Task {
         protected void onPostExecute(String s) {
 
             if (s != null) {
-                tariff.setText(s);
+                String[] separated = s.split("_");
+                tariff.setText(separated[0]);
+                sumsms.setText(separated[3]);
 
             }
         }
     }
-    public static class getMsisdnTask extends AsyncTask<String, String, String> {
+
+
+    public static class getUsageInfoTask extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... dizi) {
             Log.d("test", "doInBackground: parametre >> " + dizi[0]);
-            return ServiceManager.getUserTariffBySubmsisdn(dizi[0]);
+            return ServiceManager.getUserTariffName(dizi[0]);
         }
 
         @Override
         protected void onPostExecute(String s) {
 
-            if(s != null)
-                no.setText(s);
+            if (s != null) {
+                String[] separated = s.split("_");
 
+
+
+            }
         }
     }
+
 }

@@ -48,10 +48,9 @@ public class MainActivity extends AppCompatActivity {
                     login.execute(username, password);
                    Task.getUsernameTask textusername = new Task.getUsernameTask();
                     textusername.execute(username);
-                   Task.getUserTariffNameTask texttariff = new Task.getUserTariffNameTask();
+                   Task.getUserTariffInfoTask texttariff = new Task.getUserTariffInfoTask();
                    texttariff.execute(username);
-                   Task.getMsisdnTask msisdn = new Task.getMsisdnTask();
-                   msisdn.equals(username);
+
                 } else if (username.isEmpty() || password.isEmpty()) {
                     emptyFailed();
                 }
