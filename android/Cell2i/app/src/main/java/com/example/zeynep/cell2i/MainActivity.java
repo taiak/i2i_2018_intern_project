@@ -1,17 +1,19 @@
 package com.example.zeynep.cell2i;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,19 +38,16 @@ public class MainActivity extends AppCompatActivity {
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
-
-
-                if (!username.isEmpty() && !password.isEmpty()) {
-
-                    SubScribe.LoginAsyncTask login = new SubScribe.LoginAsyncTask();
+                if (isConnectionNetwork()==false){
+                    connectionFailed();
+                } else if (!username.isEmpty() && !password.isEmpty()) {
+                  LoginAsyncTask login = new LoginAsyncTask();
                     login.execute(username, password);
-                } else if (username.isEmpty()) {
-                    emptyUsernameFailed();
-                } else if (password.isEmpty()) {
-                    emptyPasswordFailed();
-
+                } else if (username.isEmpty() || password.isEmpty()) {
+                    emptyFailed();
                 }
 
             }
@@ -64,9 +63,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
-
 
     //** login thread bsalangıc
     public class LoginAsyncTask extends AsyncTask<String, String, String> {
@@ -95,12 +91,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     //** login thread sonu
-
-
     public void loginFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Login Failed");
-        builder.setMessage("Please check your username and password");
+        builder.setMessage("Please check your phone number and password then try again");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
             }
@@ -108,35 +102,38 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-    public void emptyUsernameFailed() {
+    public void emptyFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-        builder.setMessage("Username is empty");
+         builder.setTitle("Login Failed");
+        builder.setMessage("Fields can not be blank");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-
             }
         });
         builder.show();
     }
 
-    public void emptyPasswordFailed() {
+    public void connectionFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-        builder.setMessage("Password is empty");
+        builder.setTitle("Connection Failed");
+        builder.setMessage("Please check your network connection and try again");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-
             }
         });
         builder.show();
-
     }
 
+    boolean isConnectionNetwork() {
+        ConnectivityManager conMgr = (ConnectivityManager) getSystemService (Context.CONNECTIVITY_SERVICE);
 
+        if (conMgr.getNetworkInfo(0).getState() == NetworkInfo.State.DISCONNECTED )
+         {
+            return false;
+        } else {
+            return true;
+        }
 
-
-
-
+    }
 }
 

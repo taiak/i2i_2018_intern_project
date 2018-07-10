@@ -1,14 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.zeynep.cell2i.HomePage">
 
-    <TextView
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#EDEDED"
+
+        android:id="@+id/linearLayout2"
+        android:layout_width="450dp">
+
+        <Button
+            android:layout_marginLeft="25dp"
+            android:id="@+id/home_page"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:background="@drawable/message"
+            />
+
+        <Button
+            android:id="@+id/gift"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:background="@drawable/gift"
+            android:layout_marginLeft="35dp" />
+
+        <Button
+            android:id="@+id/invoices"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:background="@drawable/coins"
+            android:layout_marginLeft="35dp" />
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+           android:background="@drawable/cikis"
+            android:layout_marginLeft="35dp"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        >
+        <ImageView
+            android:layout_marginRight="4dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/usericon"/>
+        <TextView
 
-        android:text="@string/welcome"/>
-</android.support.constraint.ConstraintLayout>
+            android:gravity="bottom"
+
+            android:layout_marginLeft="8dp"
+            android:textColor="#111111"
+            android:textSize="20dp"
+            android:id="@+id/name"
+            android:layout_width="200dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="115dp"
+        >
+        <ImageView
+            android:layout_marginRight="2dp"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/cellicon"/>
+
+        <TextView
+            android:textSize="20dp"
+            android:gravity="bottom"
+            android:text="Telno gelecek"
+            android:id="@+id/telno"
+            android:layout_marginLeft="8dp"
+            android:textColor="#111111"
+            android:layout_width="200dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"
+        android:id="@+id/linearLayout3">
+        <ImageView
+            android:layout_marginRight="2dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/star"/>
+
+        <TextView
+            android:textSize="20dp"
+            android:gravity="bottom"
+            android:text="tarife gelecek"
+            android:layout_marginLeft="8dp"
+            android:textColor="#111111"
+            android:id="@+id/tarife"
+            android:layout_width="200dp"
+            android:layout_height="35dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/imageView4" />
+
+
+
+    <ProgressBar
+    android:layout_marginTop="260dp"
+    style="?android:attr/progressBarStyleHorizontal"
+    android:id="@+id/kalandk"
+    android:background="#118f17"
+    android:layout_width="350dp"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content"
+    />
+
+    <ProgressBar
+        android:layout_marginTop="330dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/kalanint"
+        android:background="#118f17"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        />
+
+    <ProgressBar
+        android:layout_marginTop="400dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/kalansms"
+        android:background="#118f17"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        />
+
+
+
+</RelativeLayout>
+
+
