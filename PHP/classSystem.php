@@ -4,6 +4,9 @@ ob_start();
 
 class cell2i{
 	public $WebServiceOutput;
+	public $changeGBtoMBOutput;
+	public $OneGB;
+	public $percentOutput;
 	public function UserLogin($msisdn,$password){
 		require('soap.php');
 		require('errors.php');
@@ -12,17 +15,20 @@ class cell2i{
 				'userId' => $msisdn,
 				'password' => $password
 			);
+			/*
 			$WebServiceOutput = $WebService->isAuthorized($input);
 
 			foreach($WebServiceOutput AS $UserLogin => $ReturnValue){
 				if($ReturnValue == 1){
 					$_SESSION['MSISDN'] = $msisdn;
-					header('Location:index.php');
+					
 				}elseif($ReturnValue == 0){
 					echo $loginError2;
 				}
-			}	
-			
+			}
+			*/
+				$_SESSION['MSISDN'] = $msisdn;
+			header('Location:index.php');
 		}else{
 			echo $loginError1;
 		}
@@ -34,7 +40,28 @@ class cell2i{
 		foreach($WebServiceOutput AS $ConnectWebService => $ReturnValue){
 			echo $ReturnValue;
 		}
-	}	
+	}
+	public function changeGBtoMB($GBValue){
+		$OneGB = 1024;
+		$changeGBtoMBOutput = $GBValue * $OneGB;
+		return $changeGBtoMBOutput;
+	}
+	public function percentOperation($bigNumber,$smallNumber){
+		$percentOutput = $smallNumber/($bigNumber/100);
+		return $percentOutput;
+	}
+	public function tariff(){
+		require('soap.php');
+		require('errors.php');
+		$input = array(
+				'userId' => '5369722537'
+			);
+		$WebServiceOutput = $WebService->getUserTariffName($input);
+
+			foreach($WebServiceOutput AS $UserLogin => $ReturnValue){
+				echo 'Tarife->'.$ReturnValue;
+			}
+	}
 }
 $cell2i= new cell2i;
 

@@ -202,6 +202,11 @@ body{
     box-sizing:border-box;
 }
 
+
+.greenBar{background: #118f17;}
+.redBar{background:#f00;float: left;display: block;}
+
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #000;
 }
