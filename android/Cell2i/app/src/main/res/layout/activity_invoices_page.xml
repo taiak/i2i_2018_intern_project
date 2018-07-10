@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
-        
+
     </android.support.v7.widget.RecyclerView>
 
     <ImageView
