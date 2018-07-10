@@ -4,9 +4,7 @@ package com.example.zeynep.cell2i;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Paint;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,7 +12,9 @@ import android.widget.TextView;
 
 public class HomePage extends Activity {
 
-    TextView fullname, no, recipe;
+    static TextView fullname;
+    static TextView no;
+    static TextView tariff;
     Button exit;
     Button invoices;
 
@@ -27,10 +27,15 @@ public class HomePage extends Activity {
         invoices = (Button) findViewById(R.id.invoices);
         fullname = (TextView) findViewById(R.id.name);
         no = (TextView) findViewById(R.id.telno);
-        recipe = (TextView) findViewById(R.id.tarife);
+        tariff = (TextView) findViewById(R.id.tarife);
         fullname.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
         no.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
-        recipe.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+        tariff.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+
+
+
+
+
 
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,26 +55,8 @@ public class HomePage extends Activity {
 
 
 
+
     }
-    public class getUsernameTask extends AsyncTask<String, String, String> {
-        @Override
-        protected String doInBackground(String... dizi) {
 
-
-
-            Log.d("test", "doInBackground: parametre >> " + dizi[0]);
-
-
-
-            return ServiceManager.getUsername().toString();
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-
-            fullname.setText( s);
-
-        }
-    }
 
 }
