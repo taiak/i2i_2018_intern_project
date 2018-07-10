@@ -80,9 +80,9 @@ public class ServiceManager {
 
     public static String getUsername(String username){
         String returnedData = ""; //metoddan gelen değer
-        String METHOD_NAME = "getUserName";
+        String METHOD_NAME = "getUserInfo";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getUserName";
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getUserInfo";
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
 
@@ -110,9 +110,9 @@ public class ServiceManager {
 
     public static String getUserTariffName(String username){
         String returnedData = ""; //metoddan gelen değer
-        String METHOD_NAME = "getUserTariffName";
+        String METHOD_NAME = "getTariffInfo";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getUserTariffName";
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getTariffInfo";
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
 
@@ -136,11 +136,12 @@ public class ServiceManager {
 
         return returnedData;
     }
-    public static String getUserTariffBySubmsisdn(String username){
+
+    public static String getUsageInfo(String username){
         String returnedData = ""; //metoddan gelen değer
-        String METHOD_NAME = "getUserTariffIdBySubmsisdn";
+        String METHOD_NAME = "getUsageInfo";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getUserTariffIdBySubmsisdn";
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/"+METHOD_NAME;
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
 
