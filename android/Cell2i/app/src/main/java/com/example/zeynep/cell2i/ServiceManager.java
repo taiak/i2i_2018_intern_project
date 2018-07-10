@@ -78,17 +78,20 @@ public class ServiceManager {
         return returnedData;
     }
 
-    public static String getUsername(){
+    public static String getUsername(String username){
         String returnedData = ""; //metoddan gelen değer
-        String METHOD_NAME = "getUsername";
+        String METHOD_NAME = "getUserName";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getUsername";
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getUserName";
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
-<<<<<<< HEAD
+
         soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
+
         soapSerializationEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapSerializationEnvelope.setOutputSoapObject(soapObject);
+
+        soapObject.addProperty("username", username);
         httpTransportSE = new HttpTransportSE(URL);
         httpTransportSE.debug = true;
         try {
@@ -100,10 +103,66 @@ public class ServiceManager {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-=======
->>>>>>> ced1e607b2d9ee461402c091a83921580fe6081f
+
         return returnedData;
     }
 
+
+    public static String getUserTariffName(String username){
+        String returnedData = ""; //metoddan gelen değer
+        String METHOD_NAME = "getUserTariffName";
+        String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getUserTariffName";
+        String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
+
+
+        soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
+
+        soapSerializationEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+        soapSerializationEnvelope.setOutputSoapObject(soapObject);
+
+        soapObject.addProperty("username", username);
+        httpTransportSE = new HttpTransportSE(URL);
+        httpTransportSE.debug = true;
+        try {
+            httpTransportSE.call(SOAP_ACTION, soapSerializationEnvelope);
+            SoapPrimitive soapPrimitive = (SoapPrimitive) soapSerializationEnvelope.getResponse();
+
+            returnedData = soapPrimitive.toString(); //async e gitmesini sağlar
+            System.out.println(soapPrimitive.toString());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return returnedData;
+    }
+    public static String getUserTariffBySubmsisdn(String username){
+        String returnedData = ""; //metoddan gelen değer
+        String METHOD_NAME = "getUserTariffIdBySubmsisdn";
+        String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getUserTariffIdBySubmsisdn";
+        String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
+
+
+        soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
+
+        soapSerializationEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+        soapSerializationEnvelope.setOutputSoapObject(soapObject);
+
+        soapObject.addProperty("username", username);
+        httpTransportSE = new HttpTransportSE(URL);
+        httpTransportSE.debug = true;
+        try {
+            httpTransportSE.call(SOAP_ACTION, soapSerializationEnvelope);
+            SoapPrimitive soapPrimitive = (SoapPrimitive) soapSerializationEnvelope.getResponse();
+
+            returnedData = soapPrimitive.toString(); //async e gitmesini sağlar
+            System.out.println(soapPrimitive.toString());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return returnedData;
+    }
 
 }

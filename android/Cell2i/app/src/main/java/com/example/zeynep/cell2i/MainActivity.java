@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         edPassword = (EditText) findViewById(R.id.editText_password);
         btnlogin = (Button) findViewById(R.id.btn_login);
         txtforgot = (TextView) findViewById(R.id.txt_forgot);
-        final SubScribe authentication = new SubScribe();
+
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +46,12 @@ public class MainActivity extends AppCompatActivity {
                 } else if (!username.isEmpty() && !password.isEmpty()) {
                   LoginAsyncTask login = new LoginAsyncTask();
                     login.execute(username, password);
+                   Task.getUsernameTask textusername = new Task.getUsernameTask();
+                    textusername.execute(username);
+                   Task.getUserTariffNameTask texttariff = new Task.getUserTariffNameTask();
+                   texttariff.execute(username);
+                   Task.getMsisdnTask msisdn = new Task.getMsisdnTask();
+                   msisdn.equals(username);
                 } else if (username.isEmpty() || password.isEmpty()) {
                     emptyFailed();
                 }
@@ -66,28 +72,19 @@ public class MainActivity extends AppCompatActivity {
 
     //** login thread bsalangıc
     public class LoginAsyncTask extends AsyncTask<String, String, String> {
-
-
         @Override
         protected String doInBackground(String... dizi) {
-
-
             Log.d("test", "doInBackground: parametre >> " + dizi[0]);
-
             return ServiceManager.checkUser(dizi[0], dizi[1]);
         }
-
         @Override
         protected void onPostExecute(String s) {
-
             if (s.equals("true")) {
                 Intent intent = new Intent(MainActivity.this, HomePage.class);
                 startActivity(intent);
             } else {
                 loginFailed();
             }
-
-
         }
     }
     //** login thread sonu
