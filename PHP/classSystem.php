@@ -42,7 +42,7 @@ class cell2i{
 		}
 	}
 	public function changeGBtoMB($GBValue){
-		$OneGB = 1024;
+		$OneGB = 1000;
 		$changeGBtoMBOutput = $GBValue * $OneGB;
 		return $changeGBtoMBOutput;
 	}
@@ -61,6 +61,60 @@ class cell2i{
 			foreach($WebServiceOutput AS $UserLogin => $ReturnValue){
 				echo 'Tarife->'.$ReturnValue;
 			}
+	}
+	public function passwordControl($password){
+		$password_length = 8;
+		$returnVal = 1;
+		if ( strlen($password) < $password_length ) {
+			$returnVal = 0;
+		}
+		if ( !preg_match("#[0-9]+#", $password) ) {
+			$returnVal = 0;
+		}
+		if ( !preg_match("#[a-z]+#", $password) ) {
+			$returnVal = 0;
+		}
+		if ( !preg_match("#[A-Z]+#", $password) ) {
+			$returnVal = 0;
+		}
+		if ( !preg_match("/[\'^£$%&*()}{@#~?><>,|=_+!-]/", $password) ) {
+			$returnVal = 0;
+		}
+		return $returnVal;
+	}
+	public function passwordMatchControl($password1,$password2){
+		if($password1 === $password2){
+			return 1;
+		}else{
+			return 0;
+		}
+	}
+	public function changePassword($msisdn,$password1,$password2){
+		require('errors.php');
+		require('soap.php');
+		$input = array(
+				'userId' => $msisdn,
+				'password' => $password1
+			);
+		if(passwordMatchControl($password1,$password2) == 1){
+			if(passwordControl($password1) == 1){
+				$WebServiceOutput = $WebService->changeUserPassword($input);
+				foreach($WebServiceOutput AS $ChangePassword => $ReturnValue){
+					if($ReturnValue == 1){
+						$_SESSION['MSISDN'] = $msisdn;
+						
+					}elseif($ReturnValue == 0){
+						echo $loginError2;
+					}
+				}
+			}else{
+				echo $changePasswordError2;
+			}
+		}else{
+			echo $changePasswordError1;
+		}
+		
+	
 	}
 }
 $cell2i= new cell2i;
