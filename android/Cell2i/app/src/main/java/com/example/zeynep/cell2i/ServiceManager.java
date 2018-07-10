@@ -45,7 +45,6 @@ public class ServiceManager {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
         return returnedData;
 
     }
@@ -84,7 +83,6 @@ public class ServiceManager {
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
         String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/getUserInfo";
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
-
 
         soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
 
@@ -162,7 +160,6 @@ public class ServiceManager {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
         return returnedData;
     }
 
