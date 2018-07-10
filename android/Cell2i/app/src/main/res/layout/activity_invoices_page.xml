@@ -25,6 +25,7 @@
 
 
     <android.support.v7.widget.RecyclerView
+
         android:layout_marginTop="60dp"
         android:id="@+id/recyclerView"
         android:layout_width="383dp"
@@ -33,7 +34,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
-
+        
     </android.support.v7.widget.RecyclerView>
 
     <ImageView
