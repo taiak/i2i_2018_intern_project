@@ -66,7 +66,7 @@
         <TextView
 
             android:gravity="bottom"
-            android:text="isim soyisim gelecek"
+
             android:layout_marginLeft="8dp"
             android:textColor="#111111"
             android:textSize="20dp"

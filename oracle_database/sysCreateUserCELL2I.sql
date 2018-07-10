@@ -8,5 +8,8 @@
  select * from v$session where username= 'CELL2I';
  DROP USER CELL2I;
  /
+ CREATE USER cell2iweb identified by cell2i;
+ GRANT CONNECT TO cell2iweb;
+/
 
  

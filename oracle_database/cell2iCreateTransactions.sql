@@ -1,8 +1,8 @@
 CREATE INDEX subID_idx
 ON subscriber (sub_id);
 /
-COMMENT ON COLUMN subscriber.sub_id 
-   IS 'this column is referred to mobile subscriber identification number.';
+COMMENT ON COLUMN subscriber.msisdn
+IS 'this column is referred to mobile subscriber identification number.';
 /
 CREATE SEQUENCE subscriber_seq
 START WITH 1
