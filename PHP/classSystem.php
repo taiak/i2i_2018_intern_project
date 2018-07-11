@@ -22,13 +22,13 @@ class cell2i{
 			foreach($WebServiceOutput AS $UserLogin => $ReturnValue){
 				if($ReturnValue == 1){
 					$_SESSION['MSISDN'] = $msisdn;
-					
-				}elseif($ReturnValue == 0){
+					header('Location:index.php');
+				}else{
 					echo $loginError2;
 				}
 			}
 			
-			header('Location:index.php');
+
 		}else{
 			echo $loginError1;
 		}

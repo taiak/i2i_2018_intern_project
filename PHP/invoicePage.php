@@ -7,7 +7,7 @@ require('classSystem.php');
 
 if($_SESSION){
 	
-	$InvoiceArray = $cell2i->invoiceBlock($_SESSION['MSISDN'],5);
+	$InvoiceArray = $cell2i->invoiceBlock($_SESSION['MSISDN'],6);
 	
 	?>
 	<html>
