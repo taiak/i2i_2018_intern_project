@@ -52,6 +52,7 @@ public class Task {
                 summin.setText(tariffinfo[1]+" DK");
                 sumsms.setText(tariffinfo[3]+" SMS");
 
+
             }
         }
     }
