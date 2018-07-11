@@ -12,31 +12,21 @@ if($_SESSION){
 	$defaultPhoneX = " XXX XX XX";
 	$userPhone = substr($userInfo[0],0,3).$defaultPhoneX;
 	$tariffInfo = $cell2i->tariffInfo($_SESSION['MSISDN']);
-	if(!empty($tariffInfo)){
+	
 		$userTariff = $tariffInfo[0];
-		$GBLimit = $tariffInfo[1];
-		$MinuteLimit = $tariffInfo[2];
-		$SMSLimit = $tariffInfo[3];
-	}
-	if(!empty($userTariff)){
-		$tariffUsage = $cell2i->tariffUsage($_SESSION['MSISDN'],$userTariff);
-	}
-	if(!empty($tariffUsage)){
-		if(!empty($tariffUsage[1])){$usableMB = $tariffUsage[1];}else{$usableMB = 0;}
-		if(!empty($tariffUsage[2])){$usableMinute = $tariffUsage[2];}else{$usableMinute = 0;}
-		if(!empty($tariffUsage[3])){$usableSMS = $tariffUsage[3];}else{$usableSMS = 0;}
-	}
-	if(!empty($tariffInfo) && !empty($tariffUsage)){
-		$GBNewLimit = $cell2i->changeGBtoMB($GBLimit);
-		$usableMBPercent = $cell2i->percentOperation($GBNewLimit,$usableMB);
-		$usableMinutePercent = $cell2i->percentOperation($MinuteLimit,$usableMinute);
-		$usableSMSPercent = $cell2i->percentOperation($SMSLimit,$usableSMS);
-	}else{
-		$usableMBPercent = "ERROR";
-		$usableMinutePercent = "ERROR";
-		$usableSMSPercent = "ERROR";
-	}
+		$MBLimit = $tariffInfo[3];
+		$MinuteLimit = $tariffInfo[1];
+		$SMSLimit = $tariffInfo[2];
+		
+		$usableMB = $cell2i->tariffUsage($_SESSION['MSISDN'],'DATA');
+		$usableMinute = $cell2i->tariffUsage($_SESSION['MSISDN'],'VOICE');
+		$usableSMS = $cell2i->tariffUsage($_SESSION['MSISDN'],'SMS');
 
+		$GBLimit = $cell2i->changeMBtoGB($MBLimit);
+		$bbb = $cell2i->changeMBtoGB($usableMB[1]);
+		$usableMBPercent = $cell2i->percentOperation($GBLimit,$bbb);
+		$usableMinutePercent = $cell2i->percentOperation($MinuteLimit,$usableMinute[1]);
+		$usableSMSPercent = $cell2i->percentOperation($SMSLimit,$usableSMS[1]);
 
 	?>
 	<html>
@@ -106,7 +96,7 @@ if($_SESSION){
 							<div class="row">
 								<div class="col col-10 col-sm-12 greenBar lineHeight22">
 									<div class="row">
-										<div class="col redBar a-right lineHeight22" style="width:<?php echo $usableMBPercent;?>%"><?php echo $usableMB;?> MB</div>
+										<div class="col redBar a-right lineHeight22" style="width:<?php echo $usableMBPercent;?>%"><?php echo substr($bbb, 0,4);?> GB</div>
 									</div>
 								</div>
 							</div>

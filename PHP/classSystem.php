@@ -4,7 +4,7 @@ ob_start();
 
 class cell2i{
 	public $WebServiceOutput;
-	public $changeGBtoMBOutput;
+	public $changeMBtoGBOutput;
 	public $OneGB;
 	public $percentOutput;
 	public function UserLogin($msisdn,$password){
@@ -40,10 +40,10 @@ class cell2i{
 			echo $ReturnValue;
 		}
 	}
-	public function changeGBtoMB($GBValue){
+	public function changeMBtoGB($MBValue){
 		$OneGB = 1000;
-		$changeGBtoMBOutput = $GBValue * $OneGB;
-		return $changeGBtoMBOutput;
+		$changeMBtoGBOutput = $MBValue/$OneGB;
+		return $changeMBtoGBOutput;
 	}
 	public function percentOperation($bigNumber,$smallNumber){
 		$percentOutput = $smallNumber/($bigNumber/100);
@@ -62,12 +62,12 @@ class cell2i{
 			}
 			
 	}
-	public function tariffUsage($msisdn,$tariffType){
+	public function tariffUsage($msisdn,$infoType){
 		require('soap.php');
 		require('errors.php');
 		$input = array(
 				'userId' => $msisdn,
-				'infoType' => $tariffType
+				'infoType' => $infoType
 			);
 		$WebServiceOutput = $WebService->getUsageInfo($input);	
 			foreach($WebServiceOutput AS $getUsageInfo => $ReturnValue){
