@@ -120,7 +120,7 @@ color: #706f6f;
 }
 
 .Segoe{
-	font-family:'Segoe',sans-serif;
+	font-family:'Segoe UI', sans-serif
 }
 
 body{
@@ -275,6 +275,11 @@ body{
 
 
 @media screen and (min-width: 1001px) {
+	
+	.LoginLogo{ width:421px; height:134px;}
+	.LoginLogo2{ width:375px; height:201px;}
+	.LoginInput{ width:531px; height:51px; font-size:24px;}
+	.LoginBtn{ width:180px; height:40px; line-height:15px;}
 	
 .line-height20{ line-height:20px;}
 
