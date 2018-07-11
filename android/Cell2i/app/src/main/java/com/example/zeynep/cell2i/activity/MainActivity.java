@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = edPhoneNumber.getText().toString();
                 String password = edPassword.getText().toString();
+                username = "5318929025";
+                password ="rumo123.";
                 if (isConnectionNetwork() == false) {
                     connectionFailed();
                 } else if (!username.isEmpty() && !password.isEmpty()) {
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             if (s.equals("true")) {
 
-                SessionInfo.loggedUserPhoneNumber = edPhoneNumber.getText().toString();
+                SessionInfo.loggedUserPhoneNumber = "5318929025"; //edPhoneNumber.getText().toString();
 
                 Intent intent = new Intent(MainActivity.this, HomePage.class);
                 startActivity(intent);

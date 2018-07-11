@@ -153,13 +153,14 @@
             android:layout_marginTop="5dp"
             style="?android:attr/progressBarStyleHorizontal"
             android:progressDrawable="@drawable/progress_layer"
-            android:id="@+id/kalandk"
+            android:id="@+id/kalanint"
             android:background="@drawable/progress_layer"
             android:layout_width="350dp"
             android:layout_centerHorizontal="true"
-            android:layout_height="20dp"
+            android:layout_height="25dp"
             />
         <TextView
+            android:textSize="16dp"
             android:layout_marginTop="-22dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -193,12 +194,11 @@
         android:layout_marginTop="5dp"
         android:progressDrawable="@drawable/progress_layer"
         style="?android:attr/progressBarStyleHorizontal"
-        android:id="@+id/kalanint"
+        android:id="@+id/kalandk"
 
         android:layout_width="350dp"
         android:layout_centerHorizontal="true"
-        android:layout_height="20dp"
-        />
+        android:layout_height="25dp"        />
     <TextView
         android:layout_marginTop="-22dp"
         android:layout_width="wrap_content"
@@ -206,6 +206,7 @@
         android:text="ADVGHDGDF"
         android:textAlignment="center"
         android:gravity="center"
+        android:textSize="16dp"
         android:textColor="#FFFFFF"
         android:id="@+id/usagevoice"
         android:background="#00000000"/>
@@ -224,7 +225,7 @@
 
         <TextView
             android:textColor="#111"
-            android:layout_marginLeft="290dp"
+            android:layout_marginLeft="287dp"
             android:id="@+id/toplamsms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -238,10 +239,11 @@
             android:progressDrawable="@drawable/progress_layer"
             android:layout_width="350dp"
             android:layout_centerHorizontal="true"
-            android:layout_height="23dp"
+            android:layout_height="25dp"
 
             />
         <TextView
+            android:textSize="16dp"
             android:layout_marginTop="-22dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
