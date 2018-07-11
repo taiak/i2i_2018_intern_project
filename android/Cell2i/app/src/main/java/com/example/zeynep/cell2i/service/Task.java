@@ -48,4 +48,30 @@ public class Task {
         }
     }
 
+    public static class UsageVoiceAsyncTask extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... dizi) {
+            Log.d("test", "doInBackground: parametre >> " + dizi[0] + dizi[1]);
+            return ServiceManager.getUsageInfo(dizi[0], dizi[1]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            HomePage.onPostVoiceUsageInfo(result);
+        }
+    }
+
+    public static class UsageDataAsyncTask extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... dizi) {
+            Log.d("test", "doInBackground: parametre >> " + dizi[0] + dizi[1]);
+            return ServiceManager.getUsageInfo(dizi[0], dizi[1]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            HomePage.onPostDataUsageInfo(result);
+        }
+    }
+
 }
