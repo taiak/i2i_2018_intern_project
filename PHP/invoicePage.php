@@ -7,7 +7,7 @@ require('classSystem.php');
 
 if($_SESSION){
 	
-	var_dump($cell2i->invoiceBlock());
+	$InvoiceArray = $cell2i->invoiceBlock($_SESSION['MSISDN'],5);
 	
 	?>
 	<html>
@@ -27,86 +27,33 @@ if($_SESSION){
 <div class="box col-6 col-sm-12">
 	<div class="box col-12">
 		
+		<?php
+		foreach($InvoiceArray AS $Invoice){
+		?>
 		<div class="box col-12">
 		
 			<div class="box col-12 bg1">
 				<div class="col col-12">
 					<div class="row">
-						<div class="col col-12 lineHeight35 fsize20">MAY INVOICE</div>
+						<div class="col col-12 lineHeight35 fsize20"><?php echo $Invoice['invoiceMonth'];?> INVOICE</div>
 					</div>
 					<div class="row">
-						<div class="col col-12 lineHeight35 fsize16">Cost:858,45</div>
+						<div class="col col-12 lineHeight35 fsize16">Cost:<?php echo $Invoice['price'];?></div>
 					</div>
 					<div class="row">
-						<div class="col col-12 fsize16">Invoice date:28.05.2018</div>
+						<div class="col col-12 fsize16">Invoice date:<?php echo $Invoice['lastDate'];?></div>
 					</div>
 					<div class="row">
-						<div class="col col-12 lineHeight35 a-right fsize20">PAID</div>
+						<div class="col col-12 lineHeight35 a-right fsize20"><?php echo $Invoice['status'];?></div>
 					</div>
 				</div>
 			</div>
 	
 		</div>
-		<div class="box col-12">
-		
-		<div class="box col-12 bg1">
-			<div class="col col-12">
-				<div class="row">
-					<div class="col col-12 lineHeight35 fsize20">APRIL INVOICE</div>
-				</div>
-				<div class="row">
-					<div class="col col-12 lineHeight35 fsize16">Cost:858,45</div>
-				</div>
-				<div class="row">
-					<div class="col col-12 fsize16">Invoice date:28.04.2018</div>
-				</div>
-				<div class="row">
-					<div class="col col-12 lineHeight35 a-right fsize20">NOT PAID</div>
-				</div>
-			</div>
-		</div>
-		
-		</div>
-		<div class="box col-12">
-	
-		<div class="box col-12 bg1">
-			<div class="col col-12">
-				<div class="row">
-					<div class="col col-12 lineHeight35 fsize20">MARCH INVOICE</div>
-				</div>
-				<div class="row">
-					<div class="col col-12 lineHeight35 fsize16">Cost:858,45</div>
-				</div>
-				<div class="row">
-					<div class="col col-12 fsize16">Invoice date:28.03.2018</div>
-				</div>
-				<div class="row">
-					<div class="col col-12 lineHeight35 a-right fsize20">PAID</div>
-				</div>
-			</div>
-		</div>
-		
-		</div>
-		<div class="box col-12">
-	
-		<div class="box col-12 bg1">
-			<div class="col col-12">
-				<div class="row">
-					<div class="col col-12 lineHeight35 fsize20">FEBRUARY INVOICE</div>
-				</div>
-				<div class="row">
-					<div class="col col-12 lineHeight35 fsize16">Cost:858,45</div>
-				</div>
-				<div class="row">
-					<div class="col col-12 fsize16">Invoice date:28.02.2018</div>
-				</div>
-				<div class="row">
-					<div class="col col-12 lineHeight35 a-right fsize20">NOT PAID</div>
-				</div>
-			</div>
-		</div>
-		
-		</div>
+		<?php
+		}
+		?>
+
 	
 	</div>
 </div>

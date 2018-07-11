@@ -7,6 +7,7 @@ class cell2i{
 	public $changeMBtoGBOutput;
 	public $OneGB;
 	public $percentOutput;
+	public $valueFraction, $valueArray, $valueFractionOutput;
 	public function UserLogin($msisdn,$password){
 		require('soap.php');
 		require('errors.php');
@@ -48,6 +49,12 @@ class cell2i{
 	public function percentOperation($bigNumber,$smallNumber){
 		$percentOutput = $smallNumber/($bigNumber/100);
 		return $percentOutput;
+	}
+	public function fraction($value){
+		$valueArray = explode(".",$value);
+		$valueFraction = substr($valueArray[1],0,2);
+		$valueFractionOutput = $valueArray[0].'.'.$valueFraction;
+		return $valueFractionOutput;
 	}
 	public function tariffInfo($msisdn){
 		require('soap.php');
@@ -148,21 +155,56 @@ class cell2i{
 				}
 				
 	}
-	public function invoiceBlock(){
+	public function invoiceBlock($msisdn,$invoiceCount){
 		require('errors.php');
 		require('soap.php');
 		$input = array(
-				'userId' => '5369722537'
+				'userId' => $msisdn,
+				'invoiceCount' => $invoiceCount
 			);
 			$WebServiceOutput = $WebService->getInvoiceInfo($input);
+				
+				
 				foreach($WebServiceOutput AS $UserInfo => $ReturnValue){
-					if($ReturnValue){
-						$userInfoBlock = explode("_",$ReturnValue);
-						return $userInfoBlock;
-					}else{
-
-					}
+						if($ReturnValue){
+							$userInvoiceBlock = explode("@@",$ReturnValue);
+							for($i = 0; $i < $invoiceCount; $i++){
+								$userInvoiceArray = explode("_",$userInvoiceBlock[$i]);
+								
+								$invoiceFirstArray = explode("-",$userInvoiceArray[0]);
+								$invoiceMonth = $invoiceFirstArray[1];
+								
+								if($userInvoiceArray[3] == 0){
+									$invoiceStatus = "NOT PAID";
+								}elseif($userInvoiceArray[3] == 1){
+									$invoiceStatus = "PAID";
+								}
+								
+								$InvoiceArray = array(
+									$i => array(
+										'invoiceMonth' => $invoiceMonth,
+										'lastDate' => $userInvoiceArray[1],
+										'price' => $userInvoiceArray[2],
+										'status' => $invoiceStatus
+									)
+								);
+								
+								if(empty($InvoiceAllArray)){
+									$InvoiceAllArray = $InvoiceArray;
+								}else{
+									$InvoiceAllArray = array_merge($InvoiceAllArray, $InvoiceArray);
+								}
+								
+							}
+							
+							return $InvoiceAllArray;
+						}else{
+							return 0;
+						}
+					
+	
 				}
+				
 		
 		
 	}
