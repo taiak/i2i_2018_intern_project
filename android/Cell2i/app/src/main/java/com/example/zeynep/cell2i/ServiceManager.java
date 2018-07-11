@@ -19,11 +19,10 @@ public class ServiceManager {
     static HttpTransportSE httpTransportSE;
 
 
-
     public static String changeUserPassword(String username, String password) {
         String METHOD_NAME = "changeUserPassword"; //kullanıdıgız service metodu
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/"+METHOD_NAME;
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/" + METHOD_NAME;
         final String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
         String returnedData = "";
         soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
@@ -53,7 +52,7 @@ public class ServiceManager {
         String returnedData = ""; //metoddan gelen değer
         String METHOD_NAME = "isAuthorized";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/"+METHOD_NAME;
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/" + METHOD_NAME;
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
         soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
@@ -78,11 +77,11 @@ public class ServiceManager {
     }
 
 
-    public static String getUserInfo(String username){
+    public static String getUserInfo(String username) {
         String returnedData = ""; //metoddan gelen değer
         String METHOD_NAME = "getUserInfo";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/"+METHOD_NAME;
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/" + METHOD_NAME;
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
         soapObject = new SoapObject(NAMESPACE, METHOD_NAME);
@@ -107,11 +106,11 @@ public class ServiceManager {
     }
 
 
-    public static String getUserTariffName(String username){
+    public static String getUserTariffName(String username) {
         String returnedData = ""; //metoddan gelen değer
         String METHOD_NAME = "getTariffInfo";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/"+METHOD_NAME;
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/" + METHOD_NAME;
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
 
@@ -136,11 +135,11 @@ public class ServiceManager {
         return returnedData;
     }
 
-    public static String getUsageInfo(String username,String info){
+    public static String getUsageInfo(String username, String info) {
         String returnedData = ""; //metoddan gelen değer
         String METHOD_NAME = "getUsageInfo";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
-        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/"+METHOD_NAME;
+        String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/" + METHOD_NAME;
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
 
 
@@ -149,7 +148,7 @@ public class ServiceManager {
         soapSerializationEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapSerializationEnvelope.setOutputSoapObject(soapObject);
 
-        soapObject.addProperty("info",info);
+        soapObject.addProperty("info", info);
         soapObject.addProperty("username", username);
         httpTransportSE = new HttpTransportSE(URL);
         httpTransportSE.debug = true;

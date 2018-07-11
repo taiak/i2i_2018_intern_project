@@ -15,11 +15,11 @@ import android.widget.TextView;
 
 public class HomePage extends Activity {
 
-    static TextView fullname,no,tariff;
+    static TextView fullname, no, tariff;
     static TextView sumint, summin, sumsms;
 
-    Button exit,invoices;
-    ProgressBar usagevoice,usagesms,usagedata;
+    Button exit, invoices;
+    static ProgressBar usagevoice, usagesms, usagedata;
 
 
     @Override
@@ -35,16 +35,14 @@ public class HomePage extends Activity {
         no.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
         tariff.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
 
-        usagevoice =(ProgressBar) findViewById(R.id.kalandk);
-        usagesms=(ProgressBar) findViewById(R.id.kalansms);
-        usagedata=(ProgressBar) findViewById(R.id.kalanint);
+        usagevoice = (ProgressBar) findViewById(R.id.kalandk);
+        usagesms = (ProgressBar) findViewById(R.id.kalansms);
+        usagedata = (ProgressBar) findViewById(R.id.kalanint);
 
 
-        usagevoice.getProgressDrawable().setColorFilter(
-                Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
-        sumint = (TextView)findViewById(R.id.toplamint);
-        summin = (TextView)findViewById(R.id.toplamdk);
-        sumsms = (TextView)findViewById(R.id.toplamsms);
+        sumint = (TextView) findViewById(R.id.toplamint);
+        summin = (TextView) findViewById(R.id.toplamdk);
+        sumsms = (TextView) findViewById(R.id.toplamsms);
 
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,11 +60,10 @@ public class HomePage extends Activity {
         });
 
 
-        }
-
-
-
     }
+
+
+}
 
 
 

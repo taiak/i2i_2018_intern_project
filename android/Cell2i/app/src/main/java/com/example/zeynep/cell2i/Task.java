@@ -26,13 +26,14 @@ public class Task {
         protected void onPostExecute(String s) {
 
 
-                String[] userinfo = s.split("_");
-                fullname.setText(userinfo[1] + " " + userinfo[2]);
-                no.setText(userinfo[0]);
+            String[] userinfo = s.split("_");
+            fullname.setText(userinfo[1] + " " + userinfo[2]);
+            no.setText(userinfo[0]);
 
 
         }
     }
+
     public static class getUserTariffInfoTask extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... dizi) {
@@ -41,19 +42,20 @@ public class Task {
         }
 
         @Override
-        protected void onPostExecute(String s) {
+        public void onPostExecute(String s) {
+            String[] tariffinfo = s.split("_");
+            tariff.setText(tariffinfo[0]);
+            int data = Integer.parseInt(tariffinfo[3]);
+            data = data / 1000;
+            sumint.setText(tariffinfo[3] + " GB");
+            summin.setText(tariffinfo[1] + " DK");
+            int sms = Integer.parseInt(tariffinfo[2]);
+            sumsms.setText(tariffinfo[2] + " SMS");
+            HomePage.usagesms.setMax(sms);
+            int usage = 2000;
+            int usagesms = sms - usage;
+            HomePage.usagesms.setProgress(usagesms);
 
-            if (s != null) {
-                String[] tariffinfo = s.split("_");
-                tariff.setText(tariffinfo[0]);
-                int data = Integer.parseInt(tariffinfo[2]);
-                data = data/1000;
-                sumint.setText(data+" GB");
-                summin.setText(tariffinfo[1]+" DK");
-                sumsms.setText(tariffinfo[3]+" SMS");
-
-
-            }
         }
     }
 
@@ -62,7 +64,7 @@ public class Task {
         @Override
         protected String doInBackground(String... dizi) {
             Log.d("test", "doInBackground: parametre >> " + dizi[0]);
-            return ServiceManager.getUsageInfo(dizi[0],dizi[1]);
+            return ServiceManager.getUsageInfo(dizi[0], dizi[1]);
         }
 
         @Override
