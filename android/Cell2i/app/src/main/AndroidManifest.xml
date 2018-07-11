@@ -13,16 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomePage" />
-        <activity android:name=".ChangePassword" />
-        <activity android:name=".InvoicesPage"></activity>
+        <activity android:name=".activity.HomePage" />
+        <activity android:name=".activity.ChangePassword" />
+        <activity android:name=".activity.InvoicesPage"></activity>
     </application>
 
 </manifest>

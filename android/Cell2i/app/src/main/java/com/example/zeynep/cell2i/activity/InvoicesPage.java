@@ -1,7 +1,9 @@
-package com.example.zeynep.cell2i;
+package com.example.zeynep.cell2i.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.zeynep.cell2i.R;
 
 public class InvoicesPage extends AppCompatActivity {
 

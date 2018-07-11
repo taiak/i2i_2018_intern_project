@@ -1,4 +1,4 @@
-package com.example.zeynep.cell2i;
+package com.example.zeynep.cell2i.activity;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -15,62 +15,51 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.zeynep.cell2i.R;
+import com.example.zeynep.cell2i.service.ServiceManager;
+import com.example.zeynep.cell2i.session.SessionInfo;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnlogin;
-    EditText edUsername;
+    Button btnLogin;
+    EditText edPhoneNumber;
     EditText edPassword;
-    TextView txtforgot;
+    TextView txtForgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        edUsername = (EditText) findViewById(R.id.editText_username);
+        edPhoneNumber = (EditText) findViewById(R.id.editText_username);
         edPassword = (EditText) findViewById(R.id.editText_password);
-        btnlogin = (Button) findViewById(R.id.btn_login);
-        txtforgot = (TextView) findViewById(R.id.txt_forgot);
+        btnLogin = (Button) findViewById(R.id.btn_login);
+        txtForgot = (TextView) findViewById(R.id.txt_forgot);
 
-
-        btnlogin.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String username = edUsername.getText().toString();
+                String username = edPhoneNumber.getText().toString();
                 String password = edPassword.getText().toString();
                 if (isConnectionNetwork() == false) {
                     connectionFailed();
                 } else if (!username.isEmpty() && !password.isEmpty()) {
                     LoginAsyncTask login = new LoginAsyncTask();
                     login.execute(username, password);
-                    Task.getUserInfoTask textusername = new Task.getUserInfoTask();
-                    textusername.execute(username);
-                    Task.getUserTariffInfoTask texttariff = new Task.getUserTariffInfoTask();
-                    texttariff.execute(username);
-
-
-                } else if (username.isEmpty() || password.isEmpty()) {
+                } else  {
                     emptyFailed();
                 }
-
             }
         });
-
-
-        txtforgot.setOnClickListener(new View.OnClickListener() {
+        txtForgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ChangePassword.class);
                 startActivity(intent);
             }
         });
-
     }
 
-    //** login thread bsalangıc
     public class LoginAsyncTask extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... dizi) {
@@ -81,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             if (s.equals("true")) {
+
+                SessionInfo.loggedUserPhoneNumber = edPhoneNumber.getText().toString();
+
                 Intent intent = new Intent(MainActivity.this, HomePage.class);
                 startActivity(intent);
             } else {
@@ -89,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //** login thread sonu
     public void loginFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Login Failed");
