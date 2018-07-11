@@ -5,6 +5,8 @@ import android.util.Log;
 
 import static com.example.zeynep.cell2i.HomePage.fullname;
 import static com.example.zeynep.cell2i.HomePage.no;
+import static com.example.zeynep.cell2i.HomePage.sumint;
+import static com.example.zeynep.cell2i.HomePage.summin;
 import static com.example.zeynep.cell2i.HomePage.sumsms;
 import static com.example.zeynep.cell2i.HomePage.tariff;
 
@@ -13,22 +15,22 @@ import static com.example.zeynep.cell2i.HomePage.tariff;
  */
 
 public class Task {
-    public static class getUsernameTask extends AsyncTask<String, String, String> {
+    public static class getUserInfoTask extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... dizi) {
             Log.d("test", "doInBackground: parametre >> " + dizi[0]);
-            return ServiceManager.getUsername(dizi[0]);
+            return ServiceManager.getUserInfo(dizi[0]);
         }
 
         @Override
         protected void onPostExecute(String s) {
 
-            if (s != null) {
-                String[] separated = s.split("_");
-                fullname.setText(separated[1] + " " + separated[2]);
-                no.setText(separated[0]);
 
-            }
+                String[] userinfo = s.split("_");
+                fullname.setText(userinfo[1] + " " + userinfo[2]);
+                no.setText(userinfo[0]);
+
+
         }
     }
     public static class getUserTariffInfoTask extends AsyncTask<String, String, String> {
@@ -42,9 +44,13 @@ public class Task {
         protected void onPostExecute(String s) {
 
             if (s != null) {
-                String[] separated = s.split("_");
-                tariff.setText(separated[0]);
-                sumsms.setText(separated[3]);
+                String[] tariffinfo = s.split("_");
+                tariff.setText(tariffinfo[0]);
+                int data = Integer.parseInt(tariffinfo[2]);
+                data = data/1000;
+                sumint.setText(data+" GB");
+                summin.setText(tariffinfo[1]+" DK");
+                sumsms.setText(tariffinfo[3]+" SMS");
 
             }
         }
@@ -55,15 +61,14 @@ public class Task {
         @Override
         protected String doInBackground(String... dizi) {
             Log.d("test", "doInBackground: parametre >> " + dizi[0]);
-            return ServiceManager.getUserTariffName(dizi[0]);
+            return ServiceManager.getUsageInfo(dizi[0],dizi[1]);
         }
 
         @Override
         protected void onPostExecute(String s) {
 
             if (s != null) {
-                String[] separated = s.split("_");
-
+                String[] usageinfo = s.split("_");
 
 
             }
