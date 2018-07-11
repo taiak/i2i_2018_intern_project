@@ -46,10 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 } else if (!username.isEmpty() && !password.isEmpty()) {
                   LoginAsyncTask login = new LoginAsyncTask();
                     login.execute(username, password);
-                   Task.getUsernameTask textusername = new Task.getUsernameTask();
-                    textusername.execute(username);
+                  Task.getUserInfoTask textusername = new Task.getUserInfoTask();
+                  textusername.execute(username);
                    Task.getUserTariffInfoTask texttariff = new Task.getUserTariffInfoTask();
                    texttariff.execute(username);
+
 
                 } else if (username.isEmpty() || password.isEmpty()) {
                     emptyFailed();

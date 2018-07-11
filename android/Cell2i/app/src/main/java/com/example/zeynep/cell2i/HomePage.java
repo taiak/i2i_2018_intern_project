@@ -3,6 +3,8 @@ package com.example.zeynep.cell2i;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
@@ -17,9 +19,8 @@ public class HomePage extends Activity {
     static TextView sumint, summin, sumsms;
 
     Button exit,invoices;
-    ProgressBar kalandk;
-    ProgressBar kalansms;
-    ProgressBar kalangb;
+    ProgressBar usagevoice,usagesms,usagedata;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +34,14 @@ public class HomePage extends Activity {
         fullname.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
         no.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
         tariff.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
-        kalandk =(ProgressBar)findViewById(R.id.kalandk);
-        kalansms=(ProgressBar)findViewById(R.id.kalansms);
-        kalangb=(ProgressBar)findViewById(R.id.kalanint);
+
+        usagevoice =(ProgressBar) findViewById(R.id.kalandk);
+        usagesms=(ProgressBar) findViewById(R.id.kalansms);
+        usagedata=(ProgressBar) findViewById(R.id.kalanint);
+
+
+        usagevoice.getProgressDrawable().setColorFilter(
+                Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
         sumint = (TextView)findViewById(R.id.toplamint);
         summin = (TextView)findViewById(R.id.toplamdk);
         sumsms = (TextView)findViewById(R.id.toplamsms);

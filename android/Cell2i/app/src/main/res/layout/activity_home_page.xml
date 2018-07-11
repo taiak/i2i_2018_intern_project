@@ -144,7 +144,7 @@
             android:textColor="#111"
             android:layout_marginTop="50dp"
             android:id="@+id/toplamint"
-            android:text="gb" android:layout_marginLeft="320dp"
+            android:text="gb" android:layout_marginLeft="310dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
              />
@@ -156,7 +156,7 @@
             android:background="#118f17"
             android:layout_width="350dp"
             android:layout_centerHorizontal="true"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             />
 
 
@@ -172,7 +172,7 @@
 
     <TextView
         android:textColor="#111"
-     android:layout_marginLeft="320dp"
+     android:layout_marginLeft="300dp"
         android:id="@+id/toplamdk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -185,7 +185,7 @@
         android:background="#118f17"
         android:layout_width="350dp"
         android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         />
 
 
@@ -196,13 +196,13 @@
 
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="310dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TextView
             android:textColor="#111"
-            android:layout_marginLeft="320dp"
+            android:layout_marginLeft="290dp"
             android:id="@+id/toplamsms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
             android:background="#118f17"
             android:layout_width="350dp"
             android:layout_centerHorizontal="true"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             />
 
 
