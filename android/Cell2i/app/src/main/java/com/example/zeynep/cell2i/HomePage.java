@@ -33,16 +33,12 @@ public class HomePage extends Activity {
         fullname.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
         no.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
         tariff.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
-        kalandk =(ProgressBar) findViewById(R.id.kalandk);
-        kalansms=(ProgressBar) findViewById(R.id.kalansms);
-        kalangb=(ProgressBar) findViewById(R.id.kalanint);
+        kalandk =(ProgressBar)findViewById(R.id.kalandk);
+        kalansms=(ProgressBar)findViewById(R.id.kalansms);
+        kalangb=(ProgressBar)findViewById(R.id.kalanint);
         sumint = (TextView)findViewById(R.id.toplamint);
         summin = (TextView)findViewById(R.id.toplamdk);
         sumsms = (TextView)findViewById(R.id.toplamsms);
-
-
-
-
 
         exit.setOnClickListener(new View.OnClickListener() {
             @Override

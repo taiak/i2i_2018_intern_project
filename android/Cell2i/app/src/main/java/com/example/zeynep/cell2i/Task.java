@@ -46,6 +46,7 @@ public class Task {
                 tariff.setText(separated[0]);
                 sumsms.setText(separated[3]);
 
+
             }
         }
     }
