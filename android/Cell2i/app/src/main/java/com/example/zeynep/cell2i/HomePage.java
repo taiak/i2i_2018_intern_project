@@ -3,6 +3,8 @@ package com.example.zeynep.cell2i;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +39,9 @@ public class HomePage extends Activity {
         usagesms=(ProgressBar) findViewById(R.id.kalansms);
         usagedata=(ProgressBar) findViewById(R.id.kalanint);
 
+
+        usagevoice.getProgressDrawable().setColorFilter(
+                Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
         sumint = (TextView)findViewById(R.id.toplamint);
         summin = (TextView)findViewById(R.id.toplamdk);
         sumsms = (TextView)findViewById(R.id.toplamsms);
