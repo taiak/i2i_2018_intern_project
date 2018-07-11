@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.example.zeynep.cell2i.MainActivity">
+    tools:context="com.example.zeynep.cell2i.activity.MainActivity">
 
     <LinearLayout
         android:id="@+id/login"

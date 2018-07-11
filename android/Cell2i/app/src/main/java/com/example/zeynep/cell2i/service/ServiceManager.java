@@ -1,4 +1,4 @@
-package com.example.zeynep.cell2i;
+package com.example.zeynep.cell2i.service;
 
 
 import org.ksoap2.SoapEnvelope;
@@ -148,8 +148,9 @@ public class ServiceManager {
         soapSerializationEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapSerializationEnvelope.setOutputSoapObject(soapObject);
 
-        soapObject.addProperty("info", info);
         soapObject.addProperty("username", username);
+        soapObject.addProperty("info", info);
+
         httpTransportSE = new HttpTransportSE(URL);
         httpTransportSE.debug = true;
         try {

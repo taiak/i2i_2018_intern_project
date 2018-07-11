@@ -1,4 +1,4 @@
-package com.example.zeynep.cell2i;
+package com.example.zeynep.cell2i.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,6 +10,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.zeynep.cell2i.R;
+import com.example.zeynep.cell2i.service.ServiceManager;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
