@@ -40,10 +40,6 @@ public class HomePage extends Activity {
         usageVoice.execute(SessionInfo.loggedUserPhoneNumber,SessionInfo.info1);
         Task.UsageDataAsyncTask usagedata = new Task.UsageDataAsyncTask();
         usagedata.execute(SessionInfo.loggedUserPhoneNumber,SessionInfo.info2);
-
-
-
-
     }
     public void initalize()
     {
@@ -87,7 +83,6 @@ public class HomePage extends Activity {
 
     public static void onPostUserInfo(String postResult)
     {
-
         String[] infoArray = postResult.split("_");
         Log.d("TAG", "onPostUserInfo: "+postResult);
         txtFullname.setText(infoArray[1] + " " + infoArray[2]);
@@ -96,7 +91,6 @@ public class HomePage extends Activity {
 
     public static void onPostTariffInfo(String postResult)
     {
-
         String[] tariffinfo = postResult.split("_");
         txtTariff.setText(tariffinfo[0]);
         int data = Integer.parseInt(tariffinfo[3]);
@@ -104,41 +98,28 @@ public class HomePage extends Activity {
         txtSumdata.setText(data + " GB");
         int voice = Integer.parseInt(tariffinfo[1]);
         txtSumvoice.setText(tariffinfo[1] + " DK");
-
         int sms = Integer.parseInt(tariffinfo[2]);
         txtSumsms.setText(tariffinfo[2] + " SMS");
         pBarUsagesms.setMax(sms);
         pBarUsagedata.setMax(data);
         pBarUsagevoice.setMax(voice);
-
-
     }
 
     public static void onPostUsageInfo(String postResult)
     {
         SessionInfo.loggedUserPhoneNumber = txtPhonenumber.getText().toString();
-
         String[] infoArray = postResult.split("_");
         Log.d("TAG", "onPostUserInfo: "+postResult);
-
         txtUsageSms.setText(infoArray[1]+" SMS");
-
-
-
         HomePage.pBarUsagesms.setProgress(Integer.parseInt(infoArray[1]));
     }
 
     public static void onPostVoiceUsageInfo(String postResult)
     {
         SessionInfo.loggedUserPhoneNumber = txtPhonenumber.getText().toString();
-
         String[] infoArray = postResult.split("_");
         Log.d("TAG", "onPostUserInfo: "+postResult);
-
         txtUsageVoice.setText(infoArray[1]+" DK");
-
-
-
         HomePage.pBarUsagevoice.setProgress(Integer.parseInt(infoArray[1]));
     }
 
@@ -146,17 +127,12 @@ public class HomePage extends Activity {
     public static void onPostDataUsageInfo(String postResult)
     {
         SessionInfo.loggedUserPhoneNumber = txtPhonenumber.getText().toString();
-
         String[] infoArray = postResult.split("_");
         Log.d("TAG", "onPostUserInfo: "+postResult);
-
         int sumdata = Integer.valueOf(infoArray[1]);
-
         float usagedata = sumdata/1000;
         sumdata = sumdata/1000;
         txtUsageData.setText(usagedata+" MB");
-
-
         HomePage.pBarUsagedata.setProgress(sumdata);
     }
 }

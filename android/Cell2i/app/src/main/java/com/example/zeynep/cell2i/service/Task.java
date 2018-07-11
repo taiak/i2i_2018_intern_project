@@ -33,8 +33,6 @@ public class Task {
            HomePage.onPostTariffInfo(result);
         }
     }
-
-
     public static class UsageInfoAsyncTask extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... dizi) {
@@ -74,4 +72,17 @@ public class Task {
         }
     }
 
+
+    public static class InvoiceInfoAsyncTask extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... dizi) {
+            Log.d("test", "doInBackground: parametre >> " + dizi[0] + dizi[1]);
+            return ServiceManager.getUsageInfo(dizi[0], dizi[1]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            HomePage.onPostDataUsageInfo(result);
+        }
+    }
 }
