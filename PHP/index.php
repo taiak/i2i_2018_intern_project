@@ -7,21 +7,37 @@ require('classSystem.php');
 
 if($_SESSION){
 	
-	
-	$userName = "Hasan UYANIK";
-	$userPhone = "538 XXX XX XX";
-	$userTariff = "Genç Tarife";
-	$GBLimit = "2";
-	$usableMB = "700";
-	$GBNewLimit = $cell2i->changeGBtoMB($GBLimit);
-	$usableMBPercent = $cell2i->percentOperation($GBNewLimit,$usableMB);
-	$MinuteLimit = "100";
-	$usableMinute = "80";
-	$usableMinutePercent = $cell2i->percentOperation($MinuteLimit,$usableMinute);
-	$SMSLimit = "100";
-	$usableSMS = "50";
-	$usableSMSPercent = $cell2i->percentOperation($SMSLimit,$usableSMS);
-	
+	$userInfo = $cell2i->userInfoBlock($_SESSION['MSISDN']);
+	$userName = $userInfo[1].' '.$userInfo[2];
+	$defaultPhoneX = " XXX XX XX";
+	$userPhone = substr($userInfo[0],0,3).$defaultPhoneX;
+	$tariffInfo = $cell2i->tariffInfo($_SESSION['MSISDN']);
+	if(!empty($tariffInfo)){
+		$userTariff = $tariffInfo[0];
+		$GBLimit = $tariffInfo[1];
+		$MinuteLimit = $tariffInfo[2];
+		$SMSLimit = $tariffInfo[3];
+	}
+	if(!empty($userTariff)){
+		$tariffUsage = $cell2i->tariffUsage($_SESSION['MSISDN'],$userTariff);
+	}
+	if(!empty($tariffUsage)){
+		if(!empty($tariffUsage[1])){$usableMB = $tariffUsage[1];}else{$usableMB = 0;}
+		if(!empty($tariffUsage[2])){$usableMinute = $tariffUsage[2];}else{$usableMinute = 0;}
+		if(!empty($tariffUsage[3])){$usableSMS = $tariffUsage[3];}else{$usableSMS = 0;}
+	}
+	if(!empty($tariffInfo) && !empty($tariffUsage)){
+		$GBNewLimit = $cell2i->changeGBtoMB($GBLimit);
+		$usableMBPercent = $cell2i->percentOperation($GBNewLimit,$usableMB);
+		$usableMinutePercent = $cell2i->percentOperation($MinuteLimit,$usableMinute);
+		$usableSMSPercent = $cell2i->percentOperation($SMSLimit,$usableSMS);
+	}else{
+		$usableMBPercent = "ERROR";
+		$usableMinutePercent = "ERROR";
+		$usableSMSPercent = "ERROR";
+	}
+
+
 	?>
 	<html>
 	<head>

@@ -15,7 +15,7 @@ class cell2i{
 				'userId' => $msisdn,
 				'password' => $password
 			);
-			/*
+			
 			$WebServiceOutput = $WebService->isAuthorized($input);
 
 			foreach($WebServiceOutput AS $UserLogin => $ReturnValue){
@@ -26,8 +26,7 @@ class cell2i{
 					echo $loginError2;
 				}
 			}
-			*/
-				$_SESSION['MSISDN'] = $msisdn;
+			
 			header('Location:index.php');
 		}else{
 			echo $loginError1;
@@ -50,17 +49,32 @@ class cell2i{
 		$percentOutput = $smallNumber/($bigNumber/100);
 		return $percentOutput;
 	}
-	public function tariff(){
+	public function tariffInfo($msisdn){
 		require('soap.php');
 		require('errors.php');
 		$input = array(
-				'userId' => '5369722537'
+				'userId' => $msisdn
 			);
-		$WebServiceOutput = $WebService->getUserTariffName($input);
-
-			foreach($WebServiceOutput AS $UserLogin => $ReturnValue){
-				echo 'Tarife->'.$ReturnValue;
+		$WebServiceOutput = $WebService->getTariffInfo($input);	
+			foreach($WebServiceOutput AS $getTariffInfo => $ReturnValue){
+				$tariffInfoBlock = explode("_",$ReturnValue);
+						return $tariffInfoBlock;
 			}
+			
+	}
+	public function tariffUsage($msisdn,$tariffType){
+		require('soap.php');
+		require('errors.php');
+		$input = array(
+				'userId' => $msisdn,
+				'infoType' => $tariffType
+			);
+		$WebServiceOutput = $WebService->getUsageInfo($input);	
+			foreach($WebServiceOutput AS $getUsageInfo => $ReturnValue){
+				$tariffUsageBlock = explode("_",$ReturnValue);
+						return $tariffUsageBlock;
+			}
+			
 	}
 	
 	public function changePassword($msisdn,$password1,$password2){
@@ -116,6 +130,41 @@ class cell2i{
 		}else{
 			return 0;
 		}
+	}
+	public function userInfoBlock($msisdn){
+		require('errors.php');
+		require('soap.php');
+		$input = array(
+				'userId' => $msisdn
+			);
+			$WebServiceOutput = $WebService->getUserInfo($input);
+				foreach($WebServiceOutput AS $UserInfo => $ReturnValue){
+					if($ReturnValue){
+						$userInfoBlock = explode("_",$ReturnValue);
+						return $userInfoBlock;
+					}else{
+
+					}
+				}
+				
+	}
+	public function invoiceBlock(){
+		require('errors.php');
+		require('soap.php');
+		$input = array(
+				'userId' => '5369722537'
+			);
+			$WebServiceOutput = $WebService->getInvoiceInfo($input);
+				foreach($WebServiceOutput AS $UserInfo => $ReturnValue){
+					if($ReturnValue){
+						$userInfoBlock = explode("_",$ReturnValue);
+						return $userInfoBlock;
+					}else{
+
+					}
+				}
+		
+		
 	}
 }
 $cell2i= new cell2i;

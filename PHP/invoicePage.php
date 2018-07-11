@@ -7,20 +7,7 @@ require('classSystem.php');
 
 if($_SESSION){
 	
-	
-	$userName = "Hasan UYANIK";
-	$userPhone = "538 XXX XX XX";
-	$userTariff = "Genç Tarife";
-	$GBLimit = "2";
-	$usableMB = "700";
-	$GBNewLimit = $cell2i->changeGBtoMB($GBLimit);
-	$usableMBPercent = $cell2i->percentOperation($GBNewLimit,$usableMB);
-	$MinuteLimit = "100";
-	$usableMinute = "80";
-	$usableMinutePercent = $cell2i->percentOperation($MinuteLimit,$usableMinute);
-	$SMSLimit = "100";
-	$usableSMS = "50";
-	$usableSMSPercent = $cell2i->percentOperation($SMSLimit,$usableSMS);
+	var_dump($cell2i->invoiceBlock());
 	
 	?>
 	<html>
