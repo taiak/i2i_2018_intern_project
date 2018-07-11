@@ -41,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
                 String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
-                if (isConnectionNetwork()==false){
+                if (isConnectionNetwork() == false) {
                     connectionFailed();
                 } else if (!username.isEmpty() && !password.isEmpty()) {
-                  LoginAsyncTask login = new LoginAsyncTask();
+                    LoginAsyncTask login = new LoginAsyncTask();
                     login.execute(username, password);
-                  Task.getUserInfoTask textusername = new Task.getUserInfoTask();
-                  textusername.execute(username);
-                   Task.getUserTariffInfoTask texttariff = new Task.getUserTariffInfoTask();
-                   texttariff.execute(username);
+                    Task.getUserInfoTask textusername = new Task.getUserInfoTask();
+                    textusername.execute(username);
+                    Task.getUserTariffInfoTask texttariff = new Task.getUserTariffInfoTask();
+                    texttariff.execute(username);
 
 
                 } else if (username.isEmpty() || password.isEmpty()) {
@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("test", "doInBackground: parametre >> " + dizi[0]);
             return ServiceManager.checkUser(dizi[0], dizi[1]);
         }
+
         @Override
         protected void onPostExecute(String s) {
             if (s.equals("true")) {
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
     //** login thread sonu
     public void loginFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void emptyFailed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-         builder.setTitle("Login Failed");
+        builder.setTitle("Login Failed");
         builder.setMessage("Fields can not be blank");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
@@ -122,10 +124,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     boolean isConnectionNetwork() {
-        ConnectivityManager conMgr = (ConnectivityManager) getSystemService (Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        if (conMgr.getNetworkInfo(0).getState() == NetworkInfo.State.DISCONNECTED )
-         {
+        if (conMgr.getNetworkInfo(0).getState() == NetworkInfo.State.DISCONNECTED) {
             return false;
         } else {
             return true;

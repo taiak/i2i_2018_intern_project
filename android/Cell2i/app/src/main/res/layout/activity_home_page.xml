@@ -152,8 +152,9 @@
         <ProgressBar
             android:layout_marginTop="5dp"
             style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progress_layer"
             android:id="@+id/kalandk"
-            android:background="#118f17"
+            android:background="@drawable/progress_layer"
             android:layout_width="350dp"
             android:layout_centerHorizontal="true"
             android:layout_height="20dp"
@@ -180,9 +181,10 @@
         android:text="dk" />
     <ProgressBar
         android:layout_marginTop="5dp"
+        android:progressDrawable="@drawable/progress_layer"
         style="?android:attr/progressBarStyleHorizontal"
         android:id="@+id/kalanint"
-        android:background="#118f17"
+
         android:layout_width="350dp"
         android:layout_centerHorizontal="true"
         android:layout_height="20dp"
@@ -209,13 +211,15 @@
             android:layout_marginTop="100dp"
             android:text="sms" />
         <ProgressBar
+
             android:layout_marginTop="5dp"
             style="?android:attr/progressBarStyleHorizontal"
             android:id="@+id/kalansms"
-            android:background="#118f17"
+            android:progressDrawable="@drawable/progress_layer"
             android:layout_width="350dp"
             android:layout_centerHorizontal="true"
             android:layout_height="20dp"
+
             />
 
 
