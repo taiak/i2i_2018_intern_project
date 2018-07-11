@@ -26,9 +26,9 @@ if($_SESSION){
 			<div class="box col-6 col-sm-12">
 				<div class="row">
 					<div class="box col-12">
-						<div class="box col-12 a-center">
+						<a href="index.php" class="box col-12 a-center">
 							<img src="img/cell2i-original.png" />
-						</div>
+						</a>
 					</div>
 				</div>
 				<div class="row">

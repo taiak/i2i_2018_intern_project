@@ -75,9 +75,9 @@ class cell2i{
 				$WebServiceOutput = $WebService->changeUserPassword($input);
 				foreach($WebServiceOutput AS $ChangePassword => $ReturnValue){
 					if($ReturnValue == TRUE){
-						echo "Password Confirmed";
+						echo '<font class="color6">Password Confirmed</font>';
 					}elseif($ReturnValue == FALSE){
-						echo $loginError2;
+
 					}
 				}
 			}else{
