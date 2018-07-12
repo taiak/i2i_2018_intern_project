@@ -27,14 +27,14 @@ if($_SESSION){
 				<div class="row">
 					<div class="box col-12">
 						<a href="index.php" class="box col-12 a-center">
-							<img src="img/cell2i-original.png" />
+							<img src="img/cell2i-original.png" class="changePasswordLogo"/>
 						</a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="box col-12">
 						
-							<input type="text" name="MSISDN" placeholder="Enter your phone number" class="box col-12 box-shadow1 border1 Segoe" maxLength="10"/>
+							<input type="text" name="MSISDN" placeholder="Enter your phone number" class="box col-12 box-shadow1 border1 Segoe LoginInput fw300" maxLength="10"/>
 						
 					</div>
 				</div>
@@ -42,7 +42,7 @@ if($_SESSION){
 					<div class="box col-12">
 						<div class="row">
 							<div class="box col-12">
-								<input type="password" name="Password" placeholder="Enter your new password" class="box col-12 box-shadow1 border1 Segoe"/>
+								<input type="password" name="Password" placeholder="Enter your new password" class="box col-12 box-shadow1 border1 Segoe LoginInput fw300"/>
 							</div>
 						</div>
 					</div>
@@ -50,12 +50,12 @@ if($_SESSION){
 				<div class="row">
 					<div class="box col-12">
 						
-							<input type="password" name="confirmPassword" placeholder="Confirm your password" class="box col-12 box-shadow1 border1 Segoe"/>
+							<input type="password" name="confirmPassword" placeholder="Confirm your password" class="box col-12 box-shadow1 border1 Segoe LoginInput fw300"/>
 						
 					</div>
 				</div>
 				<div class="row">
-					<div class="col col-12 color5 a-center Segoe">
+					<div class="box col-11 color5 a-center Segoe fsize24 fw300 lineHeight30">
 						<?php 
 							if($_POST){
 								$MSISDN = $_POST['MSISDN'];
@@ -71,8 +71,8 @@ if($_SESSION){
 						<div class="row">
 							<div class="box col-12">
 								<div class="row">
-									<div class="box col-12">
-										<input type="submit" value="DONE" class="box col-4 col-sm-10 box-shadow1 border1 cPointer bg4 color1 fsize16 Segoe fr"/>
+									<div class="box col-11">
+										<input type="submit" value="DONE" class="box col-4 col-sm-10 box-shadow1 border1 cPointer bg4 color1 fsize20 Segoe fr LoginBtn"/>
 									</div>
 								</div>
 							</div>

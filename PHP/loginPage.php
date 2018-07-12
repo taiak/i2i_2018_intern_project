@@ -40,14 +40,14 @@ if($_SESSION){
 				<div class="row">
 					<div class="box col-11">
 						
-							<input type="text" name="MSISDN" placeholder="Enter your phone number" class="box col-sm-12 box-shadow1 border1 Segoe LoginInput" maxLength="10"/>
+							<input type="text" name="MSISDN" placeholder="Enter your phone number" class="box col-sm-12 box-shadow1 border1 Segoe LoginInput fw300" maxLength="10"/>
 						
 					</div>
 				</div>
 				<div class="row">
 					<div class="box col-11">
 						
-							<input type="password" name="Password" placeholder="Enter your password" class="box col-sm-12 box-shadow1 border1 Segoe LoginInput"/>
+							<input type="password" name="Password" placeholder="Enter your password" class="box col-sm-12 box-shadow1 border1 Segoe LoginInput fw300"/>
 						
 					</div>
 				</div>
