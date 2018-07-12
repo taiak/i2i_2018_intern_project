@@ -71,7 +71,7 @@ namespace _180705_i2i_Cell2i
 
         //public string getTariff(Customer customer)
         //{
-        //    return "erdemsex";          //change when web service ready
+        //    return "erdem";          //change when web service ready
         //}
 
 
