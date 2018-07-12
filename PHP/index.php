@@ -109,7 +109,7 @@ if($_SESSION){
 							<div class="row">
 								<div class="col col-9 col-sm-12 greenBar">
 									<div class="row">
-										<div class="col redBar a-center lineHeight35 fsize24" style="width:<?php echo $usableMBPercent;?>%"><?php echo $usableMB;?> GB</div>
+										<div class="col redBar a-center lineHeight35 fsize24 p-left" style="width:<?php echo $usableMBPercent;?>%"><?php echo $usableMB;?> GB</div>
 									</div>
 								</div>
 							</div>
@@ -126,7 +126,7 @@ if($_SESSION){
 							<div class="row">
 								<div class="col col-9 col-sm-12 greenBar">
 									<div class="row">
-										<div class="col redBar a-center lineHeight35 fsize24" style="width:<?php echo $usableMinutePercent;?>%"><?php echo $usableMinute[1];?> DK</div>
+										<div class="col redBar a-center lineHeight35 fsize24 p-left" style="width:<?php echo $usableMinutePercent;?>%"><?php echo $usableMinute[1];?> DK</div>
 									</div>
 								</div>
 							</div>
@@ -143,7 +143,7 @@ if($_SESSION){
 							<div class="row">
 								<div class="col col-9 col-sm-12 greenBar">
 									<div class="row">
-										<div class="col redBar a-center lineHeight35 fsize24" style="width:<?php echo $usableSMSPercent;?>%"><?php echo $usableSMS[1];?> SMS</div>
+										<div class="col redBar a-center lineHeight35 fsize24 p-left" style="width:<?php echo $usableSMSPercent;?>%"><?php echo $usableSMS[1];?> SMS</div>
 									</div>
 								</div>
 							</div>

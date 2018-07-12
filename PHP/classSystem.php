@@ -163,16 +163,30 @@ class cell2i{
 				'invoiceCount' => $invoiceCount
 			);
 			$WebServiceOutput = $WebService->getInvoiceInfo($input);
-				
-				
+			
 				foreach($WebServiceOutput AS $UserInfo => $ReturnValue){
 						if($ReturnValue){
-							$userInvoiceBlock = explode("@@",$ReturnValue);
+							$userInvoiceBlock = explode("@",$ReturnValue);
 							for($i = 0; $i < $invoiceCount; $i++){
 								$userInvoiceArray = explode("_",$userInvoiceBlock[$i]);
 								
-								$invoiceFirstArray = explode("-",$userInvoiceArray[0]);
+								$invoiceFirstArray = explode(".",$userInvoiceArray[0]);
 								$invoiceMonth = $invoiceFirstArray[1];
+								
+								$month = array(
+									'01' => 'JANUARY',
+									'02' => 'FEBRUARY',
+									'03' => 'MARCH',
+									'04' => 'APRIL',
+									'05' => 'MAY',
+									'06' => 'JUNE',
+									'07' => 'JULY',
+									'08' => 'AUGUST',
+									'09' => 'SEPTEMBER',
+									'10' => 'OCTOBER',
+									'11' => 'NOVEMBER',
+									'12' => 'DECEMBER'
+								);
 								
 								if($userInvoiceArray[3] == 0){
 									$invoiceStatus = "NOT PAID";
@@ -182,7 +196,7 @@ class cell2i{
 								
 								$InvoiceArray = array(
 									$i => array(
-										'invoiceMonth' => $invoiceMonth,
+										'invoiceMonth' => $month[$invoiceMonth],
 										'lastDate' => $userInvoiceArray[1],
 										'price' => $userInvoiceArray[2],
 										'status' => $invoiceStatus
