@@ -153,9 +153,9 @@ public class ServiceManager {
         return returnedData;
     }
 
-    public static String getInvoicesInfo(String username, String count) {
+    public static String getInvoicesInfo(String username, int count) {
         String returnedData = ""; //metoddan gelen değer
-        String METHOD_NAME = "getInvoicesInfo";
+        String METHOD_NAME = "getInvoiceInfo";
         String NAMESPACE = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl"; //web service isim alanı
         String SOAP_ACTION = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl/" + METHOD_NAME;
         String URL = "http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl";
@@ -163,7 +163,8 @@ public class ServiceManager {
         soapSerializationEnvelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
         soapSerializationEnvelope.setOutputSoapObject(soapObject);
         soapObject.addProperty("username", username);
-        soapObject.addProperty("count", count);
+        soapObject.addProperty("invoiceCount", count);
+
         httpTransportSE = new HttpTransportSE(URL);
         httpTransportSE.debug = true;
         try {
@@ -176,5 +177,6 @@ public class ServiceManager {
         }
         return returnedData;
     }
+
 
 }

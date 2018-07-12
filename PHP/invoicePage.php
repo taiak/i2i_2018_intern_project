@@ -22,7 +22,7 @@ if($_SESSION){
 <div class="box col-12">
 	<div class="row">
 <div class="box col-3 col-sm-12 a-center">
-	<a href="index.php" class="box col-12 a-center"><img src="img/cell2i-original.png"/></a>
+	<a href="index.php" class="box col-12 a-center"><img src="img/cell2i-original.png" class="invoiceLogo"/></a>
 </div>
 <div class="box col-6 col-sm-12">
 	<div class="box col-12">
@@ -32,19 +32,19 @@ if($_SESSION){
 		?>
 		<div class="box col-12">
 		
-			<div class="box col-12 bg1">
+			<div class="box col-12 bg1 invoiceBlockSP" style="margin-bottom:20px;">
 				<div class="col col-12">
 					<div class="row">
-						<div class="col col-12 lineHeight35 fsize20"><?php echo $Invoice['invoiceMonth'];?> INVOICE</div>
+						<div class="col col-12 lineHeight50 fsize36"><?php echo $Invoice['invoiceMonth'];?> INVOICE</div>
 					</div>
 					<div class="row">
-						<div class="col col-12 lineHeight35 fsize16">Cost:<?php echo $Invoice['price'];?></div>
+						<div class="col col-12 lineHeight50 fsize30 fw300">Cost:<?php echo $Invoice['price'];?></div>
 					</div>
 					<div class="row">
-						<div class="col col-12 fsize16">Invoice date:<?php echo $Invoice['lastDate'];?></div>
+						<div class="col col-12 fsize30 fw300 lineHeight35">Invoice date:<?php echo $Invoice['lastDate'];?></div>
 					</div>
 					<div class="row">
-						<div class="col col-12 lineHeight35 a-right fsize20"><?php echo $Invoice['status'];?></div>
+						<div class="col col-12 lineHeight35 a-right fsize36"><?php echo $Invoice['status'];?></div>
 					</div>
 				</div>
 			</div>

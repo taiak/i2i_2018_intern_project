@@ -30,6 +30,7 @@
 		B8DD2E0920EBF20300A9F1CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DD2E0820EBF20300A9F1CA /* Assets.xcassets */; };
 		B8DD2E0C20EBF20300A9F1CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DD2E0A20EBF20300A9F1CA /* LaunchScreen.storyboard */; };
 		B8DD2E1420EBF23A00A9F1CA /* cell2i.png in Resources */ = {isa = PBXBuildFile; fileRef = B8DD2E1320EBF23A00A9F1CA /* cell2i.png */; };
+		B8EC248120F49E9D00EB7136 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EC248020F49E9D00EB7136 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		B8DD2E0B20EBF20300A9F1CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8DD2E0D20EBF20300A9F1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8DD2E1320EBF23A00A9F1CA /* cell2i.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell2i.png; sourceTree = "<group>"; };
+		B8EC248020F49E9D00EB7136 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				B8DD2E0120EBF20300A9F1CA /* AppDelegate.swift */,
 				B82488F520F378D5003D573C /* FourthViewController.swift */,
+				B8EC248020F49E9D00EB7136 /* CollectionViewCell.swift */,
 				B8DD2E0320EBF20300A9F1CA /* ViewController.swift */,
 				8FD0ED4D20EC0A2B00C1E1EF /* SecondViewController.swift */,
 				8F81F17A20ECB245006DB84C /* ThirdViewController.swift */,
@@ -214,6 +217,7 @@
 				B8DD2E0220EBF20300A9F1CA /* AppDelegate.swift in Sources */,
 				8F81F19320EE5079006DB84C /* SWXMLHash.swift in Sources */,
 				8F81F18C20EE506D006DB84C /* SoapHttpClient.swift in Sources */,
+				B8EC248120F49E9D00EB7136 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
