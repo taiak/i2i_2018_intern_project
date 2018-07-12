@@ -47,11 +47,16 @@
             let xmlResult: XMLIndexer?  = xmlResponse?.children.last
             
             let xmlElement = xmlResult?.element
-            _ = xmlElement?.text
+            let str = xmlElement?.text
             let xmlElementFirst = xmlElement?.children[0] as!TextElement
             return xmlElementFirst.text
         }
-        
+        catch
+        {
+        }
+        //NOT IMPLETEMENTED!
+        var returnValue:String!
+        return returnValue
     }
     func stringFromXML(data:Data)-> String
     {
@@ -142,6 +147,32 @@
         let returnValue:Bool = strVal!.lowercased() == "true"
         return returnValue
     }
+    public func getUserInfo(userId:String)-> String{
+        var soapReqXML:String = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
+        
+        soapReqXML  += "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\""
+        soapReqXML  += " xmlns:xsd =\"http://www.w3.org/2001/XMLSchema\""
+        soapReqXML  += " xmlns:soap =\"http://schemas.xmlsoap.org/soap/envelope/\">"
+        soapReqXML += " <soap:Body>"
+        soapReqXML += "<getUserInfo xmlns=\"http://services.cell2iwebservice.com\">"
+        soapReqXML += "<userId>"
+        soapReqXML += userId
+        soapReqXML += "</userId>"
+        soapReqXML += "</getUserInfo>"
+        soapReqXML += "</soap:Body>"
+        soapReqXML += "</soap:Envelope>"
+        
+        let soapAction :String = "http://services.cell2iwebservice.com/getUserInfo"
+        
+        let responseData:Data = SoapHttpClient.callWS(Host : self.Host,WebServiceUrl:self.Url,SoapAction:soapAction,SoapMessage:soapReqXML)
+        let strVal :String? = stringFromXML(data : responseData);
+        if strVal == nil {
+            
+            return  ""
+        }
+        let returnValue:String = strVal!
+        return returnValue
+    }
     public func isConnected()-> String{
         var soapReqXML:String = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
         
@@ -165,30 +196,32 @@
         let returnValue:String = strVal!
         return returnValue
     }
-    public func getTariffIdBySubmsisdn(msisdn:String)-> Int{
+    public func getUsageInfo(userId:String, infoType:String)-> String{
         var soapReqXML:String = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
-        
         soapReqXML  += "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\""
         soapReqXML  += " xmlns:xsd =\"http://www.w3.org/2001/XMLSchema\""
         soapReqXML  += " xmlns:soap =\"http://schemas.xmlsoap.org/soap/envelope/\">"
         soapReqXML += " <soap:Body>"
-        soapReqXML += "<getTariffIdBySubmsisdn xmlns=\"http://services.cell2iwebservice.com\">"
-        soapReqXML += "<msisdn>"
-        soapReqXML += msisdn
-        soapReqXML += "</msisdn>"
-        soapReqXML += "</getTariffIdBySubmsisdn>"
+        soapReqXML += "<getUsageInfo xmlns=\"http://services.cell2iwebservice.com\">"
+        soapReqXML += "<userId>"
+        soapReqXML += userId
+        soapReqXML += "</userId>"
+        soapReqXML += "<infoType>"
+        soapReqXML += infoType
+        soapReqXML += "</infoType>"
+        soapReqXML += "</getUsageInfo>"
         soapReqXML += "</soap:Body>"
         soapReqXML += "</soap:Envelope>"
         
-        let soapAction :String = "http://services.cell2iwebservice.com/getTariffIdBySubmsisdn"
+        let soapAction :String = "http://services.cell2iwebservice.com/getUsageInfo"
         
         let responseData:Data = SoapHttpClient.callWS(Host : self.Host,WebServiceUrl:self.Url,SoapAction:soapAction,SoapMessage:soapReqXML)
-        let strVal :String? = stringFromXML( data : responseData);
+        let strVal :String? = stringFromXML(data : responseData);
         if strVal == nil {
             
-            return  0
+            return  ""
         }
-        let returnValue:Int = strVal!.toInt()!
+        let returnValue:String = strVal!
         return returnValue
     }
     public func changeUserPassword(userId:String, password:String)-> Bool{
@@ -220,30 +253,59 @@
         let returnValue:Bool = strVal!.lowercased() == "true"
         return returnValue
     }
-    public func getTariffIdByname(tariffName:String)-> Int{
+    public func getTariffInfo(userId:String)-> String{
         var soapReqXML:String = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
         
         soapReqXML  += "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\""
         soapReqXML  += " xmlns:xsd =\"http://www.w3.org/2001/XMLSchema\""
         soapReqXML  += " xmlns:soap =\"http://schemas.xmlsoap.org/soap/envelope/\">"
         soapReqXML += " <soap:Body>"
-        soapReqXML += "<getTariffIdByname xmlns=\"http://services.cell2iwebservice.com\">"
-        soapReqXML += "<tariffName>"
-        soapReqXML += tariffName
-        soapReqXML += "</tariffName>"
-        soapReqXML += "</getTariffIdByname>"
+        soapReqXML += "<getTariffInfo xmlns=\"http://services.cell2iwebservice.com\">"
+        soapReqXML += "<userId>"
+        soapReqXML += userId
+        soapReqXML += "</userId>"
+        soapReqXML += "</getTariffInfo>"
         soapReqXML += "</soap:Body>"
         soapReqXML += "</soap:Envelope>"
         
-        let soapAction :String = "http://services.cell2iwebservice.com/getTariffIdByname"
+        let soapAction :String = "http://services.cell2iwebservice.com/getTariffInfo"
         
         let responseData:Data = SoapHttpClient.callWS(Host : self.Host,WebServiceUrl:self.Url,SoapAction:soapAction,SoapMessage:soapReqXML)
-        let strVal :String? = stringFromXML( data : responseData);
+        let strVal :String? = stringFromXML(data : responseData);
         if strVal == nil {
             
-            return  0
+            return  ""
         }
-        let returnValue:Int = strVal!.toInt()!
+        let returnValue:String = strVal!
+        return returnValue
+    }
+    public func getInvoiceInfo(userId:String, invoiceCount:Int)-> String{
+        var soapReqXML:String = "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
+        
+        soapReqXML  += "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\""
+        soapReqXML  += " xmlns:xsd =\"http://www.w3.org/2001/XMLSchema\""
+        soapReqXML  += " xmlns:soap =\"http://schemas.xmlsoap.org/soap/envelope/\">"
+        soapReqXML += " <soap:Body>"
+        soapReqXML += "<getInvoiceInfo xmlns=\"http://services.cell2iwebservice.com\">"
+        soapReqXML += "<userId>"
+        soapReqXML += userId
+        soapReqXML += "</userId>"
+        soapReqXML += "<invoiceCount>"
+        soapReqXML += String(invoiceCount)
+        soapReqXML += "</invoiceCount>"
+        soapReqXML += "</getInvoiceInfo>"
+        soapReqXML += "</soap:Body>"
+        soapReqXML += "</soap:Envelope>"
+        
+        let soapAction :String = "http://services.cell2iwebservice.com/getInvoiceInfo"
+        
+        let responseData:Data = SoapHttpClient.callWS(Host : self.Host,WebServiceUrl:self.Url,SoapAction:soapAction,SoapMessage:soapReqXML)
+        let strVal :String? = stringFromXML(data : responseData);
+        if strVal == nil {
+            
+            return  ""
+        }
+        let returnValue:String = strVal!
         return returnValue
     }
     public func isDBConnected()-> String{
@@ -270,3 +332,4 @@
         return returnValue
     }
  }
+

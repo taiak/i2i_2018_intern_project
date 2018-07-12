@@ -8,23 +8,52 @@
 
 import UIKit
 
-class FourthViewController: UIViewController {
+class FourthViewController: UIViewController , UICollectionViewDataSource , UICollectionViewDelegate {
 
+    
+    let monthName = ["May Invoice" , " March Invoice" , "February Invoice"]
+    
+    let costName = ["78,34" , " 78,34" , "78,34"]
+    
+    let date = ["28.05.2018" , "28.04.2018" , "28.03.2018"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return monthName.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell" , for: indexPath) as! CollectionViewCell
+        
+        cell.monthName.text = monthName[indexPath.row]
+        cell.costName.text = costName[indexPath.row]
+        cell.date.text = date[indexPath.row]
+        
+        cell.contentView.layer.cornerRadius = 4.0
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.masksToBounds = false
+        cell.layer.shadowColor = UIColor.gray.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0 , height: 1.0 )
+        cell.layer.shadowRadius = 4.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect : cell.bounds , cornerRadius : cell.contentView.layer.cornerRadius).cgPath
+        
+        return cell
+    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func backTurnButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 
-    @IBAction func backButton(_ sender: Any) {
-        performSegue(withIdentifier: "backButton", sender: nil)
-    }
     /*
     // MARK: - Navigation
 
