@@ -120,7 +120,7 @@ color: #706f6f;
 }
 
 .Segoe{
-	font-family:'Segoe',sans-serif;
+	font-family:'Segoe UI', sans-serif
 }
 
 body{
@@ -165,12 +165,15 @@ body{
 
 .userBlock{}
 .userBlock img{
-    max-height: 40px;
+    max-width: 80px;
+	max-height:80px;
 }
 
 
 .lineHeight22{ line-height:22px;}
-
+.lineHeight30{ line-height:30px;}
+.lineHeight35{ line-height:35px;}
+.lineHeight50{ line-height:50px;}
 
 .borderNone{ border:0;}
 .border1{ border:1px solid #ddd;}
@@ -190,9 +193,14 @@ body{
 .color3{ color:#0064ff;}
 .color4{ color:#1e7cc0;}
 .color5{ color:#ff0000;}
+.color6{ color:#118f17;}
 
 .fsize10{ font-size:10px;}
 .fsize16{ font-size:16px;}
+.fsize20{ font-size:20px;}
+.fsize24{ font-size:24px;}
+.fsize30{ font-size:30px;}
+.fsize36{ font-size:36px;}
 
 .cPointer{ cursor:pointer;}
 
@@ -201,6 +209,11 @@ body{
     padding:5px;
     box-sizing:border-box;
 }
+
+
+.greenBar{background: #118f17;}
+.redBar{background:#f00;float: left;display: block;}
+
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #000;
@@ -220,12 +233,7 @@ body{
 .menu > .Btn{
 	
 }
-.menu > .logoBtn > img{
-	max-height:80px;
-}
-.menu > .Btn > img{
-	max-height: 60px;
-}
+
 
 .logoutBtn{
 	
@@ -269,17 +277,40 @@ body{
 
 @media screen and (min-width: 1001px) {
 	
+	.LoginLogo{ width:421px; height:134px;}
+	.LoginLogo2{ width:375px; height:201px;}
+	.LoginInput{ width:531px; height:51px; font-size:24px;}
+	.LoginBtn{width:180px;height:40px;line-height: 6px;}
+	
+	.changePasswordLogo{ width:441px; height:236px;}
+	
+	.userPagei2iLogo{ width:285px; height:84px;}
+	.userPageC2iLogo{ width:188px; height:100px;}
+	
+	.invoiceLogo{ width:375px; height:201px;}
+	.invoiceBlockSP{ width:830px;}
+	
 .line-height20{ line-height:20px;}
 
 .fsize15{ font-size:15px;}
 .fsize20{ font-size:20px;}
 
 .desktopWidthHeight45{ height:45px;}
+
+.innerIndex{
+	width:1080px;
+	margin:0 auto;
+}
 	
 }
 
 @media screen and (max-width: 1000px) {
-	
+	.menu > .logoBtn > img{
+	max-height:80px;
+}
+.menu > .Btn > img{
+	max-height: 60px;
+}
 	
 }
 

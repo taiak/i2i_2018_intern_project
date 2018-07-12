@@ -4,21 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.zeynep.cell2i.InvoicesPage">
+    tools:context="com.example.zeynep.cell2i.activity.InvoicesPage">
 
-
-
+<LinearLayout
+    android:orientation="horizontal"
+    android:background="#118f17"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="INVOICES"
+    android:textColor="#FFFF"
+    android:textSize="25dp"
+   android:layout_marginLeft="130dp"
+    android:layout_gravity="center" />
+</LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="383dp"
-        android:layout_height="510dp"
-        android:layout_marginBottom="120dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_width="wrap_content"
+        android:id="@+id/invoiceslist"
+        android:layout_height="wrap_content">
 
     </android.support.v7.widget.RecyclerView>
+
+
+
 
     <ImageView
         android:id="@+id/imageView4"

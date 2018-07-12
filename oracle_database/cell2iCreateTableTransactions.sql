@@ -31,12 +31,12 @@ CREATE TABLE invoice
     invoice_date DATE,
     due_date DATE,
     total_amount NUMBER,
-    open_amount NUMBER,
+    status NUMBER,
     CONSTRAINT invoice_pk PRIMARY KEY (invoice_id),
     CONSTRAINT sub_invoice_subid_fk FOREIGN KEY (subscriber_id)
     REFERENCES subscriber(subscriber_id)
 );
-/
+/   
 
 CREATE TABLE usage
 (
