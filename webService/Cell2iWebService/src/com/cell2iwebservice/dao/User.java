@@ -121,8 +121,6 @@ public class User extends DAO {
 				resultString +=  resultSet.getString(1) + seperator +
 								 resultSet.getString(2) + seperator +
 								 resultSet.getString(3);
-				
-				System.out.println(resultString);
 			}
 			connectionClose();
 		} catch (Exception e) {

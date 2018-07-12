@@ -35,36 +35,22 @@ public class Cell2iWebServiceImpl {
 	}
 	
 	public boolean changeUserPassword(String userId, String password) {
-		// return (userId.equals(password));
 		return User.changePassword(userId, SafeLogin.getSha256(password));		
 	}
 	
 	public String getUserInfo(String userId) {
-		// return "123_Behsat_cinar";
 		return User.getUserInfo(userId);
 	}
 	
 	public String getTariffInfo(String userId) {
-		// return "Esnaf Tarifesi_2000_1500_1200";
 		return Tariff.getTariffInfo(userId);
 	}
 	
 	public String getInvoiceInfo(String userId, int invoiceCount) {
-		// return "21/02/2018_21/03/2018_35_0";
 		return Invoice.getInvoiceInfo(userId, invoiceCount);
 	}
 
 	public String getUsageInfo(String userId, String infoType) {
-/*		String returnValue = "";
-		if(infoType.equals("DATA"))
-			returnValue = "DATA_10000_21/07/2017";
-		else if (infoType.equals("SMS"))
-			returnValue = "SMS_10000_21/07/2017";
-		else if (infoType.equals("VOICE"))
-			returnValue = "VOICE_10000_21/07/2017";
-
-		return returnValue;
-*/
 		return User.getUsageInfo(userId, infoType);
 	}
 }
