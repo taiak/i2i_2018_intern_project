@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = edPhoneNumber.getText().toString();
                 String password = edPassword.getText().toString();
-                //username = "5318929025";
-                //password ="rumo123.";
+
                 if (isConnectionNetwork() == false) {
                     connectionFailed();
                 } else if (!username.isEmpty() && !password.isEmpty()) {
