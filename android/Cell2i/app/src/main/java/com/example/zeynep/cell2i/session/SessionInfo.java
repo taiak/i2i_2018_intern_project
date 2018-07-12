@@ -9,7 +9,4 @@ public class SessionInfo {
     public static String info="SMS";
     public static String info1="VOICE";
     public static String info2="DATA";
-
-
-
 }

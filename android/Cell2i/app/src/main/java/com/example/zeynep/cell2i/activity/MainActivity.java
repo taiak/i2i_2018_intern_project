@@ -72,9 +72,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             if (s.equals("true")) {
-
                 SessionInfo.loggedUserPhoneNumber = "5318929025"; //edPhoneNumber.getText().toString();
-
                 Intent intent = new Intent(MainActivity.this, HomePage.class);
                 startActivity(intent);
             } else {
