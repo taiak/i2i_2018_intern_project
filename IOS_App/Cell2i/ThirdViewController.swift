@@ -12,12 +12,7 @@ class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // doneButton.layer.shadowColor = UIColor.lightGray.cgColor
-        //doneButton.layer.shadowOffset = CGSize(width: 5, height: 5)
-       // doneButton.layer.shadowRadius = 10
-        //doneButton.layer.shadowOpacity = 1.0
         doneButton.layer.cornerRadius = doneButton.bounds.size.height / 3
-        // Do any additional setup after loading the view.
         confirmPassword.isSecureTextEntry = true
         newPassword.isSecureTextEntry = true
     }

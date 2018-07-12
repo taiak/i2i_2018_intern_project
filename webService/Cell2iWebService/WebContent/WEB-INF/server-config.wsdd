@@ -7,8 +7,8 @@
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
-  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
   <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -27,19 +27,27 @@
    <ns2:parameter qname="ns1:userId" type="xsd:string"/>
    <ns2:parameter qname="ns1:password" type="xsd:string"/>
   </ns2:operation>
-  <ns1:operation name="isConnected" qname="ns2:isConnected" returnQName="ns2:isConnectedReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
-  <ns1:operation name="getTariffIdBySubmsisdn" qname="ns3:getTariffIdBySubmsisdn" returnQName="ns3:getTariffIdBySubmsisdnReturn" returnType="xsd:int" soapAction="" xmlns:ns3="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns3:msisdn" type="xsd:string"/>
+  <ns1:operation name="getUserInfo" qname="ns2:getUserInfo" returnQName="ns2:getUserInfoReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns2:userId" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="changeUserPassword" qname="ns4:changeUserPassword" returnQName="ns4:changeUserPasswordReturn" returnType="xsd:boolean" soapAction="" xmlns:ns4="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ns1:operation name="isConnected" qname="ns3:isConnected" returnQName="ns3:isConnectedReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getTariffInfo" qname="ns4:getTariffInfo" returnQName="ns4:getTariffInfoReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <ns1:parameter qname="ns4:userId" type="xsd:string"/>
-   <ns1:parameter qname="ns4:password" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="getTariffIdByname" qname="ns5:getTariffIdByname" returnQName="ns5:getTariffIdBynameReturn" returnType="xsd:int" soapAction="" xmlns:ns5="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns5:tariffName" type="xsd:string"/>
+  <ns1:operation name="getUsageInfo" qname="ns5:getUsageInfo" returnQName="ns5:getUsageInfoReturn" returnType="xsd:string" soapAction="" xmlns:ns5="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns5:userId" type="xsd:string"/>
+   <ns1:parameter qname="ns5:infoType" type="xsd:string"/>
   </ns1:operation>
   <ns1:operation name="isDBConnected" qname="ns6:isDBConnected" returnQName="ns6:isDBConnectedReturn" returnType="xsd:string" soapAction="" xmlns:ns6="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
-  <ns1:parameter name="allowedMethods" value="getTariffIdBySubmsisdn changeUserPassword isAuthorized isDBConnected isConnected getTariffIdByname"/>
+  <ns1:operation name="getInvoiceInfo" qname="ns7:getInvoiceInfo" returnQName="ns7:getInvoiceInfoReturn" returnType="xsd:string" soapAction="" xmlns:ns7="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns7:userId" type="xsd:string"/>
+   <ns1:parameter qname="ns7:invoiceCount" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="changeUserPassword" qname="ns8:changeUserPassword" returnQName="ns8:changeUserPasswordReturn" returnType="xsd:boolean" soapAction="" xmlns:ns8="http://services.cell2iwebservice.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns8:userId" type="xsd:string"/>
+   <ns1:parameter qname="ns8:password" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getTariffInfo changeUserPassword isAuthorized getUsageInfo isDBConnected getInvoiceInfo isConnected getUserInfo"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="Cell2iWebServiceImpl"/>
   <ns1:parameter name="className" value="com.cell2iwebservice.services.Cell2iWebServiceImpl"/>

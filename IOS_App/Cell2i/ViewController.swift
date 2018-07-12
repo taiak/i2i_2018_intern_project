@@ -9,14 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController , UITextFieldDelegate {
-
-    
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var userNameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
- 
     @IBOutlet weak var underline1: UILabel!
     @IBOutlet weak var underline2: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordText.isSecureTextEntry = true
@@ -25,7 +23,6 @@ class ViewController: UIViewController , UITextFieldDelegate {
         button.layer.shadowRadius = 10
         button.layer.shadowOpacity = 1.0
         button.layer.cornerRadius = button.bounds.size.height / 3
-
     }
    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -37,10 +34,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
         return true
     }
 
-    @IBAction public func buttonClicked(_ sender: Any) {
-        
-       
-        
+    @IBAction public func buttonClicked(_ sender: Any) {  
         let wsgetSuccess = Cell2iWebServiceImplService()
         let str = wsgetSuccess.isConnected()
         if(str == "Connect Successful") {
@@ -75,5 +69,13 @@ class ViewController: UIViewController , UITextFieldDelegate {
         }
             
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let SecondViewController = segue.destination as? SecondViewController{
+            SecondViewController.text = userNameText.text
+        }
+    }
+    
+    
 }
 

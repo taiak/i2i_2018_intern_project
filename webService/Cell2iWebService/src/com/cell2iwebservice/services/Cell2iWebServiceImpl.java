@@ -1,25 +1,27 @@
 package com.cell2iwebservice.services;
 
 import com.cell2iwebservice.dao.User;
+import com.cell2iwebservice.dao.Invoice;
 import com.cell2iwebservice.dao.Tariff;
 import com.cell2iwebservice.utilities.SafeLogin;
 
-/**********************
+/********************************
  * 
  * @author : taha yasir kiroglu
- * @date   : 04.07.2018
- */
+ * @date   : 10.07.2018
+ * 
+ *********************************/
 
 
 public class Cell2iWebServiceImpl {
-
-
-	public Cell2iWebServiceImpl() {
+	
+	public Cell2iWebServiceImpl() { 
 		
-    }
+	}	
 
 	// control is username and user password valid?
 	public boolean isAuthorized(String userId, String password) {
+		//return (userId.equals(password));
 		return User.isAuthorized(userId, SafeLogin.getSha256(password));
 	}
 	
@@ -33,14 +35,36 @@ public class Cell2iWebServiceImpl {
 	}
 	
 	public boolean changeUserPassword(String userId, String password) {
+		// return (userId.equals(password));
 		return User.changePassword(userId, SafeLogin.getSha256(password));		
 	}
 	
-	public int getTariffIdByname(String tariffName) {
-		return Tariff.get_tariff_id_byname(tariffName);
+	public String getUserInfo(String userId) {
+		// return "123_Behsat_cinar";
+		return User.getUserInfo(userId);
 	}
 	
-	public int getTariffIdBySubmsisdn(String msisdn) {
-		return Tariff.get_tariff_id_bysubmsisdn(msisdn);
+	public String getTariffInfo(String userId) {
+		// return "Esnaf Tarifesi_2000_1500_1200";
+		return Tariff.getTariffInfo(userId);
+	}
+	
+	public String getInvoiceInfo(String userId, int invoiceCount) {
+		// return "21/02/2018_21/03/2018_35_0";
+		return Invoice.getInvoiceInfo(userId, invoiceCount);
+	}
+
+	public String getUsageInfo(String userId, String infoType) {
+/*		String returnValue = "";
+		if(infoType.equals("DATA"))
+			returnValue = "DATA_10000_21/07/2017";
+		else if (infoType.equals("SMS"))
+			returnValue = "SMS_10000_21/07/2017";
+		else if (infoType.equals("VOICE"))
+			returnValue = "VOICE_10000_21/07/2017";
+
+		return returnValue;
+*/
+		return User.getUsageInfo(userId, infoType);
 	}
 }
