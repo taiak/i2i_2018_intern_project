@@ -261,8 +261,8 @@ h1.sp, h2.sp, h3.sp, h4.sp, h5.sp, h6.sp{
 
 .box, .col{
     float:left;
-    padding-left:15px;
-    padding-right:15px;
+    padding-left:10px;
+    padding-right:10px;
     box-sizing:border-box;
 }
 
