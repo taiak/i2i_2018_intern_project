@@ -56,6 +56,8 @@ public class DAO {
 	    System.out.println("DB: Connection successfully closed.");
 	}	
 	
+	// XXX: not working
+	// Add automatize it
 	// NOT: sql injection saldýrýsýna karþý dýþarý açýlmamalýdýr!
 	public static String getFunctionInfo(String functionName, List<String> sqlFunctionParameters, int parameterCount  ) {
 		String resultString = "";

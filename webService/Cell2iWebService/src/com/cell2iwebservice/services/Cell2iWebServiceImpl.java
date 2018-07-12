@@ -16,7 +16,6 @@ import com.cell2iwebservice.utilities.SafeLogin;
 public class Cell2iWebServiceImpl {
 	
 	public Cell2iWebServiceImpl() { 
-		
 	}	
 
 	// control is username and user password valid?

@@ -55,6 +55,5 @@ public class DatabaseController {
 	    return "Connection Succesful";
 	    
 	}
-
 		
 }

@@ -99,13 +99,8 @@ public class User extends DAO {
 		
 		return resultString;
 	}
-
-	// XXX: exception yönetimi yapýlmadý
- 
 	
 	public static String getUsageInfo(String msisdn, String usageType) {
-		// List<String> invoices = new ArrayList<String>();
-		
 		String resultString = "";
 		String userInfoSql = "{ ? = call CELL2I.CELL2I_UTILITY.get_usageInfo(?,?) }";
 		try {
@@ -122,6 +117,7 @@ public class User extends DAO {
 								 resultSet.getString(2) + seperator +
 								 resultSet.getString(3);
 			}
+			
 			connectionClose();
 		} catch (Exception e) {
 			System.out.println(e);
