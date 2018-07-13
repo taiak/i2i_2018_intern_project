@@ -6,9 +6,6 @@ import oracle.jdbc.OracleTypes;
 public class Invoice extends DAO {
 	
 	//TODO: learn how cursor return value
-	/*	
-		date get_startdayfrominvoice (String msisdn)
-	*/
 	
 	public static String getInvoiceInfo(String msisdn, int invoiceCount) {
 		// List<String> invoices = new ArrayList<String>();
@@ -23,13 +20,25 @@ public class Invoice extends DAO {
 			callableStatement.execute();
 			
 			resultSet =((OracleCallableStatement) callableStatement).getCursor(1);
-			for (int i = 0 ;resultSet.next() && i < invoiceCount;resultString += lineSeperator){
+			
+			int i = 0;
+			boolean hasNext = resultSet.next();
+			
+			while(hasNext && i < invoiceCount) {
 				resultString +=  resultSet.getString(1) + seperator +
 								 resultSet.getString(2) + seperator +
 								 resultSet.getString(3) + seperator +
 								 resultSet.getString(4);
-				System.out.println(resultString);
+				
+				hasNext = resultSet.next();
+				i++;
+				
+				if(hasNext && i < invoiceCount) {
+					resultString += lineSeperator;
+				}
+				
 			}
+			
 			connectionClose();
 		} catch (Exception e) {
 			System.out.println(e);
