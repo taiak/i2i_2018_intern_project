@@ -56,7 +56,7 @@ create or replace PACKAGE BODY CELL2I_UTILITY AS
       v_subscriber_id NUMBER;
     BEGIN
         v_subscriber_id:= get_id(pis_msisdn);
-        OPEN v_refcursor FOR 'SELECT to_char(invoice_date),to_char(due_date),total_amount,status FROM cell2i.invoice WHERE subscriber_id = :v_subscriber_id' USING  v_subscriber_id;
+        OPEN v_refcursor FOR 'SELECT to_char(invoice_date,''DD.MM.YYYY''),to_char(due_date,''DD.MM.YYYY''),total_amount,status FROM cell2i.invoice WHERE subscriber_id = :v_subscriber_id ORDER BY invoice_date' USING  v_subscriber_id;
         RETURN v_refcursor;
     END get_invoiceinfo;
     
@@ -85,7 +85,7 @@ create or replace PACKAGE BODY CELL2I_UTILITY AS
     BEGIN
         v_subscriber_id:=get_id(pis_msisdn);
         v_usage_type:=pis_usage_type;
-        OPEN v_refcursor FOR 'SELECT usage_type,used_amount,to_char(start_date) FROM cell2i.usage WHERE subscriber_id= :v_subscriber_id AND usage_type =:v_usage_type' USING v_subscriber_id,v_usage_type;
+        OPEN v_refcursor FOR 'SELECT usage_type,used_amount,to_char(start_date,''DD.MM.YYYY'') FROM cell2i.usage WHERE subscriber_id= :v_subscriber_id AND usage_type =:v_usage_type' USING v_subscriber_id,v_usage_type;
         RETURN v_refcursor;
     END get_usageinfo;
     
