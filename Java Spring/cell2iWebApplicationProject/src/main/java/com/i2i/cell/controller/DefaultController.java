@@ -8,27 +8,7 @@ public class DefaultController {
 
 	@GetMapping("/")
 	public String home1() {
-		return "/login";
-	}
-
-	@GetMapping("/home")
-	public String home() {
-		return "/home";
-	}
-
-	@GetMapping("/admin")
-	public String admin() {
-		return "/admin";
-	}
-
-	@GetMapping("/user")
-	public String user() {
-		return "/user";
-	}
-
-	@GetMapping("/about")
-	public String about() {
-		return "/about";
+		return "/invoice";
 	}
 
 	@GetMapping("/login")
@@ -36,6 +16,31 @@ public class DefaultController {
 		return "/login";
 	}
 
+	@GetMapping("/changePassword")
+	public String changePassword() {
+		return "/changePassword";
+	}
+	
+	@GetMapping("/home")
+	public String home() {
+		return "/home";
+	}
+
+	@GetMapping("/message")
+	public String message() {
+		return "/message";
+	}
+
+	@GetMapping("/gifts")
+	public String gifts() {
+		return "/gifts";
+	}
+	
+	@GetMapping("/invoice")
+	public String invoive() {
+		return "/invoice";
+	}
+	
 	@GetMapping("/403")
 	public String error403() {
 		return "/error/403";
