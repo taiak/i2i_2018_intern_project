@@ -4,33 +4,29 @@ ob_start();
 
 class cell2i{
 	public $WebServiceOutput;
-	public $changeMBtoGBOutput;
-	public $OneGB;
-	public $percentOutput;
-	public $valueFraction, $valueArray, $valueFractionOutput;
-	public function UserLogin($msisdn,$password){
+	public function UserLogin($Msisdn,$Password){
 		require('soap.php');
 		require('errors.php');
-		if(!empty($msisdn) && !empty($password)){
-			$input = array(
-				'userId' => $msisdn,
-				'password' => $password
+		if(!empty($Msisdn) && !empty($Password)){
+			$Input = array(
+				'userId' => $Msisdn,
+				'password' => $Password
 			);
 			
-			$WebServiceOutput = $WebService->isAuthorized($input);
+			$WebServiceOutput = $WebService->isAuthorized($Input);
 
 			foreach($WebServiceOutput AS $UserLogin => $ReturnValue){
 				if($ReturnValue == 1){
-					$_SESSION['MSISDN'] = $msisdn;
+					$_SESSION['Msisdn'] = $Msisdn;
 					header('Location:index.php');
 				}else{
-					echo $loginError2;
+					echo $LoginError2;
 				}
 			}
 			
 
 		}else{
-			echo $loginError1;
+			echo $LoginError1;
 		}
 		
 	}
@@ -41,59 +37,54 @@ class cell2i{
 			echo $ReturnValue;
 		}
 	}
-	public function changeMBtoGB($MBValue){
+	public function ChangeMBtoGB($MBValue){
 		$OneGB = 1000;
-		$changeMBtoGBOutput = $MBValue/$OneGB;
-		return $changeMBtoGBOutput;
+		$ChangeMBtoGBOutput = $MBValue/$OneGB;
+		$ChangeMBtoGBOutput = number_format($ChangeMBtoGBOutput,2,'.','');
+		return $ChangeMBtoGBOutput;
 	}
-	public function percentOperation($bigNumber,$smallNumber){
-		$percentOutput = $smallNumber/($bigNumber/100);
-		return $percentOutput;
+	public function PercentOperation($BigNumber,$SmallNumber){
+		$PercentOutput = $SmallNumber/($BigNumber/100);
+		return $PercentOutput;
 	}
-	public function fraction($value){
-		$valueArray = explode(".",$value);
-		$valueFraction = substr($valueArray[1],0,2);
-		$valueFractionOutput = $valueArray[0].'.'.$valueFraction;
-		return $valueFractionOutput;
-	}
-	public function tariffInfo($msisdn){
+	public function TariffInfo($Msisdn){
 		require('soap.php');
 		require('errors.php');
-		$input = array(
-				'userId' => $msisdn
+		$Input = array(
+				'userId' => $Msisdn
 			);
-		$WebServiceOutput = $WebService->getTariffInfo($input);	
-			foreach($WebServiceOutput AS $getTariffInfo => $ReturnValue){
-				$tariffInfoBlock = explode("_",$ReturnValue);
-						return $tariffInfoBlock;
+		$WebServiceOutput = $WebService->getTariffInfo($Input);	
+			foreach($WebServiceOutput AS $GetTariffInfo => $ReturnValue){
+				$TariffInfoBlock = explode("_",$ReturnValue);
+						return $TariffInfoBlock;
 			}
 			
 	}
-	public function tariffUsage($msisdn,$infoType){
+	public function TariffUsage($Msisdn,$InfoType){
 		require('soap.php');
 		require('errors.php');
-		$input = array(
-				'userId' => $msisdn,
-				'infoType' => $infoType
+		$Input = array(
+				'userId' => $Msisdn,
+				'infoType' => $InfoType
 			);
-		$WebServiceOutput = $WebService->getUsageInfo($input);	
-			foreach($WebServiceOutput AS $getUsageInfo => $ReturnValue){
-				$tariffUsageBlock = explode("_",$ReturnValue);
-						return $tariffUsageBlock;
+		$WebServiceOutput = $WebService->GetUsageInfo($Input);	
+			foreach($WebServiceOutput AS $GetUsageInfo => $ReturnValue){
+				$TariffUsageBlock = explode("_",$ReturnValue);
+						return $TariffUsageBlock;
 			}
 			
 	}
 	
-	public function changePassword($msisdn,$password1,$password2){
+	public function ChangePassword($Msisdn,$Password1,$Password2){
 		require('errors.php');
 		require('soap.php');
-		$input = array(
-				'userId' => $msisdn,
-				'password' => $password1
+		$Input = array(
+				'userId' => $Msisdn,
+				'Password' => $Password1
 			);
-		if($this->passwordMatchControl($password1,$password2) == 1){
-			if($this->passwordControl($password1) == 1){
-				$WebServiceOutput = $WebService->changeUserPassword($input);
+		if($this->PasswordMatchControl($Password1,$Password2) == 1){
+			if($this->PasswordControl($Password1) == 1){
+				$WebServiceOutput = $WebService->changeUserPassword($Input);
 				foreach($WebServiceOutput AS $ChangePassword => $ReturnValue){
 					if($ReturnValue == TRUE){
 						echo '<font class="color6">Password Confirmed</font>';
@@ -102,78 +93,73 @@ class cell2i{
 					}
 				}
 			}else{
-				echo $changePasswordError2;
+				echo $ChangePasswordError2;
 			}
 		}else{
-			echo $changePasswordError1;
+			echo $ChangePasswordError1;
 		}
 		
 	
 	}
 	
-	public function passwordControl($password){
-		$password_length = 8;
-		$returnVal = 1;
-		if ( strlen($password) < $password_length ) {
-			$returnVal = 0;
+	public function PasswordControl($Password){
+		$PasswordLength = 8;
+		$ReturnVal = 1;
+		if ( strlen($Password) < $PasswordLength ) {
+			$ReturnVal = 0;
 		}
-		if ( !preg_match("#[0-9]+#", $password) ) {
-			$returnVal = 0;
+		if ( !preg_match("#[0-9]+#", $Password) ) {
+			$ReturnVal = 0;
 		}
-		/*if ( !preg_match("#[a-z]+#", $password) ) {
-			$returnVal = 0;
+		if ( !preg_match("/[\'^£$%&*()}{@#~?.><>,|=_+!-]/", $Password) ) {
+			$ReturnVal = 0;
 		}
-		if ( !preg_match("#[A-Z]+#", $password) ) {
-			$returnVal = 0;
-		}*/
-		if ( !preg_match("/[\'^£$%&*()}{@#~?.><>,|=_+!-]/", $password) ) {
-			$returnVal = 0;
-		}
-		return $returnVal;
+		return $ReturnVal;
 	}
-	public function passwordMatchControl($password1,$password2){
-		if($password1 === $password2){
+	public function PasswordMatchControl($Password1,$Password2){
+		if($Password1 === $Password2){
 			return 1;
 		}else{
 			return 0;
 		}
 	}
-	public function userInfoBlock($msisdn){
+	public function UserInfoBlock($Msisdn){
 		require('errors.php');
 		require('soap.php');
-		$input = array(
-				'userId' => $msisdn
+		$Input = array(
+				'userId' => $Msisdn
 			);
-			$WebServiceOutput = $WebService->getUserInfo($input);
+			$WebServiceOutput = $WebService->getUserInfo($Input);
 				foreach($WebServiceOutput AS $UserInfo => $ReturnValue){
 					if($ReturnValue){
-						$userInfoBlock = explode("_",$ReturnValue);
-						return $userInfoBlock;
+						$UserInfoBlock = explode("_",$ReturnValue);
+						return $UserInfoBlock;
 					}else{
 
 					}
 				}
 				
 	}
-	public function invoiceBlock($msisdn,$invoiceCount){
+	public function InvoiceBlock($Msisdn,$InvoiceCount){
 		require('errors.php');
 		require('soap.php');
-		$input = array(
-				'userId' => $msisdn,
-				'invoiceCount' => $invoiceCount
+		$Input = array(
+				'userId' => $Msisdn,
+				'invoiceCount' => $InvoiceCount
 			);
-			$WebServiceOutput = $WebService->getInvoiceInfo($input);
+			$WebServiceOutput = $WebService->getInvoiceInfo($Input);
+			
 			
 				foreach($WebServiceOutput AS $UserInfo => $ReturnValue){
 						if($ReturnValue){
-							$userInvoiceBlock = explode("@",$ReturnValue);
-							for($i = 0; $i < $invoiceCount; $i++){
-								$userInvoiceArray = explode("_",$userInvoiceBlock[$i]);
+							$UserInvoiceBlock = explode("@",$ReturnValue);
+							for($i = $InvoiceCount-1; $i >= 0; $i--){
+								$UserInvoiceArray = explode("_",$UserInvoiceBlock[$i]);
 								
-								$invoiceFirstArray = explode(".",$userInvoiceArray[0]);
-								$invoiceMonth = $invoiceFirstArray[1];
+								$InvoiceFirstArray = explode(".",$UserInvoiceArray[0]);
+								$InvoiceMonth = $InvoiceFirstArray[1];
 								
-								$month = array(
+								$Month = array(
 									'01' => 'JANUARY',
 									'02' => 'FEBRUARY',
 									'03' => 'MARCH',
@@ -188,18 +174,18 @@ class cell2i{
 									'12' => 'DECEMBER'
 								);
 								
-								if($userInvoiceArray[3] == 0){
-									$invoiceStatus = "NOT PAID";
-								}elseif($userInvoiceArray[3] == 1){
-									$invoiceStatus = "PAID";
+								if($UserInvoiceArray[3] == 0){
+									$InvoiceStatus = "NOT PAID";
+								}elseif($UserInvoiceArray[3] == 1){
+									$InvoiceStatus = "PAID";
 								}
 								
 								$InvoiceArray = array(
 									$i => array(
-										'invoiceMonth' => $month[$invoiceMonth],
-										'lastDate' => $userInvoiceArray[1],
-										'price' => $userInvoiceArray[2],
-										'status' => $invoiceStatus
+										'InvoiceMonth' => $Month[$InvoiceMonth],
+										'InvoiceDate' => $UserInvoiceArray[1],
+										'Cost' => $UserInvoiceArray[2],
+										'PaidStatus' => $InvoiceStatus
 									)
 								);
 								

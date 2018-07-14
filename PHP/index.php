@@ -7,25 +7,25 @@ require('classSystem.php');
 
 if($_SESSION){
 	
-	$userInfo = $cell2i->userInfoBlock($_SESSION['MSISDN']);
-	$userName = $userInfo[1].' '.$userInfo[2];
-	$userPhone = $userInfo[0];
-	$tariffInfo = $cell2i->tariffInfo($_SESSION['MSISDN']);
+	$UserInfo = $cell2i->UserInfoBlock($_SESSION['Msisdn']);
+	$UserName = $UserInfo[1].' '.$UserInfo[2];
+	$UserPhone = $UserInfo[0];
+	$TariffInfo = $cell2i->TariffInfo($_SESSION['Msisdn']);
 	
-		$userTariff = $tariffInfo[0];
-		$MBLimit = $tariffInfo[3];
-		$MinuteLimit = $tariffInfo[1];
-		$SMSLimit = $tariffInfo[2];
+		$UserTariff = $TariffInfo[0];
+		$MBLimit = $TariffInfo[3];
+		$MinuteLimit = $TariffInfo[1];
+		$SMSLimit = $TariffInfo[2];
 		
-		$usableMB = $cell2i->tariffUsage($_SESSION['MSISDN'],'DATA');
-		$usableMinute = $cell2i->tariffUsage($_SESSION['MSISDN'],'VOICE');
-		$usableSMS = $cell2i->tariffUsage($_SESSION['MSISDN'],'SMS');
+		$UsableMB = $cell2i->TariffUsage($_SESSION['Msisdn'],'DATA');
+		$UsableMinute = $cell2i->TariffUsage($_SESSION['Msisdn'],'VOICE');
+		$UsableSMS = $cell2i->TariffUsage($_SESSION['Msisdn'],'SMS');
 
-		$GBLimit = $cell2i->changeMBtoGB($MBLimit);
-		$usableMB = $cell2i->fraction($cell2i->changeMBtoGB($usableMB[1]));
-		$usableMBPercent = $cell2i->percentOperation($GBLimit,$usableMB);
-		$usableMinutePercent = $cell2i->percentOperation($MinuteLimit,$usableMinute[1]);
-		$usableSMSPercent = $cell2i->percentOperation($SMSLimit,$usableSMS[1]);
+		$GBLimit = $cell2i->ChangeMBtoGB($MBLimit);
+		$UsableMB = $cell2i->ChangeMBtoGB($UsableMB[1]);
+		$UsableMBPercent = $cell2i->PercentOperation($GBLimit,$UsableMB);
+		$UsableMinutePercent = $cell2i->PercentOperation($MinuteLimit,$UsableMinute[1]);
+		$UsableSMSPercent = $cell2i->PercentOperation($SMSLimit,$UsableSMS[1]);
 
 	?>
 	<html>
@@ -64,7 +64,7 @@ if($_SESSION){
 						<div class="box col-12 a-center">
 							<span class="dInlineBlock">
 								<span class="col"><img src="img/user.png"/></span>
-								<span class="box fsize36 lineHeight50"><?php echo $userName;?></span>
+								<span class="box fsize36 lineHeight50"><?php echo $UserName;?></span>
 							</span>
 						</div>
 					</div>
@@ -72,7 +72,7 @@ if($_SESSION){
 						<div class="box col-12 a-center">
 							<span class="dInlineBlock">
 								<span class="col"><img src="img/smartphone.png"/></span>
-								<span class="box fsize36 lineHeight50"><?php echo $userPhone;?></span>
+								<span class="box fsize36 lineHeight50"><?php echo $UserPhone;?></span>
 							</span>
 						</div>
 					</div>
@@ -80,7 +80,7 @@ if($_SESSION){
 						<div class="box col-12 a-center">
 							<span class="dInlineBlock">
 								<span class="col"><img src="img/tariffArticle.png"/></span>
-								<span class="box fsize36 lineHeight50"><?php echo $userTariff;?></span>
+								<span class="box fsize36 lineHeight50"><?php echo $UserTariff;?></span>
 							</span>
 						</div>
 					</div>
@@ -109,7 +109,7 @@ if($_SESSION){
 							<div class="row">
 								<div class="col col-9 col-sm-12 greenBar">
 									<div class="row">
-										<div class="col redBar a-center lineHeight35 fsize24 p-left p-right" style="width:<?php echo $usableMBPercent;?>%"><?php echo $usableMB;?> GB</div>
+										<div class="col redBar a-center lineHeight35 fsize24 p-left p-right" style="width:<?php echo $UsableMBPercent;?>%"><?php echo $UsableMB;?> GB</div>
 									</div>
 								</div>
 							</div>
@@ -126,7 +126,7 @@ if($_SESSION){
 							<div class="row">
 								<div class="col col-9 col-sm-12 greenBar">
 									<div class="row">
-										<div class="col redBar a-center lineHeight35 fsize24 p-left p-right" style="width:<?php echo $usableMinutePercent;?>%"><?php echo $usableMinute[1];?> DK</div>
+										<div class="col redBar a-center lineHeight35 fsize24 p-left p-right" style="width:<?php echo $UsableMinutePercent;?>%"><?php echo $UsableMinute[1];?> DK</div>
 									</div>
 								</div>
 							</div>
@@ -143,7 +143,7 @@ if($_SESSION){
 							<div class="row">
 								<div class="col col-9 col-sm-12 greenBar">
 									<div class="row">
-										<div class="col redBar a-center lineHeight35 fsize24 p-left p-right" style="width:<?php echo $usableSMSPercent;?>%"><?php echo $usableSMS[1];?> SMS</div>
+										<div class="col redBar a-center lineHeight35 fsize24 p-left p-right" style="width:<?php echo $UsableSMSPercent;?>%"><?php echo $UsableSMS[1];?> SMS</div>
 									</div>
 								</div>
 							</div>
