@@ -7,20 +7,21 @@
 
 </head>
 <body>
-
-<div th:replace="fragments/header :: header"/>
+	<div th:replace="fragments/header :: header"/>
 
    <div class="container">
    		<div class="starter-template">
-        <h1>CELL2I LOGIN SCREENS</h1>
-        <h2>Ahmet <a th:href="@{/admin}">Admin page (Spring Security protected, Need Admin Role)</a></h2>
-        <h2>Hakan <a th:href="@{/user}">User page (Spring Security protected, Need User Role)</a></h2>
-        <h2>Spring kalp <a th:href="@{/about}">Normal page</a></h2>
+        <h2>Burasi User Name - Iste serviceden cekilen name</h2>
+        <h2>Burasi User Number - Iste serviceden cekilen msisdn</h2>
+        <h2>Burasi Tariff Name - Iste serviceden cekilen tariff</h2>
+        <fieldset>
+        	<h2>Burada guzel usage detaylari olacak</h2>
+        	<h2>Bunlarin hepsi css te centerlanarak yapilmali, html5 desteklemiyormus</h2>
+        	<h2>Iste bu tarz isle</h2>
+        </fieldset>
     </div>
 </div>
 <!-- /.container -->
-
-<div th:replace="fragments/footer :: footer"/>
 
 </body>
 </html>
