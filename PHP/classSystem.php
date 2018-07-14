@@ -1,165 +1,222 @@
 <?php
-ob_start();
-@session_start();
+OB_START();
+@SESSION_START();
 
-class cell2i{
-	public $WebServiceOutput;
-	public function UserLogin($Msisdn,$Password){
-		require('soap.php');
-		require('errors.php');
-		if(!empty($Msisdn) && !empty($Password)){
+CLASS cell2i{
+	PUBLIC $WebServiceOutput;
+	PUBLIC FUNCTION UserLogin($Msisdn,$Password){
+		REQUIRE('soap.php');
+		REQUIRE('errors.php');
+		$this->LogWrite("-----class -> cell2i , function -> UserLogin-----");
+		IF(!EMPTY($Msisdn) && !EMPTY($Password)){
+			$this->LogWrite("Msisdn ve Password değerleri alındı");
 			$Input = array(
 				'userId' => $Msisdn,
 				'password' => $Password
 			);
-			
+			$this->LogWrite("Msisdn ve Password değerleri dizi(array) haline getirildi");
 			$WebServiceOutput = $WebService->isAuthorized($Input);
-
-			foreach($WebServiceOutput AS $UserLogin => $ReturnValue){
-				if($ReturnValue == 1){
+			
+			FOREACH($WebServiceOutput AS $UserLogin => $RETURNValue){
+				IF($RETURNValue == 1){
+					$this->LogWrite("WebServisten bilgi çekiliyor");	
 					$_SESSION['Msisdn'] = $Msisdn;
+					$this->LogWrite("Login işlemi yapıldı");
 					header('Location:index.php');
-				}else{
-					echo $LoginError2;
+				}ELSE{
+					$this->LogWrite("Login işlemi yapılamadı");
+					ECHO $LoginError2;
 				}
 			}
 			
 
-		}else{
-			echo $LoginError1;
+		}ELSE{
+			$this->LogWrite("Msisdn ve Password değerleri alınamadı");
+			ECHO $LoginError1;
+			
 		}
+		$this->LogWrite("-----class -> cell2i , function -> UserLogin-----");
+	}
+	PUBLIC FUNCTION ConnectWebService(){
+		REQUIRE('soap.php');
+		$this->LogWrite("-----class -> cell2i , function -> ConnectWebService-----");
+		$WebServiceOutput = $WebService->isConnected();
+		FOREACH($WebServiceOutput AS $ConnectWebService => $ReturnValue){
+			$this->LogWrite("WebServisten bilgi çekiliyor");	
+			ECHO $ReturnValue;
+			$this->LogWrite("Bağlantı durumu sorgulandı.Bağlantı Durumu: ".$RETURNValue);
+		}
+		$this->LogWrite("-----class -> cell2i , function -> ConnectWebService-----");
+	}
+	PUBLIC FUNCTION ChangeMBtoGB($MBValue){
+		$this->LogWrite("-----class -> cell2i , function -> ChangeMBtoGB-----");
+		$OneGB = 1000;
+		$this->LogWrite(" OneGB = 1000 ");
+		$ChangeMBtoGBOutput = $MBValue/$OneGB;
+		$this->LogWrite(" ".$ChangeMBtoGBOutput."=".$MBValue."/".$OneGB." ");
+		$ChangeMBtoGBOutput = number_format($ChangeMBtoGBOutput,2,'.','');
+		$this->LogWrite(" ChangeMBtoGBOutput = ".$ChangeMBtoGBOutput." ");
+		$this->LogWrite("-----class -> cell2i , function -> ChangeMBtoGB-----");
+		RETURN $ChangeMBtoGBOutput;
 		
 	}
-	public function ConnectWebService(){
-		require('soap.php');
-		$WebServiceOutput = $WebService->isConnected();
-		foreach($WebServiceOutput AS $ConnectWebService => $ReturnValue){
-			echo $ReturnValue;
-		}
-	}
-	public function ChangeMBtoGB($MBValue){
-		$OneGB = 1000;
-		$ChangeMBtoGBOutput = $MBValue/$OneGB;
-		$ChangeMBtoGBOutput = number_format($ChangeMBtoGBOutput,2,'.','');
-		return $ChangeMBtoGBOutput;
-	}
-	public function PercentOperation($BigNumber,$SmallNumber){
+	PUBLIC FUNCTION PercentOperation($BigNumber,$SmallNumber){
+		$this->LogWrite("-----class -> cell2i , function -> PercentOperation-----");
 		$PercentOutput = $SmallNumber/($BigNumber/100);
-		return $PercentOutput;
+		$this->LogWrite(" ".$PercentOutput."=".$SmallNumber."/(".$BigNumber."/100) ");
+		$this->LogWrite("-----class -> cell2i , function -> PercentOperation-----");
+		RETURN $PercentOutput;
 	}
-	public function TariffInfo($Msisdn){
-		require('soap.php');
-		require('errors.php');
-		$Input = array(
+	PUBLIC FUNCTION TariffInfo($Msisdn){
+		$this->LogWrite("-----class -> cell2i , function -> TariffInfo-----");
+		REQUIRE('soap.php');
+		REQUIRE('errors.php');
+		$Input = ARRAY(
 				'userId' => $Msisdn
 			);
+		$this->LogWrite("Msisdn değerini dizi(array) haline getirildi");
 		$WebServiceOutput = $WebService->getTariffInfo($Input);	
-			foreach($WebServiceOutput AS $GetTariffInfo => $ReturnValue){
-				$TariffInfoBlock = explode("_",$ReturnValue);
-						return $TariffInfoBlock;
+			FOREACH($WebServiceOutput AS $GetTariffInfo => $ReturnValue){
+				$this->LogWrite("WebServisten bilgi çekiliyor");	
+				$TariffInfoBlock = EXPLODE("_",$ReturnValue);
+				$this->LogWrite("WebServisten çekilen tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi");
+						RETURN $TariffInfoBlock;
 			}
-			
+		$this->LogWrite("-----class -> cell2i , function -> TariffInfo-----");
 	}
-	public function TariffUsage($Msisdn,$InfoType){
-		require('soap.php');
-		require('errors.php');
-		$Input = array(
+	PUBLIC FUNCTION TariffUsage($Msisdn,$InfoType){
+		REQUIRE('soap.php');
+		REQUIRE('errors.php');
+		$this->LogWrite("-----class -> cell2i , function -> TariffUsage-----");
+		$Input = ARRAY(
 				'userId' => $Msisdn,
 				'infoType' => $InfoType
 			);
+		$this->LogWrite("Msisdn ve InfoType değerleri dizi(array) haline getirildi");
 		$WebServiceOutput = $WebService->GetUsageInfo($Input);	
-			foreach($WebServiceOutput AS $GetUsageInfo => $ReturnValue){
-				$TariffUsageBlock = explode("_",$ReturnValue);
-						return $TariffUsageBlock;
+			FOREACH($WebServiceOutput AS $GetUsageInfo => $ReturnValue){
+				$this->LogWrite("WebServisten bilgi çekiliyor");	
+				$TariffUsageBlock = EXPLODE("_",$ReturnValue);
+				$this->LogWrite("WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi");
+						RETURN $TariffUsageBlock;
 			}
-			
+		$this->LogWrite("-----class -> cell2i , function -> TariffUsage-----");	
 	}
 	
-	public function ChangePassword($Msisdn,$Password1,$Password2){
-		require('errors.php');
-		require('soap.php');
-		$Input = array(
+	PUBLIC FUNCTION ChangePassword($Msisdn,$Password1,$Password2){
+		REQUIRE('errors.php');
+		REQUIRE('soap.php');
+		$this->LogWrite("-----class -> cell2i , function -> ChangePassword-----");
+		$Input = ARRAY(
 				'userId' => $Msisdn,
-				'Password' => $Password1
+				'password' => $Password1
 			);
-		if($this->PasswordMatchControl($Password1,$Password2) == 1){
-			if($this->PasswordControl($Password1) == 1){
+		$this->LogWrite("Msisdn ve Password1 değerleri dizi(array) haline getirildi");
+		IF($this->PasswordMatchControl($Password1,$Password2) == 1){
+			$this->LogWrite("Password1 ve Password2 değerlerinin birbirine eşit olduğu onaylandı");
+			IF($this->PasswordControl($Password1) == 1){
+				$this->LogWrite("Password değeri istenilen niteliklere uygun olduğu onaylandı");
 				$WebServiceOutput = $WebService->changeUserPassword($Input);
-				foreach($WebServiceOutput AS $ChangePassword => $ReturnValue){
-					if($ReturnValue == TRUE){
-						echo '<font class="color6">Password Confirmed</font>';
-					}elseif($ReturnValue == FALSE){
-
+				FOREACH($WebServiceOutput AS $ChangePassword => $ReturnValue){
+					IF($ReturnValue == TRUE){
+						$this->LogWrite("WebServisten bilgi çekiliyor");	
+						$this->LogWrite("WebServis ile Password Yenilendi");
+						ECHO '<font class="color6">Password Confirmed</font>';
+					}ELSEIF($ReturnValue == FALSE){
+						$this->LogWrite("WebServisten Password için olumsuz sonuç dönüşü oldu");
 					}
 				}
-			}else{
-				echo $ChangePasswordError2;
+			}ELSE{
+				$this->LogWrite("Password değeri istenilen niteliklere uygun olduğu onaylanmadı");
+				ECHO $ChangePasswordError2;
 			}
-		}else{
-			echo $ChangePasswordError1;
+		}ELSE{
+			$this->LogWrite("Password1 ile Password2 değerlerinin eşleşmediği tespit edildi");
+			ECHO $ChangePasswordError1;
 		}
 		
-	
+		$this->LogWrite("-----class -> cell2i , function -> ChangePassword-----");
 	}
 	
-	public function PasswordControl($Password){
+	PUBLIC FUNCTION PasswordControl($Password){
+		$this->LogWrite("-----class -> cell2i , function -> PasswordControl-----");
 		$PasswordLength = 8;
+		$this->LogWrite(" PasswordLength = 8 ");
 		$ReturnVal = 1;
-		if ( strlen($Password) < $PasswordLength ) {
+		$this->LogWrite(" ReturnVal = 1 ");
+		IF ( STRLEN($Password) < $PasswordLength ) {
+			$this->LogWrite("Password değerinin uzunluğu yetersiz olduğu anlaşıldı ve sonuç olumsuza çevrildi");
 			$ReturnVal = 0;
 		}
-		if ( !preg_match("#[0-9]+#", $Password) ) {
+		IF ( !PREG_MATCH("#[0-9]+#", $Password) ) {
+			$this->LogWrite("Password değerinin içinde sayı kullanılmadığı anlaşıldı ve sonuç olumsuza çevrildi");
 			$ReturnVal = 0;
 		}
-		if ( !preg_match("/[\'^£$%&*()}{@#~?.><>,|=_+!-]/", $Password) ) {
+		IF ( !PREG_MATCH("/[\'^£$%&*()}{@#~?.><>,|=_+!-]/", $Password) ) {
+			$this->LogWrite("Password değerinin içinde özel karakter kullanılmadığı anlaşıldı ve sonuç olumsuza çevrildi");
 			$ReturnVal = 0;
 		}
-		return $ReturnVal;
+		RETURN $ReturnVal;
+		$this->LogWrite("-----class -> cell2i , function -> PasswordControl-----");
 	}
-	public function PasswordMatchControl($Password1,$Password2){
-		if($Password1 === $Password2){
-			return 1;
-		}else{
-			return 0;
+	PUBLIC FUNCTION PasswordMatchControl($Password1,$Password2){
+		$this->LogWrite("-----class -> cell2i , function -> PasswordMatchControl-----");
+		IF($Password1 === $Password2){
+			$this->LogWrite("Password1 ve Password2 değerlerinin eşit olduğu anlaşıldı ve sonuç olumlu olarak tanımlandı");
+			RETURN 1;
+		}ELSE{
+			$this->LogWrite("Password1 ve Password2 değerlerinin eşit olmadığı anlaşıldı ve sonuç olumsuz olarak tanımlandı");
+			RETURN 0;
 		}
+		$this->LogWrite("-----class -> cell2i , function -> PasswordMatchControl-----");
 	}
-	public function UserInfoBlock($Msisdn){
-		require('errors.php');
-		require('soap.php');
-		$Input = array(
+	PUBLIC FUNCTION UserInfoBlock($Msisdn){
+		REQUIRE('errors.php');
+		REQUIRE('soap.php');
+		$this->LogWrite("-----class -> cell2i , function -> UserInfoBlock-----");
+		$Input = ARRAY(
 				'userId' => $Msisdn
 			);
+		$this->LogWrite("Msisdn değeri dizi(array) haline getirildi");
 			$WebServiceOutput = $WebService->getUserInfo($Input);
-				foreach($WebServiceOutput AS $UserInfo => $ReturnValue){
-					if($ReturnValue){
-						$UserInfoBlock = explode("_",$ReturnValue);
-						return $UserInfoBlock;
-					}else{
-
+				FOREACH($WebServiceOutput AS $UserInfo => $ReturnValue){
+					IF($ReturnValue){
+						$this->LogWrite("WebServisten bilgi çekiliyor");	
+						$UserInfoBlock = EXPLODE("_",$ReturnValue);
+						$this->LogWrite("WebServisten çekilen kullanıcı bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi");
+						RETURN $UserInfoBlock;
+					}ELSE{
+						$this->LogWrite("WebServisten kullanıcı bilgileri için olumsuz sonuç dönüşü oldu");
 					}
 				}
-				
+		$this->LogWrite("-----class -> cell2i , function -> UserInfoBlock-----");		
 	}
-	public function InvoiceBlock($Msisdn,$InvoiceCount){
-		require('errors.php');
-		require('soap.php');
-		$Input = array(
+	PUBLIC FUNCTION InvoiceBlock($Msisdn,$InvoiceCount){
+		REQUIRE('errors.php');
+		REQUIRE('soap.php');
+		$this->LogWrite("-----class -> cell2i , function -> InvoiceBlock-----");	
+		$Input = ARRAY(
 				'userId' => $Msisdn,
 				'invoiceCount' => $InvoiceCount
 			);
+			$this->LogWrite("Msisdn ve InvoiceCount değerleri dizi(array) haline getirildi");	
 			$WebServiceOutput = $WebService->getInvoiceInfo($Input);
 			
 			
-				foreach($WebServiceOutput AS $UserInfo => $ReturnValue){
-						if($ReturnValue){
-							$UserInvoiceBlock = explode("@",$ReturnValue);
-							for($i = $InvoiceCount-1; $i >= 0; $i--){
-								$UserInvoiceArray = explode("_",$UserInvoiceBlock[$i]);
-								
-								$InvoiceFirstArray = explode(".",$UserInvoiceArray[0]);
+				FOREACH($WebServiceOutput AS $UserInfo => $ReturnValue){
+						IF($ReturnValue){
+							$this->LogWrite("WebServisten bilgi çekiliyor");	
+							$UserInvoiceBlock = EXPLODE("@",$ReturnValue);
+							$this->LogWrite("Çekilen fatura bloğu '@' değerlerine göre ayırarak dizi(array) haline getirildi");	
+							FOR($i = $InvoiceCount-1; $i >= 0; $i--){
+								$this->LogWrite("Fatura çekiminde döngü değeri:".$i);	
+								$UserInvoiceArray = EXPLODE("_",$UserInvoiceBlock[$i]);
+								$this->LogWrite("Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi");	
+								$InvoiceFirstArray = EXPLODE(".",$UserInvoiceArray[0]);
+								$this->LogWrite("Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi");	
 								$InvoiceMonth = $InvoiceFirstArray[1];
-								
-								$Month = array(
+								$this->LogWrite("InvoiceMonth=".$InvoiceFirstArray[1]);	
+								$Month = ARRAY(
 									'01' => 'JANUARY',
 									'02' => 'FEBRUARY',
 									'03' => 'MARCH',
@@ -173,45 +230,65 @@ class cell2i{
 									'11' => 'NOVEMBER',
 									'12' => 'DECEMBER'
 								);
-								
-								if($UserInvoiceArray[3] == 0){
+								$this->LogWrite("Month adında dizi(array) oluşturarak içine aylar tanımlandı");	
+								IF($UserInvoiceArray[3] == 0){
+									$this->LogWrite("Ödeme durumunu 'NOT PAID' olarak tanımlandı");	
 									$InvoiceStatus = "NOT PAID";
-								}elseif($UserInvoiceArray[3] == 1){
+								}ELSEIF($UserInvoiceArray[3] == 1){
+									$this->LogWrite("Ödeme durumunu 'PAID' olarak tanımlandı");
 									$InvoiceStatus = "PAID";
 								}
 								
-								$InvoiceArray = array(
-									$i => array(
+								$InvoiceArray = ARRAY(
+									$i => ARRAY(
 										'InvoiceMonth' => $Month[$InvoiceMonth],
 										'InvoiceDate' => $UserInvoiceArray[1],
 										'Cost' => $UserInvoiceArray[2],
 										'PaidStatus' => $InvoiceStatus
 									)
 								);
-								
-								if(empty($InvoiceAllArray)){
+									$this->LogWrite("InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi");								
+								IF(EMPTY($InvoiceAllArray)){
+									$this->LogWrite("InvoiceAllArray değeri ilk defa oluşturuluyor");
 									$InvoiceAllArray = $InvoiceArray;
-								}else{
-									$InvoiceAllArray = array_merge($InvoiceAllArray, $InvoiceArray);
+								}ELSE{
+									$this->LogWrite("InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi");
+									$InvoiceAllArray = ARRAY_MERGE($InvoiceAllArray, $InvoiceArray);
 								}
 								
 							}
 							
-							return $InvoiceAllArray;
-						}else{
-							return 0;
+									$this->LogWrite("InvoiceAllArray dizi(array)leri gönderildi");
+							RETURN $InvoiceAllArray;
+						}ELSE{
+							$this->LogWrite("WebServisten fatura bilgileri için olumsuz sonuç dönüşü oldu");
+							RETURN 0;
 						}
 					
 	
 				}
 				
 		
-		
+		$this->LogWrite("-----class -> cell2i , function -> UserInfoBlock-----");	
+	}
+	PRIVATE FUNCTION LogWrite($LogInput){
+		date_default_timezone_set('Etc/GMT-3');
+		$Time = DATE("d.m.Y , H:i:s");
+		$Ip = GETENV("REMOTE_ADDR");
+		IF(!EMPTY($_SESSION['Msisdn'])){
+			$SessionUser = $_SESSION['Msisdn'];
+		}ELSE{
+			$SessionUser = "GUEST";
+		}
+		$LogArticle = "Date->".$Time." / Ip->".$Ip." / SessionUser->".$SessionUser." / Operation->".$LogInput."\n\n";
+		$LogFile = FOPEN("log.txt", "a");
+		FWRITE($LogFile, $LogArticle);
+		FCLOSE($LogFile);
 	}
 }
-$cell2i= new cell2i;
+$cell2i= NEW cell2i;
 
 
 
-ob_end_flush();
+OB_END_FLUSH();
 ?>
