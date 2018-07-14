@@ -26,7 +26,8 @@ public class DAO {
 	protected static Connection sqlConnection = null;
 	protected static CallableStatement callableStatement = null;
 	protected static String seperator = "_";
-	protected static String lineSeperator = "@@";
+	protected static String lineSeperator = "@";
+	
 	protected static String packageName = "CELL2I.CELL2I_UTILITY";
 	public static List<String> sqlFunctionParameters = null;
 	
@@ -55,6 +56,8 @@ public class DAO {
 	    System.out.println("DB: Connection successfully closed.");
 	}	
 	
+	// XXX: not working
+	// Add automatize it
 	// NOT: sql injection saldýrýsýna karþý dýþarý açýlmamalýdýr!
 	public static String getFunctionInfo(String functionName, List<String> sqlFunctionParameters, int parameterCount  ) {
 		String resultString = "";
@@ -82,7 +85,6 @@ public class DAO {
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
 			System.out.println("Hata yok!");
 			
-			// wtf?
 			for(int seq = 1; seq <= parameterLength; seq++) {
 				System.out.println(Integer.toString(seq) + sqlFunctionParameters.get(seq) );
 				callableStatement.setString(seq, sqlFunctionParameters.get(seq));

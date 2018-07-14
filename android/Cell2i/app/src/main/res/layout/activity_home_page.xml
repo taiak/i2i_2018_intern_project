@@ -167,7 +167,7 @@
             android:text="ADVGHDGDF"
             android:textAlignment="center"
             android:gravity="center"
-            android:textColor="#FFFFFF"
+            android:textColor="#111"
             android:id="@+id/usagedata"
             android:background="#00000000"/>
 
@@ -207,7 +207,7 @@
         android:textAlignment="center"
         android:gravity="center"
         android:textSize="16dp"
-        android:textColor="#FFFFFF"
+        android:textColor="#111"
         android:id="@+id/usagevoice"
         android:background="#00000000"/>
 
@@ -250,7 +250,7 @@
             android:text="ADVGHDGDF"
             android:textAlignment="center"
             android:gravity="center"
-            android:textColor="#FFFFFF"
+            android:textColor="#111"
             android:id="@+id/usagesms"
             android:background="#00000000"/>
     </LinearLayout>

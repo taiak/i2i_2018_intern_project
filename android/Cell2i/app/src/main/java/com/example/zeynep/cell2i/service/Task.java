@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.example.zeynep.cell2i.activity.HomePage;
+import com.example.zeynep.cell2i.activity.InvoicesPage;
 
 /**
  * Created by rumey on 10.07.2018.
@@ -77,12 +78,16 @@ public class Task {
         @Override
         protected String doInBackground(String... dizi) {
             Log.d("test", "doInBackground: parametre >> " + dizi[0] + dizi[1]);
-            return ServiceManager.getUsageInfo(dizi[0], dizi[1]);
+            String phoneNumber = dizi[0];
+            int invoiceCount = Integer.parseInt(dizi[1]);
+            Log.d("test", "doInBackground: "+phoneNumber + " count "+invoiceCount);
+            return ServiceManager.getInvoicesInfo(phoneNumber, invoiceCount);
         }
 
         @Override
         protected void onPostExecute(String result) {
-            HomePage.onPostDataUsageInfo(result);
+            Log.d("DEBUG", "onPostExecute: "+result);
+            InvoicesPage.onPostInvoicesInfo(result);
         }
     }
 }
