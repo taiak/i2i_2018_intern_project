@@ -19,6 +19,20 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
+   <element name="getUserInfo">
+    <complexType>
+     <sequence>
+      <element name="userId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUserInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="getUserInfoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
    <element name="isConnected">
     <complexType/>
    </element>
@@ -29,17 +43,57 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="getTariffIdBySubmsisdn">
+   <element name="getTariffInfo">
     <complexType>
      <sequence>
-      <element name="msisdn" type="xsd:string"/>
+      <element name="userId" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
-   <element name="getTariffIdBySubmsisdnResponse">
+   <element name="getTariffInfoResponse">
     <complexType>
      <sequence>
-      <element name="getTariffIdBySubmsisdnReturn" type="xsd:int"/>
+      <element name="getTariffInfoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUsageInfo">
+    <complexType>
+     <sequence>
+      <element name="userId" type="xsd:string"/>
+      <element name="infoType" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUsageInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="getUsageInfoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isDBConnected">
+    <complexType/>
+   </element>
+   <element name="isDBConnectedResponse">
+    <complexType>
+     <sequence>
+      <element name="isDBConnectedReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getInvoiceInfo">
+    <complexType>
+     <sequence>
+      <element name="userId" type="xsd:string"/>
+      <element name="invoiceCount" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getInvoiceInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="getInvoiceInfoReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
@@ -58,36 +112,84 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="getTariffIdByname">
-    <complexType>
-     <sequence>
-      <element name="tariffName" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="getTariffIdBynameResponse">
-    <complexType>
-     <sequence>
-      <element name="getTariffIdBynameReturn" type="xsd:int"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="isDBConnected">
-    <complexType/>
-   </element>
-   <element name="isDBConnectedResponse">
-    <complexType>
-     <sequence>
-      <element name="isDBConnectedReturn" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
   </schema>
  </wsdl:types>
+
+   <wsdl:message name="getUserInfoRequest">
+
+      <wsdl:part element="impl:getUserInfo" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserInfoResponse">
+
+      <wsdl:part element="impl:getUserInfoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
 
    <wsdl:message name="isConnectedRequest">
 
       <wsdl:part element="impl:isConnected" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getInvoiceInfoResponse">
+
+      <wsdl:part element="impl:getInvoiceInfoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTariffInfoRequest">
+
+      <wsdl:part element="impl:getTariffInfo" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsageInfoRequest">
+
+      <wsdl:part element="impl:getUsageInfo" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTariffInfoResponse">
+
+      <wsdl:part element="impl:getTariffInfoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isDBConnectedResponse">
+
+      <wsdl:part element="impl:isDBConnectedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUsageInfoResponse">
+
+      <wsdl:part element="impl:getUsageInfoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isDBConnectedRequest">
+
+      <wsdl:part element="impl:isDBConnected" name="parameters">
 
       </wsdl:part>
 
@@ -104,22 +206,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <wsdl:message name="isConnectedResponse">
 
       <wsdl:part element="impl:isConnectedResponse" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="getTariffIdBynameResponse">
-
-      <wsdl:part element="impl:getTariffIdBynameResponse" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="getTariffIdBySubmsisdnRequest">
-
-      <wsdl:part element="impl:getTariffIdBySubmsisdn" name="parameters">
 
       </wsdl:part>
 
@@ -149,33 +235,9 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="isDBConnectedResponse">
+   <wsdl:message name="getInvoiceInfoRequest">
 
-      <wsdl:part element="impl:isDBConnectedResponse" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="getTariffIdBySubmsisdnResponse">
-
-      <wsdl:part element="impl:getTariffIdBySubmsisdnResponse" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="isDBConnectedRequest">
-
-      <wsdl:part element="impl:isDBConnected" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="getTariffIdBynameRequest">
-
-      <wsdl:part element="impl:getTariffIdByname" name="parameters">
+      <wsdl:part element="impl:getInvoiceInfo" name="parameters">
 
       </wsdl:part>
 
@@ -195,6 +257,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="getUserInfo">
+
+         <wsdl:input message="impl:getUserInfoRequest" name="getUserInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUserInfoResponse" name="getUserInfoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="isConnected">
 
          <wsdl:input message="impl:isConnectedRequest" name="isConnectedRequest">
@@ -207,37 +281,25 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="getTariffIdBySubmsisdn">
+      <wsdl:operation name="getTariffInfo">
 
-         <wsdl:input message="impl:getTariffIdBySubmsisdnRequest" name="getTariffIdBySubmsisdnRequest">
+         <wsdl:input message="impl:getTariffInfoRequest" name="getTariffInfoRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:getTariffIdBySubmsisdnResponse" name="getTariffIdBySubmsisdnResponse">
+         <wsdl:output message="impl:getTariffInfoResponse" name="getTariffInfoResponse">
 
        </wsdl:output>
 
       </wsdl:operation>
 
-      <wsdl:operation name="changeUserPassword">
+      <wsdl:operation name="getUsageInfo">
 
-         <wsdl:input message="impl:changeUserPasswordRequest" name="changeUserPasswordRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:changeUserPasswordResponse" name="changeUserPasswordResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="getTariffIdByname">
-
-         <wsdl:input message="impl:getTariffIdBynameRequest" name="getTariffIdBynameRequest">
+         <wsdl:input message="impl:getUsageInfoRequest" name="getUsageInfoRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:getTariffIdBynameResponse" name="getTariffIdBynameResponse">
+         <wsdl:output message="impl:getUsageInfoResponse" name="getUsageInfoResponse">
 
        </wsdl:output>
 
@@ -250,6 +312,30 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:isDBConnectedResponse" name="isDBConnectedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getInvoiceInfo">
+
+         <wsdl:input message="impl:getInvoiceInfoRequest" name="getInvoiceInfoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getInvoiceInfoResponse" name="getInvoiceInfoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeUserPassword">
+
+         <wsdl:input message="impl:changeUserPasswordRequest" name="changeUserPasswordRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:changeUserPasswordResponse" name="changeUserPasswordResponse">
 
        </wsdl:output>
 
@@ -279,6 +365,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="getUserInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserInfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserInfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="isConnected">
 
          <wsdlsoap:operation soapAction=""/>
@@ -297,17 +401,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="getTariffIdBySubmsisdn">
+      <wsdl:operation name="getTariffInfo">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="getTariffIdBySubmsisdnRequest">
+         <wsdl:input name="getTariffInfoRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="getTariffIdBySubmsisdnResponse">
+         <wsdl:output name="getTariffInfoResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -315,35 +419,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="changeUserPassword">
+      <wsdl:operation name="getUsageInfo">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="changeUserPasswordRequest">
+         <wsdl:input name="getUsageInfoRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="changeUserPasswordResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="getTariffIdByname">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="getTariffIdBynameRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="getTariffIdBynameResponse">
+         <wsdl:output name="getUsageInfoResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -362,6 +448,42 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="isDBConnectedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getInvoiceInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getInvoiceInfoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getInvoiceInfoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeUserPassword">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="changeUserPasswordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="changeUserPasswordResponse">
 
             <wsdlsoap:body use="literal"/>
 

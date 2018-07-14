@@ -14,21 +14,29 @@
         <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userId" type="tns:string"/>
         <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:password" type="tns:string"/>
       </operation>
+      <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getUserInfo" qname="operNS:getUserInfo" returnQName="retNS:getUserInfoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userId" type="tns:string"/>
+      </operation>
       <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="isConnected" qname="operNS:isConnected" returnQName="retNS:isConnectedReturn" returnType="rtns:string" soapAction="">
       </operation>
-      <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getTariffIdBySubmsisdn" qname="operNS:getTariffIdBySubmsisdn" returnQName="retNS:getTariffIdBySubmsisdnReturn" returnType="rtns:int" soapAction="">
-        <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:msisdn" type="tns:string"/>
+      <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getTariffInfo" qname="operNS:getTariffInfo" returnQName="retNS:getTariffInfoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userId" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getUsageInfo" qname="operNS:getUsageInfo" returnQName="retNS:getUsageInfoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userId" type="tns:string"/>
+        <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:infoType" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="isDBConnected" qname="operNS:isDBConnected" returnQName="retNS:isDBConnectedReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getInvoiceInfo" qname="operNS:getInvoiceInfo" returnQName="retNS:getInvoiceInfoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userId" type="tns:string"/>
+        <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:invoiceCount" type="tns:int"/>
       </operation>
       <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="changeUserPassword" qname="operNS:changeUserPassword" returnQName="retNS:changeUserPasswordReturn" returnType="rtns:boolean" soapAction="">
         <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:userId" type="tns:string"/>
         <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:password" type="tns:string"/>
       </operation>
-      <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getTariffIdByname" qname="operNS:getTariffIdByname" returnQName="retNS:getTariffIdBynameReturn" returnType="rtns:int" soapAction="">
-        <parameter xmlns:pns="http://services.cell2iwebservice.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:tariffName" type="tns:string"/>
-      </operation>
-      <operation xmlns:operNS="http://services.cell2iwebservice.com" xmlns:retNS="http://services.cell2iwebservice.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="isDBConnected" qname="operNS:isDBConnected" returnQName="retNS:isDBConnectedReturn" returnType="rtns:string" soapAction="">
-      </operation>
-      <parameter name="allowedMethods" value="getTariffIdBySubmsisdn changeUserPassword isAuthorized isDBConnected isConnected getTariffIdByname"/>
+      <parameter name="allowedMethods" value="getTariffInfo changeUserPassword isAuthorized getUsageInfo isDBConnected getInvoiceInfo isConnected getUserInfo"/>
 
   </service>
 </deployment>

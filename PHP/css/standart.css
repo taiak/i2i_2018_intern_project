@@ -281,8 +281,8 @@ tr.box, th.box, td.box, tr.col, th.col, td.col{
 }
 
 .box{
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top:15px;
+    padding-bottom:15px;
 }
 
 .box.box-border{

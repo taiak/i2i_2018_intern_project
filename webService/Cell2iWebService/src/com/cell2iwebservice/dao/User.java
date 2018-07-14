@@ -1,5 +1,9 @@
 package com.cell2iwebservice.dao;
 
+import java.sql.SQLException;
+import oracle.jdbc.OracleCallableStatement;
+import oracle.jdbc.OracleTypes;
+
 public class User extends DAO {
 	
 	/*  Return login statement
@@ -10,7 +14,6 @@ public class User extends DAO {
 	public static boolean isAuthorized(String userName, String password)
 	{
 		int connectionStatu = 0;
-		boolean returnStatement = false;
 		try {
 			connectionOpen();
 			String sql = "{ ? = call CELL2I.CELL2I_UTILITY.check_user_is_valid(?,?) }";
@@ -29,14 +32,7 @@ public class User extends DAO {
 			connectionStatu = 0;
 		}
 		
-		if (connectionStatu == 1) {
-			returnStatement = true;
-		} 
-		else {
-		    returnStatement = false;
-		}
-		
-		return returnStatement;
+		return (connectionStatu == 1);
 	}
 	
 	/*  Return password change statement
@@ -76,4 +72,58 @@ public class User extends DAO {
 		return returnStatement;
 	}
 	
+	
+	public static String getUserInfo(String msisdn) {
+		String resultString = "";
+		String userInfoSql = "{ ? = call CELL2I.CELL2I_UTILITY.get_subscriberinfo(?) }";
+		try {
+			connectionOpen();
+			callableStatement = sqlConnection.prepareCall(userInfoSql);
+			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
+			callableStatement.setString(2, msisdn);
+			callableStatement.execute();
+			
+			resultSet =((OracleCallableStatement) callableStatement).getCursor(1);
+			System.out.println("resultSet");
+			
+			if (resultSet.next()){
+				resultString += resultSet.getString(1) + seperator +
+								resultSet.getString(2) + seperator +
+								resultSet.getString(3);
+			}
+			
+			connectionClose();
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+		
+		return resultString;
+	}
+	
+	public static String getUsageInfo(String msisdn, String usageType) {
+		String resultString = "";
+		String userInfoSql = "{ ? = call CELL2I.CELL2I_UTILITY.get_usageInfo(?,?) }";
+		try {
+			connectionOpen();
+			callableStatement = sqlConnection.prepareCall(userInfoSql);
+			callableStatement.registerOutParameter(1,OracleTypes.CURSOR);
+			callableStatement.setString(2, msisdn);
+			callableStatement.setString(3, usageType);
+			callableStatement.execute();
+			
+			resultSet =((OracleCallableStatement) callableStatement).getCursor(1);
+			if (resultSet.next()){
+				resultString +=  resultSet.getString(1) + seperator +
+								 resultSet.getString(2) + seperator +
+								 resultSet.getString(3);
+			}
+			
+			connectionClose();
+		} catch (Exception e) {
+			System.out.println(e);
+			resultString = "error";
+		}
+		
+		return resultString;
+	}	
 }
