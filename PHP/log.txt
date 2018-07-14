@@ -317,3 +317,81 @@ Date->14.07.2018 , 19:42:47 / Ip->::1 / SessionUser->5369722537 / Operation-> 48
 
 Date->14.07.2018 , 19:42:47 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
 
+Date->14.07.2018 , 22:21:16 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserInfoBlock-----
+
+Date->14.07.2018 , 22:21:16 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değeri dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:16 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->14.07.2018 , 22:21:16 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanıcı bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:16 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffInfo-----
+
+Date->14.07.2018 , 22:21:16 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değerini dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:16 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->14.07.2018 , 22:21:16 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:18 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->14.07.2018 , 22:21:18 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:18 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->14.07.2018 , 22:21:18 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:18 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->14.07.2018 , 22:21:18 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:18 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->14.07.2018 , 22:21:18 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> 5=5000/1000 
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 5.00 
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> 4.201=4201/1000 
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 4.20 
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> 84=4.20/(5.00/100) 
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> 37.5=375/(1000/100) 
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> 48.96=4896/(10000/100) 
+
+Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
