@@ -13,8 +13,14 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var progressBar2: UIProgressView!
     @IBOutlet weak var progressBar3: UIProgressView!
-    var text: String? = nil
+    var texta: String? = nil
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let FourthViewController = segue.destination as? FourthViewController{
+            FourthViewController.textname = texta!
+        }
+        
+    }
     
     @IBOutlet weak var tariffID: UITextField!
     @IBOutlet weak var numberBar: UITextField!
@@ -36,13 +42,13 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let userInfo = wsgetSuccess.getUserInfo(userId: text!)
+        let userInfo = wsgetSuccess.getUserInfo(userId: texta!)
         let userInfo_Split = userInfo.split(separator: "_")
         
         nameBar.text! = String(userInfo_Split[1] + " " + userInfo_Split[2])
         numberBar.text! = String(userInfo_Split[0])
         
-        let TariffInfo = wsgetSuccess.getTariffInfo(userId: text!)
+        let TariffInfo = wsgetSuccess.getTariffInfo(userId: texta!)
         let TariffInfo_Split = TariffInfo.split(separator: "_")
         
         tariffID.text! = String(TariffInfo_Split[0]) //tarife adi
@@ -54,7 +60,7 @@ class SecondViewController: UIViewController {
         
         totalSMS.text! = String(TariffInfo_Split[2] + " SMS") //sms total
         
-        var SMS_Infos: String = wsgetSuccess.getUsageInfo(userId: text!, infoType: ("SMS")) //kullanilan
+        var SMS_Infos: String = wsgetSuccess.getUsageInfo(userId: texta!, infoType: ("SMS")) //kullanilan
         let SMS_Infos_Split = SMS_Infos.split(separator: "_")
 
         var float_total_sms = Float(String(TariffInfo_Split[2]))! //total sms float cinsinden
@@ -68,7 +74,7 @@ class SecondViewController: UIViewController {
         progressBar3.transform = progressBar.transform.scaledBy(x: 1, y: 10)
         progressBar3.setProgress(Float(progress_sms_yuzde), animated: true)
         
-        var DATA_Infos: String = wsgetSuccess.getUsageInfo(userId: text!, infoType: ("DATA"))
+        var DATA_Infos: String = wsgetSuccess.getUsageInfo(userId: texta!, infoType: ("DATA"))
         let Data_Infos_Split = DATA_Infos.split(separator: "_")
         
         var float_total_data = (Float(String(TariffInfo_Split[3])))!
@@ -81,7 +87,7 @@ class SecondViewController: UIViewController {
         progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 10)
         progressBar.setProgress(progress_data_yuzde, animated: true)
         
-        var DK_Infos = wsgetSuccess.getUsageInfo(userId: text!, infoType: ("VOICE")) //kullanilan
+        var DK_Infos = wsgetSuccess.getUsageInfo(userId: texta!, infoType: ("VOICE")) //kullanilan
         let DK_Infos_Split = DK_Infos.split(separator: "_")
         
         var float_total_DK = (Float(String(TariffInfo_Split[1])))!
@@ -114,6 +120,5 @@ class SecondViewController: UIViewController {
         performSegue(withIdentifier: "gotothirdpage", sender: nil)
         
     }
-    
 
 }

@@ -16,8 +16,6 @@ import java.util.List;
  */
 
 public class InvoicesAdapter extends RecyclerView.Adapter<InvoicesAdapter.ViewHolder> {
-
-
     List<Invoices> invoicesList;
     int itemLayout;
     ItemListener itemListener;
@@ -47,31 +45,22 @@ public class InvoicesAdapter extends RecyclerView.Adapter<InvoicesAdapter.ViewHo
         return invoicesList.size();
     }
 
-
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView cardTitle;
         TextView cardCost;
         TextView cardDate;
         Invoices invoices;
-         TextView txtPaid;
+        TextView txtPaid;
 
-
-
-        public  ViewHolder(View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
-
-            cardTitle =  itemView.findViewById(R.id.invoices_month);
-            cardCost =      itemView.findViewById(R.id.cost);
-            cardDate =  itemView.findViewById(R.id.date);
+            cardTitle = itemView.findViewById(R.id.invoices_month);
+            cardCost = itemView.findViewById(R.id.cost);
+            cardDate = itemView.findViewById(R.id.date);
             txtPaid = itemView.findViewById(R.id.txtpaidinfo);
             itemView.setOnClickListener(this);
-
-
         }
-
-
-
 
         public void bindItem(Invoices invoices) {
             this.invoices = invoices;
@@ -79,26 +68,17 @@ public class InvoicesAdapter extends RecyclerView.Adapter<InvoicesAdapter.ViewHo
             cardCost.setText(invoices.getCost());
             cardDate.setText(invoices.getDate());
             txtPaid.setText(invoices.getPaidInfo());
-
-
         }
-
 
         @Override
             public void onClick(View v) {
                 if (itemListener != null) {
                     itemListener.onItemClicked(invoices);
-
                 }
         }
     }
 
     public interface ItemListener {
         void onItemClicked(Invoices invoices);
-    }
-
-    public void setItemListener(ItemListener itemListener)
-    {
-        this.itemListener = itemListener;
     }
 }

@@ -1,11 +1,21 @@
 h1{
-	color:#0000FF;
+	color:#00FF00;
 }
 
 h2{
-	color:#FF0000;
+	color:#000000;
 }
 
 footer{
     margin-top:60px;
+}
+
+nav{
+	margin-top:22px;
+	
+}
+
+li{
+	position: relative;
+   	left: 325px;
 }

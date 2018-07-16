@@ -6,10 +6,9 @@
 
 
 	<groupId>org.springframework</groupId>
-		<artifactId>gs-consuming-web-service</artifactId>
+		<artifactId>Cell2iSpringWebApplication</artifactId>
     <version>0.1.0</version>
-    
-<!-- Change 1 : groupId used instead of artifactId -->
+    <packaging>war</packaging>
 	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -41,13 +40,17 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/org.springframework.ws/spring-ws-core -->
+		<dependency>
+		    <groupId>org.springframework.ws</groupId>
+		    <artifactId>spring-ws-core</artifactId>
+		    <version>3.0.1.RELEASE</version>
+		</dependency>
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
 		</dependency>
-
-		<!-- hot swapping, disable cache for template, enable live reload -->
+		<!--   hot swapping, disable cache for template, enable live reload  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -60,7 +63,13 @@
 			<artifactId>bootstrap</artifactId>
 			<version>3.3.7</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.ksoap</groupId>
+			<artifactId>ksoap</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}\lib\ksoap2.jar</systemPath>
+		</dependency>
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc</artifactId>
@@ -77,29 +86,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- start of wsdl -->
-			<plugin>
-                <groupId>org.jvnet.jaxb2.maven2</groupId>
-                <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.12.3</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <schemaLanguage>WSDL</schemaLanguage>
-                    <generatePackage>hello.wsdl</generatePackage>
-                    <schemas>
-                        <schema>
-                            <url>http://209.97.129.103:8080/Cell2iWebService/services/Cell2iWebServiceImpl?wsdl</url>
-                        </schema>
-                    </schemas>
-                </configuration>
-            </plugin>
-            <!-- end wsdl -->
 		</plugins>
 	</build>
 </project>

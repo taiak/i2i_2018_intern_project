@@ -72,9 +72,11 @@ class ViewController: UIViewController , UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let SecondViewController = segue.destination as? SecondViewController{
-            SecondViewController.text = userNameText.text
+            SecondViewController.texta = userNameText.text
         }
+        
     }
+    
     
     
 }

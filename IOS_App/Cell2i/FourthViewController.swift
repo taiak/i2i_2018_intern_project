@@ -9,32 +9,12 @@
 import UIKit
 
 class FourthViewController: UIViewController , UICollectionViewDataSource , UICollectionViewDelegate {
-
-    
-    let monthName = ["May Invoice" , " March Invoice" , "February Invoice"]
-    
-    let costName = ["78,34" , " 78,34" , "78,34"]
-    
-    let date = ["28.05.2018" , "28.04.2018" , "28.03.2018"]
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return monthName.count
-    }
+    var textname: String? = nil
+    let wsgetSuccess = Cell2iWebServiceImplService()
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell" , for: indexPath) as! CollectionViewCell
-        
-        cell.monthName.text = monthName[indexPath.row]
-        cell.costName.text = costName[indexPath.row]
-        cell.date.text = date[indexPath.row]
-        
+        let invoceInfo = wsgetSuccess.getInvoiceInfo(userId: textname! , invoiceCount: 6)
         cell.contentView.layer.cornerRadius = 4.0
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = UIColor.clear.cgColor
@@ -46,22 +26,48 @@ class FourthViewController: UIViewController , UICollectionViewDataSource , UICo
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect : cell.bounds , cornerRadius : cell.contentView.layer.cornerRadius).cgPath
         
+        let invoiceInfo_Split = invoceInfo.split(separator: "@")
+        
+        let ogeler = invoiceInfo_Split[indexPath[1]].split(separator: "_")
+        cell.last_date.text! = "Invoice Date:" + String(ogeler[1])
+        
+        let tarih_ayrimi_Split = String(ogeler[1]).split(separator: ".")
+        if(tarih_ayrimi_Split[1] == "03") {
+            cell.month.text! = "MARCH INVOICE"
+        }
+        else if(tarih_ayrimi_Split[1] == "04") {
+            cell.month.text! = "APRIL INVOICE"
+        }
+        else if(tarih_ayrimi_Split[1] == "05") {
+            cell.month.text! = "MAY INVOICE"
+        }
+        else if(tarih_ayrimi_Split[1] == "06") {
+            cell.month.text! = "JUN INVOICE"
+        }
+        else if(tarih_ayrimi_Split[1] == "07") {
+            cell.month.text! = "JULY INVOICE"
+        }
+        else if(tarih_ayrimi_Split[1] == "08") {
+            cell.month.text! = "AUGUST INVOICE"
+        }
+        
+        cell.cost.text! = "Cost: " + String(ogeler[2])
+        if(String(ogeler[3]) == "1"){
+            cell.paidornot.text! = "PAID"
+        }
+        else{
+            cell.paidornot.text! = "NOT PAID"
+        }
         return cell
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
     @IBAction func backTurnButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
