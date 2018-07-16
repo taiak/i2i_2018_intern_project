@@ -29,45 +29,22 @@ public class HomePage extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         initalize();
-        //Call Services
-        Task.UserInfoAsyncTask n = new Task.UserInfoAsyncTask();
-        n.execute(SessionInfo.loggedUserPhoneNumber);
-        Task.UserTariffInfoAsyncTask m = new Task.UserTariffInfoAsyncTask();
-        m.execute(SessionInfo.loggedUserPhoneNumber);
-        Task.UsageInfoAsyncTask t = new Task.UsageInfoAsyncTask();
-        t.execute(SessionInfo.loggedUserPhoneNumber,SessionInfo.info);
+
+        Task.UserInfoAsyncTask userInfo = new Task.UserInfoAsyncTask();
+        userInfo.execute(SessionInfo.loggedUserPhoneNumber);
+        Task.UserTariffInfoAsyncTask userTariff = new Task.UserTariffInfoAsyncTask();
+        userTariff.execute(SessionInfo.loggedUserPhoneNumber);
+        Task.UsageInfoAsyncTask usageInfo = new Task.UsageInfoAsyncTask();
+        usageInfo.execute(SessionInfo.loggedUserPhoneNumber,SessionInfo.info);
         Task.UsageVoiceAsyncTask usageVoice = new Task.UsageVoiceAsyncTask();
         usageVoice.execute(SessionInfo.loggedUserPhoneNumber,SessionInfo.info1);
         Task.UsageDataAsyncTask usagedata = new Task.UsageDataAsyncTask();
         usagedata.execute(SessionInfo.loggedUserPhoneNumber,SessionInfo.info2);
-    }
-    public void initalize()
-    {
-        btnExit = (Button) findViewById(R.id.exit);
-        btnInvoices = (Button) findViewById(R.id.invoices);
-        txtFullname = (TextView) findViewById(R.id.name);
-        txtPhonenumber = (TextView) findViewById(R.id.telno);
-        txtTariff = (TextView) findViewById(R.id.tarife);
-        txtUsageSms = (TextView) findViewById(R.id.usagesms);
-        txtUsageData = (TextView) findViewById(R.id.usagedata);
-        txtUsageVoice = (TextView) findViewById(R.id.usagevoice);
-        txtFullname.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
-        txtPhonenumber.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
-        txtTariff.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
-
-        pBarUsagevoice = (ProgressBar) findViewById(R.id.kalandk);
-        pBarUsagesms = (ProgressBar) findViewById(R.id.kalansms);
-        pBarUsagedata = (ProgressBar) findViewById(R.id.kalanint);
-
-
-        txtSumdata = (TextView) findViewById(R.id.toplamint);
-        txtSumvoice = (TextView) findViewById(R.id.toplamdk);
-        txtSumsms = (TextView) findViewById(R.id.toplamsms);
 
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentexit = new Intent(HomePage.this, MainActivity.class);
+                Intent intentexit = new Intent(HomePage.this, LoginPage.class);
                 startActivity(intentexit);
             }
         });
@@ -78,6 +55,27 @@ public class HomePage extends Activity {
                 startActivity(intentinvoices);
             }
         });
+    }
+
+    public void initalize()
+    {
+        btnExit = findViewById(R.id.exit);
+        btnInvoices = findViewById(R.id.invoices);
+        txtFullname = findViewById(R.id.name);
+        txtPhonenumber = findViewById(R.id.telno);
+        txtTariff = findViewById(R.id.tarife);
+        txtUsageSms = findViewById(R.id.usagesms);
+        txtUsageData = findViewById(R.id.usagedata);
+        txtUsageVoice = findViewById(R.id.usagevoice);
+        txtFullname.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+        txtPhonenumber.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+        txtTariff.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+        pBarUsagevoice = findViewById(R.id.kalandk);
+        pBarUsagesms = findViewById(R.id.kalansms);
+        pBarUsagedata = findViewById(R.id.kalanint);
+        txtSumdata = findViewById(R.id.toplamint);
+        txtSumvoice = findViewById(R.id.toplamdk);
+        txtSumsms = findViewById(R.id.toplamsms);
 
     }
 
@@ -122,7 +120,6 @@ public class HomePage extends Activity {
         txtUsageVoice.setText(infoArray[1]+" DK");
         HomePage.pBarUsagevoice.setProgress(Integer.parseInt(infoArray[1]));
     }
-
 
     public static void onPostDataUsageInfo(String postResult)
     {

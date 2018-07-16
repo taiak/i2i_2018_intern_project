@@ -20,7 +20,7 @@ import com.example.zeynep.cell2i.service.ServiceManager;
 import com.example.zeynep.cell2i.session.SessionInfo;
 
 
-public class MainActivity extends AppCompatActivity {
+public class LoginPage extends AppCompatActivity {
 
     Button btnLogin;
     EditText edPhoneNumber;
@@ -31,22 +31,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        edPhoneNumber = (EditText) findViewById(R.id.editText_username);
-        edPassword = (EditText) findViewById(R.id.editText_password);
-        btnLogin = (Button) findViewById(R.id.btn_login);
-        txtForgot = (TextView) findViewById(R.id.txt_forgot);
+        edPhoneNumber =  findViewById(R.id.editText_username);
+        edPassword = findViewById(R.id.editText_password);
+        btnLogin = findViewById(R.id.btn_login);
+        txtForgot = findViewById(R.id.txt_forgot);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = edPhoneNumber.getText().toString();
+                String phoneNumber = edPhoneNumber.getText().toString();
                 String password = edPassword.getText().toString();
 
                 if (isConnectionNetwork() == false) {
                     connectionFailed();
-                } else if (!username.isEmpty() && !password.isEmpty()) {
+                } else if (!phoneNumber.isEmpty() && !password.isEmpty()) {
                     LoginAsyncTask login = new LoginAsyncTask();
-                    login.execute(username, password);
+                    login.execute(phoneNumber, password);
                 } else  {
                     emptyFailed();
                 }
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         txtForgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ChangePassword.class);
+                Intent intent = new Intent(LoginPage.this, ChangePasswordPage.class);
                 startActivity(intent);
             }
         });
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             if (s.equals("true")) {
                 SessionInfo.loggedUserPhoneNumber = edPhoneNumber.getText().toString();
-                Intent intent = new Intent(MainActivity.this, HomePage.class);
+                Intent intent = new Intent(LoginPage.this, HomePage.class);
                 startActivity(intent);
             } else {
                 loginFailed();
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loginFailed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginPage.this);
         builder.setTitle("Login Failed");
         builder.setMessage("Please check your phone number and password then try again");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void emptyFailed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginPage.this);
         builder.setTitle("Login Failed");
         builder.setMessage("Fields can not be blank");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void connectionFailed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginPage.this);
         builder.setTitle("Connection Failed");
         builder.setMessage("Please check your network connection and try again");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -115,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
 
     boolean isConnectionNetwork() {
         ConnectivityManager conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-
         if (conMgr.getNetworkInfo(0).getState() == NetworkInfo.State.DISCONNECTED) {
             return false;
         } else {
