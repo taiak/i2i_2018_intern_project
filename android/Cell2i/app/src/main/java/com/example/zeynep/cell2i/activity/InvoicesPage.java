@@ -37,7 +37,7 @@ public class InvoicesPage extends AppCompatActivity {
         List<Invoices> invoicesList = new ArrayList<>();
         String[] invoiceArray = postResult.split("@");
         for (int i = 0; i <invoiceArray.length ; i++) {
-           String invoiceDetail = invoiceArray[i];
+            String invoiceDetail = invoiceArray[i];
             String[] infoArray = invoiceDetail.split("_");
             Invoices invoice = new Invoices();
             invoice.setDate("Invoice Date: " +infoArray[0]);
@@ -46,12 +46,12 @@ public class InvoicesPage extends AppCompatActivity {
             int MonthInfo = Integer.parseInt(MonthInfoArray[1]) ;
             invoice.setInvoices_month(MonthArray[MonthInfo ]+ " INVOICES");
             invoice.setPaid(infoArray[3]);
-           if (infoArray[3].equals("1")){
+            if (infoArray[3].equals("1")){
                invoice.setPaidInfo("PAID");
             }
             else
                invoice.setPaidInfo("NOT PAID");
-           invoicesList.add(invoice);
+            invoicesList.add(invoice);
         }
         loadRecyleview(invoicesList);
         Log.d("TAG", "onPostInvoicesInfo: "+postResult);
