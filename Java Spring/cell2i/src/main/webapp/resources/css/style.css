@@ -1,0 +1,96 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+h3{
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+nav{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+li{
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#asd{
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}	
+#test1 {
+    background: #ffffff;
+}
+#test2 {
+	background: #c0c0c0;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+#test3 {
+	width: 600px;
+}
+.ui-progressbar.ui-widget-content {
+	color:#000000;
+    background-color:#008000;
+    background-image:none;
+}
+
+#kutu1{
+	height:150px;
+	width:400px;
+	border-style:solid;
+	padding:5px 5px 5px 5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	background-color: #ffffff;
+}
+
+h4{
+	font-size:15px;
+}
+
+.btnLogout{
+	
+}
+
+.btnLogout > button{background-image: url("https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/web/exit_to_app.svg%20(2).png");
+    width: 90px;
+    height: 90px;
+    background-size: 71%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: inherit;
+    outline:none;
+    border: none; 
+    box-shadow:none !important;
+}
+.btnLogout > button > span{ display:none !important;}
+.ui-progressbar > .ui-progressbar-value{
+	background-color: #ff0000;
+    background-image: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 0px;
+}
+div.ui-progressbar.ui-widget-content{
+	-webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 0px;
+}
+
+div.ui-widget-content{
+	border: 0px;
+}

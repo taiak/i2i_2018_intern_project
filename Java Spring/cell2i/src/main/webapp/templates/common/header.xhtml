@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron" id="test1">
+
+		<div class="container" id="test3">
+	
+			<h3><img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/icons/user.png" alt="userLogo"
+								height="50" width="60"></img>     #{userInfo.firstNameLastName}</h3>
+			<h3><img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/icons/smartphone.png" alt="userLogo"
+								height="50" width="60"></img>     #{userInfo.mobile}</h3>
+			<h3><img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/icons/stopwatch-4.png" alt="userLogo"
+								height="50" width="60"></img>     #{userInfo.tariffName}</h3>
+
+			<p:dataList value="#{userInfo.usageInfoList}" var="info"
+				type="definition" rowStyleClass="highlight">
+				<f:facet name="header"></f:facet>
+        		
+        		Used #{info.getType(info.infoType)}: #{info.usage} #{info.getType(info.infoType)}, Total #{info.getType(info.infoType)}: #{info.tariff} #{info.getType(info.infoType)}
+        		
+        		<f:facet name="description" id="progress1" >
+					<p:progressBar value="#{info.usagePercentage}"
+						labelTemplate="{value}%" displayOnly="true"/>
+				</f:facet>
+			</p:dataList>
+			<p></p>
+		</div>
+	</div>
+
+</ui:composition>

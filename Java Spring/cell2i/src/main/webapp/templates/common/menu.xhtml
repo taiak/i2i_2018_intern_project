@@ -1,0 +1,76 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="form-group">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="index.xhtml">
+							<img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/web/message.svg%20(2).png" alt="messageLogo" height="60" width="60"></img>
+							</a>
+						</li>
+						<li>
+							<a href="index.xhtml">
+							<img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/web/gift-alt.svg%20(2).png" alt="messageLogo" height="60" width="60"></img>
+							</a>
+						</li>
+						<li>
+							<a href="index.xhtml">
+							<img src="http://i.hizliresim.com/g6oPVZ.png" alt="Cell2iLogo" height="60" width="112"></img>
+							</a>
+						</li>
+						<li>	
+							<a href="invoices.xhtml">
+							<img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/web/coins-01.svg%20(2).png" alt="messageLogo" height="60" width="60"></img>							
+							</a>
+						</li>
+						<li class="btnLogout">
+							<p:commandButton action="#{auth.logout}" value="Logout" id="btnLogout"
+							 />					
+						</li>	
+					</ul>
+				</div>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<h:form class="navbar-form navbar-right">
+					<div class="form-group" >
+					
+					</div>
+				</h:form>
+			</div>
+			
+			<ui:remove>
+				<div id="navbar" class="navbar-collapse collapse">
+					<h:form class="navbar-form navbar-right">
+						<div class="form-group">
+							<p:inputText value="#{auth.username}" placeholder="Phone Number"
+								class="form-control" />
+						</div>
+						<div class="form-group">
+							<p:password value="#{auth.password}" placeholder="Password"
+								class="form-control" />
+						</div>
+						<ui:remove>
+							<button type="submit" class="btn btn-success">Sign in</button>
+						</ui:remove>
+						<p:commandButton action="#{auth.login}" value="Sign in"
+							class="btn btn-success" />
+					</h:form>
+				</div>
+				<!--/.navbar-collapse -->
+			</ui:remove>
+		</div>
+	</nav>
+
+</ui:composition>
