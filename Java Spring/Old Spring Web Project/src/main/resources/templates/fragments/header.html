@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:fragment="header-css">
+        <!-- this is header-css -->
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" th:href="@{/css/main.css}"
+              href="../../static/css/main.css" />
+    </div>
+</head>
+<body>
+
+<div th:fragment="header">
+    <!-- this is header -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav"><!-- Merkeze alinmali tekrar bak! -->
+                    <li><a href="@{/message}"><img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/web/message.svg%20(2).png" alt="messageLogo" height="60" width="60"></img></a></li>
+                    <li><a href="@{/gifts}"><img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/web/gift-alt.svg%20(2).png" alt="giftLogo" height="60" width="60"></img></a></li>
+                    <li class="active"><a href="@{/home}"><img src="http://i.hizliresim.com/g6oPVZ.png" alt="Cell2iLogo" height="60" width="112"></img></a></li>
+                    <li><a href="@{/invoice}"><img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/web/coins-01.svg%20(2).png" alt="invoiceLogo" height="60" width="60"></img></a></li>
+                    <li><a href="@{/login}"><img src="https://raw.githubusercontent.com/taiak/i2i_2018_intern_project/master/documents_analysis/web/exit_to_app.svg%20(2).png" alt="exitLogo" height="60" width="60"></img></a></li>                	
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>
