@@ -6,7 +6,7 @@
 
 
 	<groupId>org.springframework</groupId>
-		<artifactId>Cell2iSpringWebApplication</artifactId>
+		<artifactId>OldSpringWebProject</artifactId>
     <version>0.1.0</version>
     <packaging>war</packaging>
 	
