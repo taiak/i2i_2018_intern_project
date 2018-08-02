@@ -395,3 +395,933 @@ Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation-> 48
 
 Date->14.07.2018 , 22:21:19 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
 
+Date->15.07.2018 , 13:04:23 / Ip->::1 / SessionUser->GUEST / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->15.07.2018 , 13:04:23 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri alınamadı
+
+Date->15.07.2018 , 13:04:23 / Ip->::1 / SessionUser->GUEST / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->GUEST / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri alındı
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->GUEST / Operation->WebServisten bilgi çekiliyor
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->5369722537 / Operation->Login işlemi yapıldı
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserInfoBlock-----
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değeri dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanıcı bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffInfo-----
+
+Date->15.07.2018 , 13:05:05 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değerini dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->15.07.2018 , 13:05:06 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation-> 5=5000/1000 
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 5.00 
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation-> 4.201=4201/1000 
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 4.20 
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation-> 84=4.20/(5.00/100) 
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation-> 37.5=375/(1000/100) 
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation-> 48.96=4896/(10000/100) 
+
+Date->15.07.2018 , 13:05:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:07:45 / Ip->::1 / SessionUser->GUEST / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->16.07.2018 , 09:07:45 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri alındı
+
+Date->16.07.2018 , 09:07:45 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:44 / Ip->::1 / SessionUser->GUEST / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->16.07.2018 , 09:16:44 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri alındı
+
+Date->16.07.2018 , 09:16:44 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:44 / Ip->::1 / SessionUser->GUEST / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:16:44 / Ip->::1 / SessionUser->5369722537 / Operation->Login işlemi yapıldı
+
+Date->16.07.2018 , 09:16:44 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->16.07.2018 , 09:16:45 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserInfoBlock-----
+
+Date->16.07.2018 , 09:16:45 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değeri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:45 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:16:45 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanıcı bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:45 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffInfo-----
+
+Date->16.07.2018 , 09:16:45 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:45 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:16:45 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:46 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 09:16:46 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:46 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:16:46 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:47 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 09:16:47 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:47 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:16:47 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:48 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 09:16:48 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation-> 5=5000/1000 
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 5.00 
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation-> 4.201=4201/1000 
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 4.20 
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation-> 84=4.20/(5.00/100) 
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation-> 37.5=375/(1000/100) 
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation-> 48.96=4896/(10000/100) 
+
+Date->16.07.2018 , 09:16:49 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> InvoiceBlock-----
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InvoiceCount değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '@' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:5
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=07
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'NOT PAID' olarak tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değeri ilk defa oluşturuluyor
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:4
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=06
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'NOT PAID' olarak tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:3
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=05
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'NOT PAID' olarak tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:2
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=04
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'PAID' olarak tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:1
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=03
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'PAID' olarak tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:0
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=02
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'PAID' olarak tanımlandı
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 09:16:57 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray dizi(array)leri gönderildi
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserInfoBlock-----
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değeri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanıcı bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffInfo-----
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 09:17:13 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation-> 5=5000/1000 
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 5.00 
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation-> 4.201=4201/1000 
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 4.20 
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation-> 84=4.20/(5.00/100) 
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation-> 37.5=375/(1000/100) 
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation-> 48.96=4896/(10000/100) 
+
+Date->16.07.2018 , 09:17:14 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:57:26 / Ip->::1 / SessionUser->GUEST / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->16.07.2018 , 11:57:26 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri alındı
+
+Date->16.07.2018 , 11:57:26 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:07 / Ip->::1 / SessionUser->GUEST / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->16.07.2018 , 11:58:07 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri alındı
+
+Date->16.07.2018 , 11:58:07 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:07 / Ip->::1 / SessionUser->GUEST / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:07 / Ip->::1 / SessionUser->5369722537 / Operation->Login işlemi yapıldı
+
+Date->16.07.2018 , 11:58:07 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->16.07.2018 , 11:58:08 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserInfoBlock-----
+
+Date->16.07.2018 , 11:58:08 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değeri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:08 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:08 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanıcı bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:08 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffInfo-----
+
+Date->16.07.2018 , 11:58:08 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:08 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:08 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 11:58:09 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:09 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:09 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:10 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 11:58:10 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:10 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:10 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:10 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 11:58:10 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation-> 5=5000/1000 
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 5.00 
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation-> 4.201=4201/1000 
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 4.20 
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation-> 84=4.20/(5.00/100) 
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation-> 37.5=375/(1000/100) 
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation-> 48.96=4896/(10000/100) 
+
+Date->16.07.2018 , 11:58:11 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> InvoiceBlock-----
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InvoiceCount değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '@' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:5
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=07
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'NOT PAID' olarak tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değeri ilk defa oluşturuluyor
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:4
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=06
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'NOT PAID' olarak tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:3
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=05
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'NOT PAID' olarak tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:2
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=04
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'PAID' olarak tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:1
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=03
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'PAID' olarak tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:0
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=02
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'PAID' olarak tanımlandı
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 11:58:15 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray dizi(array)leri gönderildi
+
+Date->16.07.2018 , 11:58:22 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserInfoBlock-----
+
+Date->16.07.2018 , 11:58:22 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değeri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:22 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:22 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanıcı bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:22 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffInfo-----
+
+Date->16.07.2018 , 11:58:22 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 11:58:23 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation-> 5=5000/1000 
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 5.00 
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation-> 4.201=4201/1000 
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 4.20 
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation-> 84=4.20/(5.00/100) 
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation-> 37.5=375/(1000/100) 
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation-> 48.96=4896/(10000/100) 
+
+Date->16.07.2018 , 11:58:24 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:10:15 / Ip->::1 / SessionUser->GUEST / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->16.07.2018 , 16:10:15 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri alındı
+
+Date->16.07.2018 , 16:10:15 / Ip->::1 / SessionUser->GUEST / Operation->Msisdn ve Password değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:10:16 / Ip->::1 / SessionUser->GUEST / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:10:16 / Ip->::1 / SessionUser->5369722537 / Operation->Login işlemi yapıldı
+
+Date->16.07.2018 , 16:10:16 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserLogin-----
+
+Date->16.07.2018 , 16:10:21 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserInfoBlock-----
+
+Date->16.07.2018 , 16:10:21 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değeri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:10:46 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:10:46 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanıcı bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:10:46 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffInfo-----
+
+Date->16.07.2018 , 16:10:47 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:10:55 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:10:55 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:04 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 16:11:04 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:04 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:11:04 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:08 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 16:11:08 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:08 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:11:08 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:08 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 16:11:08 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation-> 5=5000/1000 
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 5.00 
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation-> 4.201=4201/1000 
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 4.20 
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation-> 84=4.20/(5.00/100) 
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation-> 37.5=375/(1000/100) 
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation-> 48.96=4896/(10000/100) 
+
+Date->16.07.2018 , 16:11:09 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> InvoiceBlock-----
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InvoiceCount değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '@' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:5
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=07
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'NOT PAID' olarak tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değeri ilk defa oluşturuluyor
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:4
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=06
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'NOT PAID' olarak tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:3
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=05
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'NOT PAID' olarak tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:2
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=04
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'PAID' olarak tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:1
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=03
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'PAID' olarak tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Fatura çekiminde döngü değeri:0
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen faturalar bloğu '_' değerlerine göre ayırarak fatura değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Çekilen fatura bloğu '.' değerlerine göre ayırarak tarih değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceMonth=02
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Month adında dizi(array) oluşturarak içine aylar tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->Ödeme durumunu 'PAID' olarak tanımlandı
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceArray adında dizi(array) içinde faturalar düzenli bir dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray değerine yeni InvoiceArray dizi(array) değeri eklendi
+
+Date->16.07.2018 , 16:11:56 / Ip->::1 / SessionUser->5369722537 / Operation->InvoiceAllArray dizi(array)leri gönderildi
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> UserInfoBlock-----
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değeri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanıcı bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffInfo-----
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn değerini dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 16:12:15 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:16 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:12:16 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:16 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 16:12:16 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:16 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:12:16 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:16 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> TariffUsage-----
+
+Date->16.07.2018 , 16:12:16 / Ip->::1 / SessionUser->5369722537 / Operation->Msisdn ve InfoType değerleri dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten bilgi çekiliyor
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->WebServisten çekilen kullanılan tarife bilgilerini '_' değerlerine göre ayırarak dizi(array) haline getirildi
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation-> 5=5000/1000 
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 5.00 
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation-> OneGB = 1000 
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation-> 4.201=4201/1000 
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation-> ChangeMBtoGBOutput = 4.20 
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> ChangeMBtoGB-----
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation-> 84=4.20/(5.00/100) 
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation-> 37.5=375/(1000/100) 
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation-> 48.96=4896/(10000/100) 
+
+Date->16.07.2018 , 16:12:17 / Ip->::1 / SessionUser->5369722537 / Operation->-----class -> cell2i , function -> PercentOperation-----
+
