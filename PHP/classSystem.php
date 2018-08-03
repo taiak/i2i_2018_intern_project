@@ -48,7 +48,7 @@ CLASS cell2i{
 		}
 		$this->LogWrite("-----class -> cell2i , function -> ConnectWebService-----");
 	}
-	PUBLIC FUNCTION ChangeMBtoGB($MBValue){
+	PUBLIC FUNCTION ChangeMBtoGB($MBValue){//CONVERT
 		$this->LogWrite("-----class -> cell2i , function -> ChangeMBtoGB-----");
 		$OneGB = 1000;
 		$this->LogWrite(" OneGB = 1000 ");
